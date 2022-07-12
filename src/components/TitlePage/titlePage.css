@@ -1,0 +1,219 @@
+.titlePage {
+  width: 100%;
+  height: 120vh;
+  background-image: url("../../Assests/titlePageBg.svg");
+  background-size: cover;
+}
+.tp-1 {
+  height: 12%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.tp-1 .img-1 {
+  width: 6%;
+  height: 24%;
+  margin-left: 5vw;
+}
+.tp-1 .img-2 {
+  position: absolute;
+  left: 93.8%;
+  bottom: 91.3%;
+  height: 10%;
+  animation-name: blinker;
+  animation-duration: 2s;
+  animation-iteration-count:infinite;
+  animation-timing-function: linear;
+}
+.img-3 {
+  height: 8%;
+  position: relative;
+}
+/* adding styling to the arrow image */
+.arrow-img {
+  position: absolute;
+  left: 15%;
+  width: 100px;
+  top: 33%;
+}
+/* adding css to the maine content div */
+.tp-2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 80%;
+  overflow: hidden;
+}
+.tp-2 .left-tp-2 {
+  display: flex;
+  color: white;
+  width: 30%;
+  margin-left: 13%;
+  margin-top: 4%;
+}
+.left-tp-2 .content-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0% 7%;
+}
+.content-div .inner-heading-1 h1 {
+  font-weight: 400;
+  width: 100%;
+  font-size: 2.4rem;
+}
+.content-div .inner-heading-1 h1 span {
+  color: #17c3b7;
+  font-weight: 700;
+}
+.content-div .inner-heading-2 {
+  margin-top: -2rem;
+}
+.content-div .inner-heading-2 p {
+  color: #17c3b7;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+}
+.content-div .inner-paragraph {
+  line-height: 24px;
+  padding: 0% 4%;
+  margin-top: -1rem;
+}
+.content-div .inner-paragraph p {
+  font-size: 13px;
+  font-weight: 300;
+  color: white;
+  font-family: "Poppins";
+  font-style: normal;
+}
+/* giving style to the right image containing div */
+.right-tp-2 {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-right: 3%;
+  margin-top: 3%;
+}
+.anime-img-1 {
+  width: 100%;
+  z-index: 2;
+}
+.anime-img-1 .img-4 {
+  object-fit: cover;
+  width: 100%;
+}
+.anime-img-2 {
+  width: 70%;
+  z-index: 5;
+  transform: matrix(0.89, -0.18, 0.58, 0.9, 0, 0) translate(-90px, -75px);
+}
+.anime-img-2 .img-5 {
+  object-fit: cover;
+  width: 100%;
+}
+/* styling the hidden cube 1 */
+.hc-1 {
+  position: absolute;
+  top: 24%;
+  left: 86%;
+}
+/* styling the hidden cube 2 */
+.hc-2 {
+  position: absolute;
+  top: 92%;
+  left: 54.9%;
+}
+/* styling to the bottom left cube */
+.blc {
+  position: absolute;
+  left: 0%;
+  top: 86.5%;
+  width: 8%;
+}
+/* styling the scroll down arrows */
+.sd {
+  position: absolute;
+  top: 87%;
+  left: 33%;
+}
+#scroll-down a {
+  padding-top: 80px;
+}
+#scroll-down a span {
+  position: absolute;
+  top: 0%;
+  animation: sdb07 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+  transition: all 1s;
+}
+#scroll-down a span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+#scroll-down a span:nth-of-type(2) {
+  top: 16px;
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+}
+#scroll-down a span:nth-of-type(3) {
+  top: 32px;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+@-webkit-keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* styling the bottom right cube */
+.brc {
+  position: absolute;
+  top: 108.8%;
+  left: 80%;
+  width: 8%;
+}
+/* stling the 3rd animation image */
+.anime-img-3 {
+  width: 20%;
+  z-index: 5;
+  transform: matrix(0.93, 0.21, -0.42, 0.97, 5, -100);
+  margin-left: 40%;
+}
+.img-6 {
+  object-fit: cover;
+  width: 100%;
+}
+
+/* this animation is  used for the blinking of the cubes */
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+    transform: scale(0.7);
+  }
+}
+
