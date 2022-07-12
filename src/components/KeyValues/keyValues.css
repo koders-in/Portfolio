@@ -1,4 +1,68 @@
-.keyValues{
+.KeyValues {
+    background-color: #040E27;
     width: 100%;
-    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.heading {
+    margin-top: 1rem;
+}
+
+.heading img {
+    width: 18%;
+    margin-right: 1rem;
+}
+
+.heading h1 {
+    font-weight: 400;
+    color: white;
+    font-size: 36px;
+}
+
+.heading h1 span {
+    font-weight: 900;
+    color: #17C3B7;
+}
+
+.bg {
+    position: absolute;
+    z-index: 0;
+    margin-top: 22rem;
+}
+
+.bg img {
+    width: 100%;
+}
+
+.cards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 8rem;
+}
+
+.cards img {
+    width: 11rem;
+    height: 11rem;
+    margin-bottom: 2rem;
+}
+
+.KeyValues .kv-cube-bottom {
+    z-index: 1;
+    width: 8rem;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 20rem;
 }
