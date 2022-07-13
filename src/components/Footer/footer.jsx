@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css';
+import './footer.css';
 import {BsInstagram, BsLink} from 'react-icons/bs';
 import {BsFacebook} from 'react-icons/bs';
 import {BsTwitter} from 'react-icons/bs';
@@ -22,8 +22,9 @@ function Footer() {
             <a href=""><BsLinkedin /></a>
             </div>
             <div className="bottom-anime">
-                <img src="/footer-anime.png" alt="" />
-        </div>
+                {/* <img src="/bottom-anime-1.png" alt="" /> */}
+                <div className="ba-rectangle-1"></div>
+            </div>
             <div className="copyright">
                 <p>Made with ❤️ by Koders</p>
                 <small>Copyright ©2022 | All rights reserved</small>
