@@ -1,11 +1,12 @@
 import React from "react";
-import "./Footer.css";
+import "./footer.css";
 import { BsInstagram, BsLink } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import AOS from "aos";
+
 function Footer() {
   AOS.init();
   return (
@@ -46,7 +47,12 @@ function Footer() {
             </div>
             <div className="bottom-anime">
                 {/* <img src="/bottom-anime-1.png" alt="" /> */}
-                <div className="ba-rectangle-1"></div>
+                <div className="ba-rectangle-1 ba-card"></div>
+                <div className="ba-rectangle-2 ba-card"></div>
+                <div className="ba-rectangle-3 ba-card"></div>
+                <div className="ba-rectangle-4 ba-card"></div>
+                <div className="ba-rectangle-5 ba-card"></div>
+                <div className="ba-rectangle-6 ba-card"></div>
             </div>
             <div className="copyright">
                 <p>Made with ❤️ by Koders</p>
