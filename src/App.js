@@ -1,9 +1,9 @@
 import './App.css';
 import About from ".././src/components/About/about";
 import TitlePage from ".././src/components/TitlePage/titlePage";
-import Footer from ".././src/components/Footer/footer";
-import KeyValues from ".././src/components/KeyValues/keyValues";
-import Portfolio from ".././src/components/Portfolio/portfolio";
+import Footer from ".././src/components/Footer/Footer";
+import KeyValues from ".././src/components/KeyValues/KeyValues";
+import Portfolio from ".././src/components/Portfolio/Portfolio";
 function App() {
   return (
     <div className="App">
