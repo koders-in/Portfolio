@@ -9,13 +9,12 @@ import animeImg2 from "../../Assests/anime-img-2.svg";
 import animeImg3 from "../../Assests/anime-img-3.svg";
 import hiddenCube2 from "../../Assests/hidden-by-img-2-anime.svg";
 import hiddenCube1 from "../../Assests/hidden-by-img-1-anime.svg";
-import bottomLeftCube from "../../Assests/tp-bottom-left-cube.svg";
+import bottomLeftCube from "../../Assests/tp-top-right-cube.svg";
 import bottomRightCube from "../../Assests/tp-bottom-right-cube.svg";
 import sd1 from "../../Assests/not-visible-sd.svg";
 import sd2 from "../../Assests/light-sd.svg";
 import sd3 from "../../Assests/dark-sd.svg";
-
-
+import TypeWriter from "typewriter-effect";
 const titlePage = () => {
   return (
     <div className="titlePage">
@@ -30,8 +29,28 @@ const titlePage = () => {
         <div className="left-tp-2">
           <div className="content-div">
             <div className="inner-heading-1">
-              <h1>
-                WE ARE <span>KODERS</span>
+              <h1 className="typewriter">
+                WE ARE
+                <span>
+                  <TypeWriter
+                    options={{
+                      autoStart: true,
+                      loop: true,
+                    }}
+                    onInit={(typewriter) => {
+                      typewriter
+                        .typeString(".  KODERS")
+                        .pauseFor(1500)
+                        .deleteAll()
+                        .typeString(".  KREATING")
+                        .pauseFor(1500)
+                        .deleteAll()
+                        .typeString(".  INSPIRING")
+                        .deleteAll()
+                        .start();
+                    }}
+                  />
+                </span>
               </h1>
             </div>
             <div className="inner-heading-2">
@@ -47,7 +66,7 @@ const titlePage = () => {
           </div>
         </div>
         {/* for the scroll down arrows */}
-        <section id="scroll-down" class="sd">
+        <section id="scroll-down" className="sd">
           <a href="#about-id">
             <span>
               <img src={sd1} alt="" />
