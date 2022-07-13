@@ -7,17 +7,25 @@ import laptop from "../../Assests/laptop.png";
 import icon1 from "../../Assests/about-icon-1.svg";
 import icon2 from "../../Assests/about-icon-2.svg";
 import icon3 from "../../Assests/about-icon-3.svg";
+import AOS from 'aos';
 
 const about = () => {
+  AOS.init();
   return (
     <div className="about" id="about-id">
       <img src={aboutTopMidCube} alt="" className="atmc" />
       <div className="main-container">
-        <div className="left-container">
+        <div className="left-container"
+        data-aos="fade-right"
+        data-aos-delay="200"
+        >
           <img src={animeImg5} alt="" className="tilt-1" />
           <img src={laptop} alt="" className="laptop" />
         </div>
-        <div className="right-container">
+        <div className="right-container"
+        data-aos="fade-left"
+        data-aos-delay="200"
+        >
           <div className="about-child first">
             <img src={icon1} alt="" className="about-icons" />
             <div className="child-text-1">

@@ -1,10 +1,15 @@
 import React from 'react';
 import './PortfolioCard.css';
+import AOS from 'aos';
 
-function PortfolioCard({ imgSrc }) {
+function PortfolioCard({ imgSrc, delay }) {
+  AOS.init();
   return (
     <div className='PortfolioCard'>
-        <div className="PortfolioCard-container">
+        <div className="PortfolioCard-container"
+        data-aos="fade-up"
+        data-aos-delay={delay}
+        >
             <img src={imgSrc} alt="" />
         </div>
     </div>

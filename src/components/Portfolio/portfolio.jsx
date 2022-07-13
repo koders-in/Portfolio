@@ -2,7 +2,7 @@ import React from 'react';
 import PortfolioCard from '../PortfolioCard/PortfolioCard';
 import './Portfolio.css';
 
-function Portfolio() {
+function Portfolio() {   
   return (
     <div className='Portfolio'>
         <div className="portfolio-header">
@@ -11,12 +11,12 @@ function Portfolio() {
             <p>Automation is made easier with Koders. Take a look at the various projects we’ve done</p>
         </div>
         <div className="portfolio-cards">
-            <PortfolioCard imgSrc="/hawa.png" />
-            <PortfolioCard imgSrc="/pop-bot.png" />
-            <PortfolioCard imgSrc="/Divine.png" />
-            <PortfolioCard imgSrc="/Machina.png" />
-            <PortfolioCard imgSrc="/squared.png" />
-            <PortfolioCard imgSrc="/uc-toolbot.png" />
+            <PortfolioCard imgSrc="/hawa.png" delay="200" />
+            <PortfolioCard imgSrc="/pop-bot.png"  delay="300"  />
+            <PortfolioCard imgSrc="/Divine.png"  delay="200"  />
+            <PortfolioCard imgSrc="/Machina.png"  delay="300"  />
+            <PortfolioCard imgSrc="/squared.png"  delay="200"  />
+            <PortfolioCard imgSrc="/uc-toolbot.png"  delay="300"  />
         </div>
     </div>
   )

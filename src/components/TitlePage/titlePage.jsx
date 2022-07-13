@@ -15,7 +15,9 @@ import sd1 from "../../Assests/not-visible-sd.svg";
 import sd2 from "../../Assests/light-sd.svg";
 import sd3 from "../../Assests/dark-sd.svg";
 import TypeWriter from "typewriter-effect";
+import AOS from "aos";
 const titlePage = () => {
+  AOS.init();
   return (
     <div className="titlePage">
       <div className="tp-1">
@@ -26,7 +28,10 @@ const titlePage = () => {
       <img src={arrowBig} alt="" className="arrow-img" />
       <div className="tp-2">
         <img src={bottomLeftCube} alt="" className="blc" />
-        <div className="left-tp-2">
+        <div className="left-tp-2"
+        data-aos="fade-right"
+        data-aos-delay="500"
+        >
           <div className="content-div">
             <div className="inner-heading-1">
               <h1 className="typewriter">
@@ -80,8 +85,15 @@ const titlePage = () => {
           </a>
         </section>
         <img src={hiddenCube1} alt="" className="hc-1" />
-        <div className="right-tp-2">
-          <div className="anime-img-1">
+        <div className="right-tp-2"
+         data-aos="fade-left"
+         data-aos-delay="500"
+        >
+          <div
+            className="anime-img-1"
+            data-aos="fade-down"
+            data-aos-delay="1000"
+          >
             <img src={animeImg1} alt="" className="img-4" />
           </div>
           <div className="anime-img-2">
