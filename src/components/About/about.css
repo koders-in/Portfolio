@@ -7,6 +7,11 @@
   position: absolute;
   top: 138%;
   left: 46%;
+  animation-name: blinker;
+  animation-duration: 3s;
+  animation-direction:alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 /* styling the first tilted image */
 .tilt-1 {
@@ -114,13 +119,14 @@
     margin: 0;
   }
 
-  /* this animation is used to float the tilt image from title page to about page */
-  @keyframes floating
-  {
-    from{
-      
-    }
-    to{
-
-    }
+  /* use this animation for the blinking effect in the size of the cube */
+@keyframes blinker {
+  from {
+    transform: scale(0.7);
+    opacity: 0.7;
   }
+  to {
+    transform: scale(2);
+    opacity: 1;
+  }
+}

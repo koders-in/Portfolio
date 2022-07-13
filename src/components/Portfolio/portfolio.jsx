@@ -12,7 +12,7 @@ function Portfolio() {
         </div>
         <div className="portfolio-cards">
             <PortfolioCard imgSrc="/hawa.png" delay="200" />
-            <PortfolioCard imgSrc="/pop-bot.png"  delay="300"  />
+            <PortfolioCard imgSrc="/pop-bot.png"  delay="300"  />               
             <PortfolioCard imgSrc="/Divine.png"  delay="200"  />
             <PortfolioCard imgSrc="/Machina.png"  delay="300"  />
             <PortfolioCard imgSrc="/squared.png"  delay="200"  />
