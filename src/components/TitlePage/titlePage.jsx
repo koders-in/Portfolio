@@ -35,7 +35,7 @@ const titlePage = () => {
           <div className="content-div">
             <div className="inner-heading-1">
               <h1 className="typewriter">
-                WE ARE
+                WE ARE&nbsp;
                 <span>
                   <TypeWriter
                     options={{
@@ -44,13 +44,13 @@ const titlePage = () => {
                     }}
                     onInit={(typewriter) => {
                       typewriter
-                        .typeString(".  KODERS")
+                        .typeString("KODERS")
                         .pauseFor(1500)
                         .deleteAll()
-                        .typeString(".  KREATING")
+                        .typeString("KREATING")
                         .pauseFor(1500)
                         .deleteAll()
-                        .typeString(".  INSPIRING")
+                        .typeString("INSPIRING")
                         .deleteAll()
                         .start();
                     }}
@@ -91,8 +91,6 @@ const titlePage = () => {
         >
           <div
             className="anime-img-1"
-            data-aos="fade-down"
-            data-aos-delay="1000"
           >
             <img src={animeImg1} alt="" className="img-4" />
           </div>

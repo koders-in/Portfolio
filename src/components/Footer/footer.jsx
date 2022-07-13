@@ -1,17 +1,40 @@
-import React from 'react';
-import './footer.css';
-import {BsInstagram, BsLink} from 'react-icons/bs';
-import {BsFacebook} from 'react-icons/bs';
-import {BsTwitter} from 'react-icons/bs';
-import {BsGithub} from 'react-icons/bs';
-import {BsLinkedin} from 'react-icons/bs';
-
+import React from "react";
+import "./Footer.css";
+import { BsInstagram, BsLink } from "react-icons/bs";
+import { BsFacebook } from "react-icons/bs";
+import { BsTwitter } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
+import AOS from "aos";
 function Footer() {
+  AOS.init();
   return (
-    <div className='Footer'>
-         
-        <div className="footer-link">
-            <a href="#">www.koders.in</a>
+    <div className="Footer">
+      <div className="footer-link" data-aos="fade-up" data-aos-delay="200">
+        <a href="https://koders.in/#/" target="_blank">
+          www.koders.in
+        </a>
+      </div>
+      <div className="footer-bottom">
+        <div className="social-links" data-aos="fade-right" data-aos-delay="200">
+          <a href="">
+            <BsInstagram />
+          </a>
+          <a href="https://www.facebook.com/kodersindia/" target="_blank">
+            <BsFacebook />
+          </a>
+          <a href="https://twitter.com/KodersHQ" target="_blank">
+            <BsTwitter />
+          </a>
+          <a href="https://github.com/koders-in" target="_blank">
+            <BsGithub />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/koders-in/mycompany/"
+            target="_blank"
+          >
+            <BsLinkedin />
+          </a>
         </div>
         <div className="footer-bottom">
             <div className="social-links">
@@ -31,8 +54,9 @@ function Footer() {
             </div>
             
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

@@ -45,7 +45,6 @@ function KeyValues() {
           delay="500"
         />
       </div>
-      <img className="kv-cube-bottom" src="kv-cube-bottom.svg" alt="" />
     </div>
   );
 }
