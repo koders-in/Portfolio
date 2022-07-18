@@ -1,3 +1,38 @@
-.PortfolioCard-container img {
+.PortfolioCard {
+    position: relative;
+}
+
+.portfolio-card-container {
     width: 100%;
+    display: flex;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.portfolio-card-container .img-zoom {
+    scroll-snap-align: start;
+    width: 100%;
+}
+
+.next, .prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    background-color: #c0c0c0;
+    color: black;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.prev {
+    left: 1rem;
+}
+
+.next {
+    right: 1rem;
 }
