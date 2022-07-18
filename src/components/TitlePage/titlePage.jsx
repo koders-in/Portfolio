@@ -17,7 +17,11 @@ import sd3 from "../../Assests/dark-sd.svg";
 import TypeWriter from "typewriter-effect";
 import AOS from "aos";
 const titlePage = () => {
-  AOS.init();
+  AOS.init(
+    {
+      once:true
+    }
+  );
   return (
     <div className="titlePage">
       <div className="tp-1">
@@ -35,8 +39,10 @@ const titlePage = () => {
           <div className="content-div">
             <div className="inner-heading-1">
               <h1 className="typewriter">
-                WE ARE&nbsp;
-                <span>
+               <span>
+               WE ARE&nbsp;
+               </span>
+                <span className="auto-write" >
                   <TypeWriter
                     options={{
                       autoStart: true,
@@ -47,10 +53,9 @@ const titlePage = () => {
                         .typeString("KODERS")
                         .pauseFor(1500)
                         .deleteAll()
-                        .typeString("KREATING")
+                        .typeString("KREATORS")
                         .pauseFor(1500)
-                        .deleteAll()
-                        .typeString("INSPIRING")
+
                         .deleteAll()
                         .start();
                     }}

@@ -64,7 +64,7 @@
 }
 
 .ba-card {
-    width: 252px;
+  width: 252px;
   height: 241px;
   transition: all ease-out 0.3s;
   position: absolute;
@@ -79,41 +79,85 @@
 }
 
 .ba-card:hover {
-    transform: translateY(-220px) rotate(-10deg);
+  transform: translateY(-220px) rotate(-10deg);
 }
 
 .ba-rectangle-2 {
-    background: #fff;
-    transform: rotate(3.58deg);
-    left: 32%;
-    top: -10%;
+  background: #fff;
+  transform: rotate(3.58deg);
+  left: 32%;
+  top: -10%;
 }
 
 .ba-rectangle-3 {
-    background: #0D2156;
-    transform: rotate(-20.64deg);
-    left: 37%;
-    top: 20%;
+  background: #0d2156;
+  transform: rotate(-20.64deg);
+  left: 37%;
+  top: 20%;
 }
 
 .ba-rectangle-4 {
-    background: #9D9A9A;
-    transform: rotate(-3.15deg);
-    top: 30%;
-    left: 47%;
-    z-index: 2;
+  background: #9d9a9a;
+  transform: rotate(-3.15deg);
+  top: 30%;
+  left: 47%;
+  z-index: 2;
 }
 
 .ba-rectangle-5 {
-    background: #17C3B7;
-    transform: rotate(15.73deg);
-    left: 49%;
-} 
+  background: #17c3b7;
+  transform: rotate(15.73deg);
+  left: 49%;
+}
 
 .ba-rectangle-6 {
-    background-color: #0F1830;
-    transform: rotate(-18.91deg);
-    left: 57%;
-    top: 50%;
-    z-index: 3;
+  background-color: #0f1830;
+  transform: rotate(-18.91deg);
+  left: 57%;
+  top: 50%;
+  z-index: 3;
+}
+
+/* responsivness code starts here */
+@media only screen and (max-width: 1160px) {
+  .bottom-anime {
+    width: 50%;
+    margin-left: -5rem;
+  }
+  .social-links {
+    width: 22%;
+  }
+  .copyright {
+    width: 22%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .ba-card {
+    width: 150px;
+    height: 160px;
+  }
+  .copyright {
+    width: 26%;
+  }
+  .social-links {
+    width: 26%;
+  }
+  .footer-bottom {
+    bottom: 0.5rem;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .bottom-anime {
+    display: none;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200%;
+    bottom: 2rem;
+  }
+  .social-links{
+    margin-bottom: 1rem;
+  }
 }

@@ -7,6 +7,7 @@ import KeyValues from "./components/KeyValues/keyValues";
 import Portfolio from ".././src/components/Portfolio/portfolio";
 import SplashScreen from './components/SplashScreen/SplashScreen';
 
+
 function App() {
 
   const [loading, setLoading] = useState(false);
@@ -15,7 +16,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 4500);
+    }, 3500);
   }, []);
 
   return (
@@ -40,3 +41,4 @@ function App() {
 }
 
 export default App;
+

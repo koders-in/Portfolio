@@ -3,7 +3,11 @@ import './PortfolioCard.css';
 import AOS from 'aos';
 
 function PortfolioCard({ imgSrc, delay }) {
-  AOS.init();
+  AOS.init(
+    {
+      once:true
+    }
+  );
   return (
     <div className='PortfolioCard'>
         <div className="PortfolioCard-container"

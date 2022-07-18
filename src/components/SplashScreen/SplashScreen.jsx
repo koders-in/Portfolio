@@ -4,18 +4,13 @@ import "./SplashScreen.css";
 import logo from "../../Assests/logo.png";
 
 function SplashScreen() {
-  const ref = useRef(null);
-  useEffect(() => {
-    ref.current.continuousStart();
-    setTimeout(() => {
-      ref.current.complete();
-    }, 3000);
-  });
-
   return (
-    <div className="SplashScreen">
-      <LoadingBar color="#17c3b7" ref={ref} />
-      <img src={logo} alt="logo" className="logo" />
+    <div className="splashscreen">
+      <div class="logo">
+   <img src={logo} alt="logo" />
+    </div>
+    <div class="progressbar"></div>
+    <h1>VISION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KREATE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INSPIRE</h1>
     </div>
   );
 }

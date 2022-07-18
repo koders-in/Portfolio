@@ -1,11 +1,12 @@
 import React from "react";
 import KeyValueCard from "../KeyValueCard/KeyValueCard";
-import "./keyValues.css";
+import "./KeyValues.css";
 import AOS from "aos";
 function KeyValues() {
   AOS.init(
     {
-      duration: 500
+      duration: 500,
+      once:true
     }
   );
   return (
@@ -29,7 +30,7 @@ function KeyValues() {
         <KeyValueCard
           imgSrc="/icon2.png"
           title="One-stop Shop"
-          desc="Koders isn’t your regular freelancer, but an entire development company building both frontend UI and backend scripts."
+          desc="Provides both front and backend services."
           delay="300"
         />
         <KeyValueCard
@@ -41,7 +42,7 @@ function KeyValues() {
         <KeyValueCard
           imgSrc="/icon4.png"
           title="Innovation"
-          desc="We go beyond the possibilities to make the impossible possible. The soul of our Kompany is Kreation & Innovation."
+          desc="The soul of our Kompany is Kreation & Innovation."
           delay="500"
         />
       </div>

@@ -6,11 +6,15 @@ import animeImg5 from "../../Assests/anime-img-5.svg";
 import laptop from "../../Assests/laptop.png";
 import icon1 from "../../Assests/about-icon-1.svg";
 import icon2 from "../../Assests/about-icon-2.svg";
-import icon3 from "../../Assests/about-icon-3.svg";
+import icon3 from "../../Assests/about-icon-3.png";
 import AOS from 'aos';
 
 const about = () => {
-  AOS.init();
+  AOS.init(
+    {
+      once:true
+    }
+  );
   return (
     <div className="about" id="about-id">
       <img src={aboutTopMidCube} alt="" className="atmc" />
@@ -30,7 +34,7 @@ const about = () => {
             <img src={icon1} alt="" className="about-icons" />
             <div className="child-text-1">
               <span>
-                <CountUp end={450} duration={1} enableScrollSpy={true}/>
+                <CountUp end={450} duration={0.8} enableScrollSpy={true}/>
               </span>
               <p>Clients</p>
             </div>
@@ -39,7 +43,7 @@ const about = () => {
             <img src={icon2} alt="" className="about-icons" />
             <div className="child-text-2">
               <span>
-                <CountUp end={890} duration={2} enableScrollSpy={true} />
+                <CountUp end={890} duration={1} enableScrollSpy={true} />
               </span>
               <p>Project Done</p>
             </div>
@@ -48,7 +52,7 @@ const about = () => {
             <img src={icon3} alt="" className="about-icons" />
             <div className="child-text-3">
               <span>
-                <CountUp end={1000} duration={3} enableScrollSpy={true} />
+                <CountUp end={1000} duration={1.5} enableScrollSpy={true} />
               </span>
               <p>Cups Of Coffee</p>
             </div>

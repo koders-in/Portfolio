@@ -1,6 +1,7 @@
 .about {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
+  overflow: hidden;
 }
 /* styling the top middle cube */
 .atmc {
@@ -9,7 +10,7 @@
   left: 46%;
   animation-name: blinker;
   animation-duration: 3s;
-  animation-direction:alternate;
+  animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -20,10 +21,6 @@
   transform: matrix(0.99, -0.13, -0.16, 0.99, 0, 0);
   transition: all 0.3s ease;
 }
-.tilt-1:hover{
-  transform: matrix(0.99, 0, 0, 0.99, 0, 0);
-  transform: scale(1.5);
-}
 /* styling the main container */
 .main-container {
   display: flex;
@@ -32,7 +29,7 @@
   margin-top: 20vh;
   margin-left: 1.5vw;
   width: 90vw;
-  height: 80vh;
+  /* height: 80vh; */
 }
 /* styling the left container having the laptop */
 .left-container {
@@ -59,7 +56,7 @@
   align-items: center;
   width: 110%;
 }
-.about-child.first{
+.about-child.first {
   margin-left: -20px !important;
 }
 .about-child.first img {
@@ -78,7 +75,7 @@
   padding-left: 3.5rem;
 }
 /* styling the text int the lhs of the icons */
-.child-text-1{
+.child-text-1 {
   padding-left: 3.2rem;
 }
 .child-text-1 span {
@@ -86,40 +83,40 @@
   font-weight: 600;
   font-size: 32px;
 }
-.child-text-1 p{
-    color: white;
-    font-size: 28px;
-    margin: 0;
+.child-text-1 p {
+  color: white;
+  font-size: 28px;
+  margin: 0;
 }
-.child-text-2{
-    margin-left: 2rem;
-  }
+.child-text-2 {
+  margin-left: 2rem;
+}
 .child-text-2 span {
-    color: #17b0ac;
-    font-weight: 600;
-    font-size: 32px;
-  }
-  .child-text-2 p{
-    color: white;
-    font-size: 28px;
-    margin: 0;
-  }
-  .child-text-3{
-    margin-left: 1rem;
-    padding-top: 1rem;
-  }
-  .child-text-3 span {
-    color: #17b0ac;
-    font-weight: 600;
-    font-size: 32px;
-  }
-  .child-text-3 p{
-    color: white;
-    font-size: 28px;
-    margin: 0;
-  }
+  color: #17b0ac;
+  font-weight: 600;
+  font-size: 32px;
+}
+.child-text-2 p {
+  color: white;
+  font-size: 28px;
+  margin: 0;
+}
+.child-text-3 {
+  margin-left: 1rem;
+  padding-top: 1rem;
+}
+.child-text-3 span {
+  color: #17b0ac;
+  font-weight: 600;
+  font-size: 32px;
+}
+.child-text-3 p {
+  color: white;
+  font-size: 28px;
+  margin: 0;
+}
 
-  /* use this animation for the blinking effect in the size of the cube */
+/* use this animation for the blinking effect in the size of the cube */
 @keyframes blinker {
   from {
     transform: scale(0.7);
@@ -129,4 +126,92 @@
     transform: scale(2);
     opacity: 1;
   }
+}
+
+/* starts making the website responsive for different devices  */
+@media only screen and (max-width: 1160px) {
+  .atmc {
+    width: 8%;
+    top: 130%;
+  }
+  .tilt-1 {
+    margin-left: 37%;
+  }
+  .left-container {
+    padding-left: 4%;
+  }
+  .right-container {
+    margin-right: 2rem;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .main-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 5rem;
+  }
+  .left-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .right-container{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .tilt-1{
+    transform:  matrix(0.89, 0.13, 0.20, 0.98, 0, 0) translate(-8rem, -1rem) !important;
+    margin-left: 0;
+    width: 25%;
+  }
+  .laptop{
+    width: 60vw !important;
+    margin-left: 4vw;
+  }
+  .right-container{
+    margin-left: -5vw;
+  }
+}
+@media only screen and (max-width:560px)
+{
+  .atmc{
+    display: none;
+  }
+  .main-container{
+    margin-top: 30vh;
+  }
+  .laptop{
+    margin: 0;
+    width: 80vw !important;
+  }
+  .child-text-1 p{
+    font-size: 20px;
+  }
+  .child-text-1{
+    padding-left: 2rem;
+  }
+  .child-text-2 p{
+    font-size: 20px;
+  }
+  .child-text-2{
+    margin-left: 2.5rem;
+  }
+  .child-text-3 p{
+    font-size: 20px;
+  }
+  .child-text-3{
+    padding-left: 1rem;
+  }
+.about-child.second img {
+  padding-left: 0.5rem;
+}
+.about-child.third img{
+  padding-left: 1.5rem;
+}
 }

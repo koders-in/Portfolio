@@ -1,43 +1,52 @@
 .Portfolio {
-    margin-top: 12rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.portfolio-header h1{
-    font-weight: 400;
-    color: white;
-    margin-bottom: 0.5rem;
+.portfolio-header h1 {
+  font-weight: 400;
+  color: white;
+  margin-bottom: 0.5rem;
 }
 
 .portfolio-header h4 {
-    font-weight: 300;
-    color: #33DFD3;
-    font-size: 22px;
-    margin-bottom: 1rem;
+  font-weight: 300;
+  color: #33dfd3;
+  font-size: 22px;
+  margin-bottom: 1rem;
 }
 
 .portfolio-header p {
-    color: white;
-    width: 70%;
-    margin-top: 0;
-    line-height: 1.5;
+  color: white;
+  width: 70%;
+  margin-top: 0;
+  line-height: 1.5;
 }
 
 .portfolio-cards {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-column-gap: 6rem;
-    grid-row-gap: 3rem;
-    width: 80%;
-    margin-top: 5rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 6rem;
+  grid-row-gap: 3rem;
+  width: 80%;
+  margin-top: 5rem;
+}
+
+@media only screen and (max-width: 560px) {
+  .portfolio-cards {
+    grid-template-columns: auto;
+  }
+  .Portfolio {
+    margin-top: 0rem;
+  }
 }

@@ -2,7 +2,11 @@ import React from 'react';
 import './KeyValueCard.css'
 import AOS from 'aos';
 function KeyValueCard({ imgSrc, title, desc, delay }) {
-  AOS.init();
+  AOS.init(
+    {
+      once:true
+    }
+  );
   return (
     <div className='KeyValueCard'>
         <div className="kvc-container"
