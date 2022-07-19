@@ -36,3 +36,9 @@
 .next {
     right: 1rem;
 }
+
+@media only screen and (max-width: 960px) {
+    .zoom-container {
+        display: none;
+    }
+}

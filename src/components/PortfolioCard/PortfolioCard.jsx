@@ -42,6 +42,7 @@ function PortfolioCard({ imgSrc, delay, classTitle, position }) {
           {
             position=="left" ? <ReactImageMagnify
             {...{
+              enlargedImageContainerClassName: "zoom-container",
               smallImage: {
                 alt: "",
                 isFluidWidth: true,
