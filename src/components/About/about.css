@@ -168,7 +168,7 @@
   .tilt-1 {
     transform: matrix(0.89, 0.13, 0.2, 0.98, 0, 0) translate(-8rem, -1rem) !important;
     margin-left: 0;
-    width: 25%;
+    width: 30%;
   }
   .laptop {
     width: 60vw !important;
@@ -214,6 +214,6 @@
     padding-left: 1.5rem;
   }
   .tilt-1 {
-    transform: matrix(0.89, 0.13, 0.2, 0.98, 0, 0) translate(4rem, -1rem) !important;
+    transform: matrix(0.89, -0.13, -0.15, 0.98, 0, 0) translate(7rem, 0.5rem) !important;
   }
 }
