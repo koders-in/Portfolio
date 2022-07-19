@@ -7,11 +7,54 @@
     display: flex;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    border-radius: 5px;
 }
 
 .portfolio-card-container .img-zoom {
     scroll-snap-align: start;
     width: 100%;
+}
+
+.details {
+    display: none;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #020212;
+    border-radius: 13px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in 0.3s;
+}
+
+.details h1 {
+    color: #17C3B7;
+    margin: 0;
+}
+
+.details p {
+    width: 70%;
+    color: white;
+}
+
+.pc-btn, .pc-close {
+    background-color: transparent;
+    border: none;
+    color: #17C3B7;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.pc-btn:hover, .pc-close:hover {
+    color: #3fe7dc;
+}
+
+.pc-close {
+    margin-top: 4rem;
 }
 
 .next, .prev {
@@ -21,11 +64,11 @@
     cursor: pointer;
     width: 2rem;
     height: 2rem;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: black;
+    opacity: 0.6;
     border: none;
-    background-color: #c0c0c0;
-    color: black;
-    border-radius: 50%;
+    opacity: 0.7;
+    color: #17C3B7;
     z-index: 1;
 }
 
