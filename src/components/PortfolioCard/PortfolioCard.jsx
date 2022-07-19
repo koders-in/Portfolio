@@ -4,9 +4,20 @@ import ReactSlick from "react-slick";
 import "./PortfolioCard.css";
 import AOS from "aos";
 
-function PortfolioCard({ imgSrc, delay, classTitle, position }) {
+function PortfolioCard({ imgSrc, delay, classTitle, position, hidden }) {
 
   const [idx, setIdx] = useState(0);
+  let hiddenClass = "";
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    document.querySelector(`.${classTitle}`).style.display = "flex";
+  }
+
+  const handleClose = (e) => {
+    e.preventDefault();
+    document.querySelector(`.${classTitle}`).style.display = "none";
+  }
 
   const handleNext = (e) => {
     e.preventDefault();
@@ -28,16 +39,25 @@ function PortfolioCard({ imgSrc, delay, classTitle, position }) {
     }
   };
 
+  if(hidden) {
+    hiddenClass = "hidden"
+  }
+
   AOS.init();
   return (
-    <div className="PortfolioCard">
+    <div className={"PortfolioCard " + hiddenClass}>
       <button className="next" onClick={handleNext}>
         &#10095;
       </button>
       <button className="prev" onClick={handlePrev}>
         &#10094;
       </button>
-      <div className={"portfolio-card-container " + classTitle}>
+      <div className={"portfolio-card-container "}>
+        <div className={"details " + classTitle}>
+          <h1>{classTitle}</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, voluptate magnam illo autem sequi sed.</p>
+          <button className="pc-close" onClick={handleClose}>close</button>
+        </div>
         <div className="img-zoom">
           {
             position=="left" ? <ReactImageMagnify
@@ -115,6 +135,7 @@ function PortfolioCard({ imgSrc, delay, classTitle, position }) {
         </div>
         
       </div>
+      <button className="pc-btn" onClick={handleClick} >view details</button>
     </div>
   );
 }
