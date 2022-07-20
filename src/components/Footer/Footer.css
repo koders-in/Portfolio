@@ -1,0 +1,163 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+  background-color: #1d2c48;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+}
+
+.bottom-anime {
+  width: 80%;
+  z-index: 0;
+  margin-left: -1rem;
+}
+
+.footer-link {
+  margin-bottom: 6rem;
+}
+
+.footer-link a {
+  color: white;
+  z-index: 10;
+  font-size: 28px;
+  text-decoration: none;
+  border-bottom: 1px solid #17c3b7;
+}
+
+.social-links {
+  width: 20%;
+}
+
+.social-links a {
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 0.7rem;
+  color: white;
+  border-bottom: 1px solid #17c3b7;
+}
+
+.copyright {
+  width: 20%;
+}
+
+.copyright p {
+  margin: 0;
+  color: white;
+  font-size: 14px;
+}
+
+.copyright small {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 10px;
+}
+
+.ba-card {
+  width: 252px;
+  height: 241px;
+  transition: all ease-out 0.3s;
+  position: absolute;
+}
+
+.ba-rectangle-1 {
+  background: #17c3b7;
+  transform: rotate(17.82deg);
+  left: 27%;
+  top: 60%;
+  z-index: 1;
+}
+
+.ba-card:hover {
+  transform: translateY(-220px) rotate(-10deg);
+}
+
+.ba-rectangle-2 {
+  background: #fff;
+  transform: rotate(3.58deg);
+  left: 32%;
+  top: -10%;
+}
+
+.ba-rectangle-3 {
+  background: #0d2156;
+  transform: rotate(-20.64deg);
+  left: 37%;
+  top: 20%;
+}
+
+.ba-rectangle-4 {
+  background: #9d9a9a;
+  transform: rotate(-3.15deg);
+  top: 30%;
+  left: 47%;
+  z-index: 2;
+}
+
+.ba-rectangle-5 {
+  background: #17c3b7;
+  transform: rotate(15.73deg);
+  left: 49%;
+}
+
+.ba-rectangle-6 {
+  background-color: #0f1830;
+  transform: rotate(-18.91deg);
+  left: 57%;
+  top: 50%;
+  z-index: 3;
+}
+
+/* responsivness code starts here */
+@media only screen and (max-width: 1160px) {
+  .bottom-anime {
+    width: 50%;
+    margin-left: -5rem;
+  }
+  .social-links {
+    width: 22%;
+  }
+  .copyright {
+    width: 22%;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .ba-card {
+    width: 150px;
+    height: 160px;
+  }
+  .copyright {
+    width: 26%;
+  }
+  .social-links {
+    width: 26%;
+  }
+  .footer-bottom {
+    bottom: 0.5rem;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .bottom-anime {
+    display: none;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200%;
+    bottom: 2rem;
+  }
+  .social-links{
+    margin-bottom: 1rem;
+  }
+}

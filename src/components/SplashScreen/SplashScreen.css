@@ -1,0 +1,65 @@
+.splashscreen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: 100vh;
+    background:#040E27;
+    overflow: hidden;
+}
+
+.logo
+{
+    display: flex;
+    align-items: center;
+}
+.logo h2
+{
+    font-weight: 900;
+    margin: 0;
+    font-size: 3rem;
+    color: #17C3B7;
+}
+.logo img
+{
+    height: 5rem;
+}
+.progressbar
+{
+    margin-top: 1rem;
+    height: 0.2rem;
+    width: 12rem;
+    background: white;
+}
+.progressbar::after
+{
+    content: "";
+    width: 3rem;
+    height: 0.2rem;
+    background: #17C3B7;
+    display: block;
+    border-radius: 0.5rem;
+    animation: animation 1.5s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+}
+.splashscreen h1
+{
+    font-size: 1.5rem;
+    color: white;
+    position: absolute;
+    bottom: 1rem;
+    font-weight: 400;
+}
+
+@keyframes animation {
+    0% {
+        transform: translateX(0rem);
+    }
+    50% {
+        transform: translateX(9rem);
+    }
+    100% {
+        transform: translateX(0rem);
+    }
+  }
+
