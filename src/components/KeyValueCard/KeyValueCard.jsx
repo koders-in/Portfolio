@@ -12,7 +12,7 @@ function KeyValueCard({ imgSrc, title, desc, delay }) {
         <div className="kvc-container"
         data-aos="fade-up"
         data-aos-delay={delay}
-        >
+        > 
             <img src={imgSrc} alt="" />
             <h2>{title}</h2>
             <p>{desc}</p>

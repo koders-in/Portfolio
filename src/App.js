@@ -3,7 +3,7 @@ import './App.css';
 import About from ".././src/components/About/about";
 import TitlePage from ".././src/components/TitlePage/titlePage";
 import Footer from "./components/Footer/footer";
-import KeyValues from "./components/KeyValues/keyValues";
+import KeyValues from "./components/KeyValues/KeyValues";
 import Portfolio from ".././src/components/Portfolio/portfolio";
 import SplashScreen from './components/SplashScreen/SplashScreen';
 

@@ -45,7 +45,10 @@ function PortfolioCard({ imgSrc, delay, classTitle, position, hidden }) {
 
   AOS.init();
   return (
-    <div className={"PortfolioCard " + hiddenClass}>
+    <div className={"PortfolioCard " + hiddenClass}
+    data-aos="fade-up"
+    data-aos-delay={delay}
+    >
       <button className="next" onClick={handleNext}>
         &#10095;
       </button>
