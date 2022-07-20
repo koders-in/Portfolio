@@ -1,6 +1,6 @@
 import React from 'react';
 import PortfolioCard from '../PortfolioCard/PortfolioCard';
-import './portfolio.css';
+import './Portfolio.css';
 
 function Portfolio() { 
   

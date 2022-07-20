@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactImageMagnify from "react-image-magnify";
-import ReactSlick from "react-slick";
+// import ReactSlick from "react-slick";
 import "./PortfolioCard.css";
 import AOS from "aos";
 

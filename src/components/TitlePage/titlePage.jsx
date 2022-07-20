@@ -1,5 +1,5 @@
 import React from "react";
-import "./titlePage.css";
+import "./TitlePage.css";
 import logo from "../../Assests/logo.png";
 import topRightCube from "../../Assests/tp-top-right-cube.svg";
 import midTopCenterCube from "../../Assests/tp-mid-top-cube.svg";

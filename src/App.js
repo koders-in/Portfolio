@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import About from ".././src/components/About/about";
-import TitlePage from ".././src/components/TitlePage/titlePage";
-import Footer from "./components/Footer/footer";
+import About from ".././src/components/About/About";
+import TitlePage from ".././src/components/TitlePage/TitlePage";
+import Footer from "./components/Footer/Footer";
 import KeyValues from "./components/KeyValues/KeyValues";
-import Portfolio from ".././src/components/Portfolio/portfolio";
+import Portfolio from ".././src/components/Portfolio/Portfolio";
 import SplashScreen from './components/SplashScreen/SplashScreen';
 
 
