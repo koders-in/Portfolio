@@ -1,0 +1,27 @@
+.Clients{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Clients .main-container{
+    background: aqua;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-container{
+    width: 100%; 
+}
+.Clients > h1{
+    color: white;
+    font-weight: 400;
+    color: white;
+    font-size: 36px;
+}
+.Clients > h1 > span{
+    font-weight: 900;
+    color: #17C3B7;
+}

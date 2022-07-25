@@ -4,6 +4,7 @@ import About from ".././src/components/About/About";
 import TitlePage from ".././src/components/TitlePage/TitlePage";
 import Footer from "./components/Footer/Footer";
 import KeyValues from "./components/KeyValues/KeyValues";
+import Clients from ".././src/components/Clients/Clients";
 import Portfolio from ".././src/components/Portfolio/Portfolio";
 import SplashScreen from './components/SplashScreen/SplashScreen';
 
@@ -28,14 +29,12 @@ function App() {
           <TitlePage  />
           <About />
           <KeyValues />
+          <Clients />
           <Portfolio />
           <Footer />
           </>
         )
       }
-      
-      
-      
     </div>
   );
 }
