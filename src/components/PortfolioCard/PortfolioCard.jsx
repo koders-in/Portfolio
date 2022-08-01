@@ -4,7 +4,7 @@ import ReactImageMagnify from "react-image-magnify";
 import "./PortfolioCard.css";
 import AOS from "aos";
 
-function PortfolioCard({ imgSrc, delay, classTitle, position, hidden }) {
+function PortfolioCard({ imgSrc, delay, classTitle, position, hidden, techStack }) {
 
   const [idx, setIdx] = useState(0);
   let hiddenClass = "";
@@ -58,7 +58,7 @@ function PortfolioCard({ imgSrc, delay, classTitle, position, hidden }) {
       <div className={"portfolio-card-container "}>
         <div className={"details " + classTitle}>
           <h1>{classTitle}</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, voluptate magnam illo autem sequi sed.</p>
+          <p>Teach Stack - {techStack}</p>
           <button className="pc-close" onClick={handleClose}>close</button>
         </div>
         <div className="img-zoom">
@@ -138,7 +138,7 @@ function PortfolioCard({ imgSrc, delay, classTitle, position, hidden }) {
         </div>
         
       </div>
-      <button className="pc-btn" onClick={handleClick} >view details</button>
+      <button className="pc-btn" onClick={handleClick}>view details</button>
     </div>
   );
 }

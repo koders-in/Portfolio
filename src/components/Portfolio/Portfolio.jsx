@@ -23,7 +23,7 @@ function Portfolio() {
           {
             arr.map(item => (
               
-              <PortfolioCard hidden={item.hidden} imgSrc={item.imgSrc} delay={item.delay} classTitle={item.classTitle} position={item.position} />
+              <PortfolioCard hidden={item.hidden} imgSrc={item.imgSrc} delay={item.delay} classTitle={item.classTitle} position={item.position} techStack={item.techStack} />
             ))
           }
             {/* <PortfolioCard hidden={false} imgSrc={["/pop-bot.png", "/hawa.png", "/Divine.png", "/Machina.png", "/squared.png", "/uc-toolbot.png"]}  delay="300" classTitle="pop-bot" position="right" />               

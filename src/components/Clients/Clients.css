@@ -1,27 +1,107 @@
-.Clients{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.Clients {
+  width: 100vw;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.Clients .main-container{
-    background: aqua;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+.Clients > h1 {
+  color: white;
+  font-weight: 400;
+  color: white;
+  font-size: 36px;
 }
-.logo-container{
-    width: 100%; 
+.Clients > h1 > span {
+  font-weight: 900;
+  color: #17c3b7;
 }
-.Clients > h1{
-    color: white;
-    font-weight: 400;
-    color: white;
-    font-size: 36px;
+.logo-container {
+  width: 100vw;
 }
-.Clients > h1 > span{
-    font-weight: 900;
-    color: #17C3B7;
+.logo-1 {
+  /* width:7rem; */
+  height: 7rem;
+  /* overflow: hidden; */
+  margin-right: 5rem;
+}
+.logo-1 img {
+  width: 100%;
+  height: 100%;
+}
+.logo-2 {
+  /* width:7rem; */
+  height: 7rem;
+  /* overflow: hidden; */
+  margin-right: 5rem;
+}
+.logo-2 img {
+  width: 100%;
+  height: 100%;
+}
+.marq-1 {
+  margin: 6rem 0rem 8rem 0rem;
+}
+.logo-2::before,
+.logo-2::after {
+  --scale: 0;
+  height: 25px;
+  position: absolute;
+  background: #1d2c48;
+  color: #17c3b7;
+  transform: translateY(-.5rem) scale(var(--scale));
+}
+.logo-1::before,
+.logo-1::after {
+  --scale: 0;
+  height: 25px;
+  position: absolute;
+  background: #1d2c48;
+  color: #17c3b7;
+  top: 0.25rem;
+  transform: translateY(-.5rem) scale(var(--scale));
+}
+.argon::before {
+  content: attr(data-tooltip);
+  border-radius: 0.3rem;
+  text-align: center;
+  max-width: 100%;
+  padding: 0.5rem;
+  top: 0.25rem;
+  width: max-content;
+}
+.lorem::before {
+  content: attr(data-tooltip);
+  border-radius: 0.3rem;
+  text-align: center;
+  max-width: 100%;
+  padding: 0.5rem;
+  width: max-content;
+}
+.squared-io::before {
+  content: attr(data-tooltip);
+  border-radius: 0.3rem;
+  text-align: center;
+  max-width: 100%;
+  padding: 0.5rem;
+  width: max-content;
+}
+.wrencho::before {
+  content: attr(data-tooltip);
+  border-radius: 0.3rem;
+  text-align: center;
+  max-width: 100%;
+  padding: 0.5rem;
+  width: max-content;
+}
+.logo-1:hover::before {
+  --scale: 1;
+}
+.logo-2:hover::before {
+  --scale: 1;
+}
+
+.marquee-container {
+  overflow-x: visible !important;
+  overflow-y: visible !important;
 }
