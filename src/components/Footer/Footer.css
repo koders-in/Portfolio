@@ -1,11 +1,13 @@
-.Footer {
+
+
+.Footer-container {
   background-color: #1d2c48;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-top: 10rem;
+  margin-top: 15rem;
 }
 
 .footer {
@@ -13,7 +15,7 @@
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
 .right-text a {
@@ -21,9 +23,13 @@
   z-index: 10;
   font-size: 22px;
   text-decoration: none;
-  border-bottom: 1px solid #17c3b7;
+  /* border-bottom: 1px solid #17c3b7; */
   width: fit-content;
   margin-bottom: 0.7rem;
+}
+
+.right-text a:hover {
+  border-bottom: 1px solid #17c3b7;
 }
 
 .right-text small {
@@ -31,51 +37,70 @@
   font-size: 12px;
 }
 
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 12rem;
+}
+
 .socials a {
   text-decoration: none;
   font-size: 25px;
-  margin-right: 0.7rem;
   color: white;
   border-bottom: 1px solid #17c3b7;
 }
 
-.ba-card {
+.ba-card, .ba-card-back {
   width: 202px;
   height: 191px;
   transition: all ease-out 0.3s;
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .ba-rectangle-1 {
   background: #17c3b7;
   transform: rotate(17.82deg);
   left: 27%;
-  top: -10%;
+  top: -15%;
   z-index: 1;
 }
 
 .ba-card:hover {
-  transform: translateY(-120px) rotate(-10deg);
+  transform: translateY(-100px) rotate(-10deg);
+}
+
+.ba-card h1 {
+  font-size: 24px;
+  display: none;
+}
+
+.ba-card-back h1 {
+  font-size: 24px;
 }
 
 .ba-rectangle-2 {
   background: #fff;
   transform: rotate(3.58deg);
   left: 32%;
-  top: -30%;
+  top: -40%;
 }
 
 .ba-rectangle-3 {
   background: #0d2156;
   transform: rotate(-20.64deg);
   left: 37%;
-  top: -20%;
+  top: -45%;
 }
 
 .ba-rectangle-4 {
   background: #9d9a9a;
   transform: rotate(-3.15deg);
-  top: -30%;
+  top: -25%;
   left: 47%;
   z-index: 2;
 }
@@ -84,18 +109,33 @@
   background: #17c3b7;
   transform: rotate(15.73deg);
   left: 49%;
-  top: -30%;
+  top: -45%;
 }
 
 .ba-rectangle-6 {
   background-color: #0f1830;
   transform: rotate(-18.91deg);
   left: 57%;
-  top: -30%;
+  top: -25%;
   z-index: 3;
 }
 .right-text {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .bottom-anime {
+    display: none;
+  }
+  .Footer-container {
+    margin-top: 7rem;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .socials {
+    margin-bottom: 1rem;
+  }
 }

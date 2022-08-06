@@ -4,7 +4,7 @@ import ReactImageMagnify from "react-image-magnify";
 import "./PortfolioCard.css";
 import AOS from "aos";
 
-function PortfolioCard({ imgSrc, delay, classTitle, position, hidden, techStack }) {
+function PortfolioCard({ imgSrc, delay, classTitle, title, position, hidden, techStack }) {
 
   const [idx, setIdx] = useState(0);
   let hiddenClass = "";
@@ -57,8 +57,15 @@ function PortfolioCard({ imgSrc, delay, classTitle, position, hidden, techStack 
       </button>
       <div className={"portfolio-card-container "}>
         <div className={"details " + classTitle}>
-          <h1>{classTitle}</h1>
-          <p>Teach Stack - {techStack}</p>
+          <h1>{title}</h1>
+          <ul className="tech-stack">
+            {
+              techStack.map(item => (
+                <p className="skill">{item}</p>
+              ))
+            }
+          </ul>
+          {/* <p>Teach Stack - {techStack}</p> */}
           <button className="pc-close" onClick={handleClose}>close</button>
         </div>
         <div className="img-zoom">
@@ -77,7 +84,9 @@ function PortfolioCard({ imgSrc, delay, classTitle, position, hidden, techStack 
                 height: 1100,
               },
               imageStyle: {
-                transition: "all 0.3s ease-out"
+                transition: "all 0.3s ease-out",
+                borderRadius: "10px",
+                filter: "drop-shadow(4.89751px 4.89751px 3px rgba(51, 223, 211, 0.2))"
               },
               enlargedImageStyle: {
                 objectFit: 'contain',
@@ -111,7 +120,9 @@ function PortfolioCard({ imgSrc, delay, classTitle, position, hidden, techStack 
               height: 1100,
             },
             imageStyle: {
-              transition: "all 0.3s ease-out"
+              transition: "all 0.3s ease-out",
+              borderRadius: "10px",
+              filter: "drop-shadow(4.89751px 4.89751px 3px rgba(51, 223, 211, 0.2))"
             },
             enlargedImageStyle: {
               objectFit: 'contain',

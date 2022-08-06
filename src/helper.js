@@ -73,7 +73,9 @@ export const arr = [
         delay: '200',
         classTitle: "kyro-tools",
         position: "left",
-        techStack: "ReactJS, ElectronJS, Docker, Python, NodeJS"
+        title: "Kyro Tools",
+        techStack: ["ReactJS", "ElectronJS", "Docker", "Python", "NodeJS"]
+        // techStack: "ReactJS, ElectronJS, Docker, Python, NodeJS"
     },
     {
         imgSrc: [divine3, divine2, divine1, divine4, divine5, divine6],
@@ -81,7 +83,8 @@ export const arr = [
         delay: '300',
         classTitle: "divine",
         position: "right",
-        techStack: "ReactJS, ElectronJS"
+        title: "Divine",
+        techStack: ["ReactJS", "ElectronJS"]
     },
     {
         imgSrc: [hawa1, hawa2, hawa3, hawa4, hawa5, hawa6],
@@ -89,7 +92,8 @@ export const arr = [
         delay: '200',
         classTitle: "hawa",
         position: "left",
-        techStack: "ReactJS, ElectronJS"
+        title: "Hawa",
+        techStack: ["ReactJS", "ElectronJS"]
     },
     {
         imgSrc: [spacebot4, spacebot1, spacebot2, spacebot3],
@@ -97,7 +101,8 @@ export const arr = [
         delay: '300',
         classTitle: "spacebot",
         position: "right",
-        techStack: "ReactJS"
+        title: "Spacebot",
+        techStack: ["ReactJS"]
     },
     
     {
@@ -106,15 +111,17 @@ export const arr = [
         delay: '200',
         classTitle: "genesis",
         position: "left",
-        techStack: "Typescript, ElectronJS"
+        title: "Genesis",
+        techStack: ["Typescript", "ElectronJS"]
     },
     {
         imgSrc: [jt1, jt2, jt3, jt4, jt5, jt6],
         hidden: false,
         delay: '300',
-        classTitle: "jupiter-toolbox",
+        classTitle: "jupiter-toolbot",
         position: "right",
-        techStack: "ReactJS, ElectronJS, NodeJS"
+        title: "Jupiter Toolbot",
+        techStack: ["ReactJS", "ElectronJS", "NodeJS"]
     },
     {
         imgSrc: [pluto3, pluto1, pluto2, pluto4],
@@ -122,7 +129,8 @@ export const arr = [
         delay: '200',
         classTitle: "pluto",
         position: "left",
-        techStack: "ReactJS, ElectronJS"
+        title: "Pluto",
+        techStack: ["ReactJS", "ElectronJS"]
     },
     {
         imgSrc: [uc1, uc2, uc3, uc4, uc5, uc6, uc7, uc8],
@@ -130,7 +138,8 @@ export const arr = [
         delay: '300',
         classTitle: "uc-toolbot",
         position: "right",
-        techStack: "ReactJS, ElectronJS, NodeJS"
+        title: "UC Toolbot",
+        techStack: ["ReactJS", "ElectronJS", "NodeJS"]
     },
     {
         imgSrc: [squared3, squared1, squared2],
@@ -138,7 +147,8 @@ export const arr = [
         delay: '200',
         classTitle: "squared",
         position: "left",
-        techStack: "ReactJS, ElectronJS"
+        title: "Squared",
+        techStack: ["ReactJS", "ElectronJS"]
     },
     {
         imgSrc: [arc1, arc2, arc3, arc4],
@@ -146,7 +156,8 @@ export const arr = [
         delay: '300',
         classTitle: "arc",
         position: "right",
-        techStack: "ReactJS, ElectronJS"
+        title: "Arc AIO",
+        techStack: ["ReactJS", "ElectronJS"]
     },
     {
         imgSrc: [aio1, aio2, aio3, aio4, aio5],
@@ -154,7 +165,8 @@ export const arr = [
         delay: '200',
         classTitle: "aio-world",
         position: "left",
-        techStack: "ReactJS"
+        title: "AIO World",
+        techStack: ["ReactJS"]
     },
     {
         imgSrc: [argon1, argon2, argon3, argon4],
@@ -162,7 +174,8 @@ export const arr = [
         delay: '300',
         classTitle: "argon",
         position: "right",
-        techStack: "ReactJS, ElectronJS"
+        title: "Argon",
+        techStack: ["ReactJS", "ElectronJS"]
     },
     {
         imgSrc: [epon1, epon2, epon3, epon4],
@@ -170,7 +183,8 @@ export const arr = [
         delay: '200',
         classTitle: "epon",
         position: "left",
-        techStack: "ReactJS, ElectronJS, Python, Docker"
+        title: "Epon NFT",
+        techStack: ["ReactJS", "ElectronJS", "Python", "Docker"]
     },
     {
         imgSrc: [popbot1, popbot2],
@@ -178,6 +192,7 @@ export const arr = [
         delay: '300',
         classTitle: "popbot",
         position: "right",
-        techStack: "HTML, CSS"
+        title: "Popbot",
+        techStack: ["HTML", "CSS"]
     }
 ]

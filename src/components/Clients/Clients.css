@@ -1,6 +1,5 @@
 .Clients {
   width: 100vw;
-  /* overflow: hidden; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,6 +48,7 @@
   position: absolute;
   background: #1d2c48;
   color: #17c3b7;
+  margin-top: 0.5rem;
   transform: translateY(-.5rem) scale(var(--scale));
 }
 .logo-1::before,
@@ -58,7 +58,7 @@
   position: absolute;
   background: #1d2c48;
   color: #17c3b7;
-  top: 0.25rem;
+  margin-top: 0.5rem;
   transform: translateY(-.5rem) scale(var(--scale));
 }
 .argon::before {
@@ -103,5 +103,5 @@
 
 .marquee-container {
   overflow-x: visible !important;
-  overflow-y: visible !important;
+  overflow-y: hidden;
 }
