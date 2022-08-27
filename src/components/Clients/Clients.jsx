@@ -1,8 +1,8 @@
 import React from "react";
 import "./Clients.css";
-import ReactTooltip from "react-tooltip";
 import Marquee from "react-fast-marquee";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 const Clients = () => {
   return (
     <div className="Clients">
@@ -56,13 +56,13 @@ const Clients = () => {
           <div className="logo-2 lorem" data-tooltip="Machina">
             <img src="/logo/icon-12.svg" alt="" />
           </div>
-          <div className="logo-2 lorem" data-tooltip="Pluto" >
+          <div className="logo-2 lorem" data-tooltip="Pluto">
             <img src="/logo/icon-13.svg" alt="" />
           </div>
           <div className="logo-2 lorem" data-tooltip="Popbot">
             <img src="/logo/icon-14.svg" alt="" />
           </div>
-          <div className="logo-2 squared-io" data-tooltip="Squared IO" >
+          <div className="logo-2 squared-io" data-tooltip="Squared IO">
             <img src="/logo/icon-15.svg" alt="" />
           </div>
           <div className="logo-2 argon" data-tooltip="UC Toolbot">

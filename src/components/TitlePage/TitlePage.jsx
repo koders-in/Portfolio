@@ -1,27 +1,27 @@
 import React from "react";
 import "./TitlePage.css";
-import logo from "../../Assests/logo.png";
-import topRightCube from "../../Assests/tp-top-right-cube.svg";
-import midTopCenterCube from "../../Assests/tp-mid-top-cube.svg";
-import arrowBig from "../../Assests/arrow-3d1.svg";
-import animeImg1 from "../../Assests/anime-img-1.svg";
-import animeImg2 from "../../Assests/anime-img-2.svg";
-import animeImg3 from "../../Assests/anime-img-3.svg";
-import hiddenCube2 from "../../Assests/hidden-by-img-2-anime.svg";
-import hiddenCube1 from "../../Assests/hidden-by-img-1-anime.svg";
-import bottomLeftCube from "../../Assests/tp-top-right-cube.svg";
-import bottomRightCube from "../../Assests/tp-bottom-right-cube.svg";
-import sd1 from "../../Assests/not-visible-sd.svg";
-import sd2 from "../../Assests/light-sd.svg";
-import sd3 from "../../Assests/dark-sd.svg";
+import logo from "../../assests/logo.png";
+import topRightCube from "../../assests/tp-top-right-cube.svg";
+import midTopCenterCube from "../../assests/tp-mid-top-cube.svg";
+import arrowBig from "../../assests/arrow-3d1.svg";
+import animeImg1 from "../../assests/anime-img-1.svg";
+import animeImg2 from "../../assests/anime-img-2.svg";
+import animeImg3 from "../../assests/anime-img-3.svg";
+import hiddenCube2 from "../../assests/hidden-by-img-2-anime.svg";
+import hiddenCube1 from "../../assests/hidden-by-img-1-anime.svg";
+import bottomLeftCube from "../../assests/tp-top-right-cube.svg";
+import bottomRightCube from "../../assests/tp-bottom-right-cube.svg";
+import sd1 from "../../assests/not-visible-sd.svg";
+import sd2 from "../../assests/light-sd.svg";
+import sd3 from "../../assests/dark-sd.svg";
 import TypeWriter from "typewriter-effect";
 import AOS from "aos";
+
 const titlePage = () => {
-  AOS.init(
-    {
-      once:true
-    }
-  );
+  AOS.init({
+    once: true,
+  });
+
   return (
     <div className="titlePage">
       <div className="tp-1">
@@ -32,17 +32,12 @@ const titlePage = () => {
       <img src={arrowBig} alt="" className="arrow-img" />
       <div className="tp-2">
         <img src={bottomLeftCube} alt="" className="blc" />
-        <div className="left-tp-2"
-        data-aos="fade-right"
-        data-aos-delay="500"
-        >
+        <div className="left-tp-2" data-aos="fade-right" data-aos-delay="500">
           <div className="content-div">
             <div className="inner-heading-1">
               <h1 className="typewriter">
-               <span>
-               WE ARE&nbsp;
-               </span>
-                <span className="auto-write" >
+                <span>WE ARE&nbsp;</span>
+                <span className="auto-write">
                   <TypeWriter
                     options={{
                       autoStart: true,
@@ -90,13 +85,8 @@ const titlePage = () => {
           </a>
         </section>
         <img src={hiddenCube1} alt="" className="hc-1" />
-        <div className="right-tp-2"
-         data-aos="fade-left"
-         data-aos-delay="500"
-        >
-          <div
-            className="anime-img-1"
-          >
+        <div className="right-tp-2" data-aos="fade-left" data-aos-delay="500">
+          <div className="anime-img-1">
             <img src={animeImg1} alt="" className="img-4" />
           </div>
           <div className="anime-img-2">
