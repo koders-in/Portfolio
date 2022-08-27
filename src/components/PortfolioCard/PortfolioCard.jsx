@@ -36,7 +36,7 @@ function PortfolioCard({
 
   const handlePrev = (e) => {
     e.preventDefault();
-    if (idx == 0) {
+    if (idx === 0) {
       setIdx(imgSrc.length - 1);
     } else {
       setIdx((prevIdx) => prevIdx - 1);
@@ -74,7 +74,7 @@ function PortfolioCard({
           </button>
         </div>
         <div className="img-zoom">
-          {position == "left" ? (
+          {position === "left" ? (
             <ReactImageMagnify
               {...{
                 enlargedImageContainerClassName: "zoom-container",
