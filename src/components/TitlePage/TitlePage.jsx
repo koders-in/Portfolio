@@ -16,10 +16,12 @@ import sd2 from "../../assests/light-sd.svg";
 import sd3 from "../../assests/dark-sd.svg";
 import TypeWriter from "typewriter-effect";
 import AOS from "aos";
+
 const titlePage = () => {
   AOS.init({
     once: true,
   });
+
   return (
     <div className="titlePage">
       <div className="tp-1">

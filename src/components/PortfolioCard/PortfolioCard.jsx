@@ -68,7 +68,6 @@ function PortfolioCard({
               <p className="skill">{item}</p>
             ))}
           </ul>
-          {/* <p>Teach Stack - {techStack}</p> */}
           <button className="pc-close" onClick={handleClose}>
             close
           </button>
@@ -78,82 +77,11 @@ function PortfolioCard({
             <ReactImageMagnify
               {...{
                 enlargedImageContainerClassName: "zoom-container",
-                smallImage: {
-                  alt: "",
-                  isFluidWidth: true,
-                  src: imgSrc[idx],
-                },
-                largeImage: {
-                  src: imgSrc[idx],
-                  width: 1900,
-                  height: 1100,
-                },
-                imageStyle: {
-                  transition: "all 0.3s ease-out",
-                  borderRadius: "10px",
-                  filter:
-                    "drop-shadow(4.89751px 4.89751px 3px rgba(51, 223, 211, 0.2))",
-                },
-                enlargedImageStyle: {
-                  objectFit: "contain",
-                },
-                enlargedImageContainerDimensions: {
-                  width: "100%",
-                  height: "150%",
-                },
-                lensStyle: {
-                  background: "hsla(0, 0%, 100%, .3)",
-                  border: "1px solid #ccc",
-                  width: "50px",
-                  height: "50px",
-                },
-                enlargedImageContainerStyle: {
-                  position: "absolute",
-                  zIndex: "10",
-                  backgroundColor: "black",
-                },
+                ...getCardProps(imgSrc, idx),
               }}
             />
           ) : (
-            <ReactImageMagnify
-              {...{
-                smallImage: {
-                  alt: "",
-                  isFluidWidth: true,
-                  src: imgSrc[idx],
-                },
-                largeImage: {
-                  src: imgSrc[idx],
-                  width: 1900,
-                  height: 1100,
-                },
-                imageStyle: {
-                  transition: "all 0.3s ease-out",
-                  borderRadius: "10px",
-                  filter:
-                    "drop-shadow(4.89751px 4.89751px 3px rgba(51, 223, 211, 0.2))",
-                },
-                enlargedImageStyle: {
-                  objectFit: "contain",
-                },
-                enlargedImageContainerDimensions: {
-                  width: "100%",
-                  height: "150%",
-                },
-                lensStyle: {
-                  background: "hsla(0, 0%, 100%, .3)",
-                  border: "1px solid #ccc",
-                  width: "50px",
-                  height: "50px",
-                },
-                enlargedImageContainerStyle: {
-                  position: "absolute",
-                  left: "-105%",
-                  zIndex: "10",
-                  backgroundColor: "black",
-                },
-              }}
-            />
+            <ReactImageMagnify {...{ ...getCardProps(imgSrc, idx) }} />
           )}
         </div>
       </div>
@@ -165,3 +93,41 @@ function PortfolioCard({
 }
 
 export default PortfolioCard;
+
+const getCardProps = (imgSrc, idx) => {
+  return {
+    smallImage: {
+      alt: "",
+      isFluidWidth: true,
+      src: imgSrc[idx],
+    },
+    largeImage: {
+      src: imgSrc[idx],
+      width: 1900,
+      height: 1100,
+    },
+    imageStyle: {
+      transition: "all 0.3s ease-out",
+      borderRadius: "10px",
+      filter: "drop-shadow(4.89751px 4.89751px 3px rgba(51, 223, 211, 0.2))",
+    },
+    enlargedImageStyle: {
+      objectFit: "contain",
+    },
+    enlargedImageContainerDimensions: {
+      width: "100%",
+      height: "150%",
+    },
+    lensStyle: {
+      background: "hsla(0, 0%, 100%, .3)",
+      border: "1px solid #ccc",
+      width: "50px",
+      height: "50px",
+    },
+    enlargedImageContainerStyle: {
+      position: "absolute",
+      zIndex: "10",
+      backgroundColor: "black",
+    },
+  };
+};
