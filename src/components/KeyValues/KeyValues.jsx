@@ -2,13 +2,12 @@ import React from "react";
 import KeyValueCard from "../KeyValueCard/KeyValueCard";
 import "./KeyValues.css";
 import AOS from "aos";
+
 function KeyValues() {
-  AOS.init(
-    {
-      duration: 500,
-      once:true
-    }
-  );
+  AOS.init({
+    duration: 500,
+    once: true,
+  });
   return (
     <div className="KeyValues">
       <div className="heading">

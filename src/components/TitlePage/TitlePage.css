@@ -1,7 +1,7 @@
 .titlePage {
   width: 100%;
   height: 120vh;
-  background-image: url("../../Assests/titlePageBg.svg");
+  background-image: url("../../assests/titlePageBg.svg");
   background-size: cover;
 }
 .tp-1 {
@@ -559,14 +559,12 @@
     animation-name: none;
     transform: matrix(0.89, 0.13, 0.2, 0.98, 0, 0) translate(-4rem, 4rem);
   }
-  .brc{
+  .brc {
     top: 105%;
   }
-  .anime-img-3{
+  .anime-img-3 {
     transform: matrix(0.89, -0.13, -0.15, 0.98, 0, 0) translate(-1rem, 4rem) !important;
   }
- 
-  
 }
 @media only screen and (max-width: 460px) {
   .tp-1 .img-2 {

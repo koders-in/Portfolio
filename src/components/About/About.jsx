@@ -1,40 +1,40 @@
 import React from "react";
 import "./About.css";
 import CountUp from "react-countup";
-import aboutTopMidCube from "../../Assests/about-top-mid-cube.svg";
-import animeImg5 from "../../Assests/anime-img-5.svg";
-import laptop from "../../Assests/laptop.png";
-import icon1 from "../../Assests/about-icon-1.svg";
-import icon2 from "../../Assests/about-icon-2.svg";
-import icon3 from "../../Assests/about-icon-3.png";
-import AOS from 'aos';
+import aboutTopMidCube from "../../assests/about-top-mid-cube.svg";
+import animeImg5 from "../../assests/anime-img-5.svg";
+import laptop from "../../assests/laptop.png";
+import icon1 from "../../assests/about-icon-1.svg";
+import icon2 from "../../assests/about-icon-2.svg";
+import icon3 from "../../assests/about-icon-3.png";
+import AOS from "aos";
 
 const about = () => {
-  AOS.init(
-    {
-      once:true
-    }
-  );
+  AOS.init({
+    once: true,
+  });
   return (
     <div className="about" id="about-id">
       <img src={aboutTopMidCube} alt="" className="atmc" />
       <div className="main-container">
-        <div className="left-container"
-        data-aos="fade-right"
-        data-aos-delay="200"
+        <div
+          className="left-container"
+          data-aos="fade-right"
+          data-aos-delay="200"
         >
           <img src={animeImg5} alt="" className="tilt-1" />
           <img src={laptop} alt="" className="laptop" />
         </div>
-        <div className="right-container"
-        data-aos="fade-left"
-        data-aos-delay="200"
+        <div
+          className="right-container"
+          data-aos="fade-left"
+          data-aos-delay="200"
         >
           <div className="about-child first">
             <img src={icon1} alt="" className="about-icons" />
             <div className="child-text-1">
               <span>
-                <CountUp end={450} duration={0.8} enableScrollSpy={true}/>
+                <CountUp end={450} duration={0.8} enableScrollSpy={true} />
               </span>
               <p>Clients</p>
             </div>
