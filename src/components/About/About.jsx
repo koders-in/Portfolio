@@ -1,12 +1,12 @@
 import React from "react";
 import "./About.css";
 import CountUp from "react-countup";
-import aboutTopMidCube from "../../assests/about-top-mid-cube.svg";
-import animeImg5 from "../../assests/anime-img-5.svg";
-import laptop from "../../assests/laptop.png";
-import icon1 from "../../assests/about-icon-1.svg";
-import icon2 from "../../assests/about-icon-2.svg";
-import icon3 from "../../assests/about-icon-3.png";
+import aboutTopMidCube from "../../Assests/about-top-mid-cube.svg";
+import animeImg5 from "../../Assests/anime-img-5.svg";
+import laptop from "../../Assests/laptop.png";
+import icon1 from "../../Assests/about-icon-1.svg";
+import icon2 from "../../Assests/about-icon-2.svg";
+import icon3 from "../../Assests/about-icon-3.png";
 import AOS from "aos";
 
 const about = () => {
