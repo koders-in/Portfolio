@@ -1,13 +1,16 @@
 import React from "react";
 import PortfolioCard from "../PortfolioCard/PortfolioCard";
 import "./Portfolio.css";
-import { arr } from "../../helper";
+import { arr, arr2 } from "../../helper";
+import { useState } from "react";
 
 function Portfolio() {
+  const [data, setData] = useState([...arr]);
   const handleClick = () => {
-    document.querySelectorAll(".hidden").forEach((item) => {
-      item.classList.remove("hidden");
-    });
+    setData((p) => [...p, ...arr2]);
+    // document.querySelectorAll(".hidden").forEach((item) => {
+    //   item.classList.remove("hidden");
+    // });
     document.querySelector(".portfolio-btn").style.display = "none";
   };
 
@@ -22,7 +25,7 @@ function Portfolio() {
         </p>
       </div>
       <div className="portfolio-cards">
-        {arr.map((item) => (
+        {data.map((item) => (
           <PortfolioCard
             key={item.title}
             hidden={item.hidden}
