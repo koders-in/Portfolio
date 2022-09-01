@@ -123,9 +123,11 @@ export const arr = [
     title: "Jupiter Toolbot",
     techStack: ["ReactJS", "ElectronJS", "NodeJS"],
   },
+];
+export const arr2 = [
   {
     imgSrc: [pluto3, pluto1, pluto2, pluto4],
-    hidden: true,
+    hidden: false,
     delay: "200",
     classTitle: "pluto",
     position: "left",
@@ -134,7 +136,7 @@ export const arr = [
   },
   {
     imgSrc: [uc1, uc2, uc3, uc4, uc5, uc6, uc7, uc8],
-    hidden: true,
+    hidden: false,
     delay: "300",
     classTitle: "uc-toolbot",
     position: "right",
@@ -143,7 +145,7 @@ export const arr = [
   },
   {
     imgSrc: [squared3, squared1, squared2],
-    hidden: true,
+    hidden: false,
     delay: "200",
     classTitle: "squared",
     position: "left",
@@ -152,7 +154,7 @@ export const arr = [
   },
   {
     imgSrc: [arc1, arc2, arc3, arc4],
-    hidden: true,
+    hidden: false,
     delay: "300",
     classTitle: "arc",
     position: "right",
@@ -161,7 +163,7 @@ export const arr = [
   },
   {
     imgSrc: [aio1, aio2, aio3, aio4, aio5],
-    hidden: true,
+    hidden: false,
     delay: "200",
     classTitle: "aio-world",
     position: "left",
@@ -170,7 +172,7 @@ export const arr = [
   },
   {
     imgSrc: [argon1, argon2, argon3, argon4],
-    hidden: true,
+    hidden: false,
     delay: "300",
     classTitle: "argon",
     position: "right",
@@ -179,7 +181,7 @@ export const arr = [
   },
   {
     imgSrc: [epon1, epon2, epon3, epon4],
-    hidden: true,
+    hidden: false,
     delay: "200",
     classTitle: "epon",
     position: "left",
@@ -188,7 +190,7 @@ export const arr = [
   },
   {
     imgSrc: [popbot1, popbot2],
-    hidden: true,
+    hidden: false,
     delay: "300",
     classTitle: "popbot",
     position: "right",
