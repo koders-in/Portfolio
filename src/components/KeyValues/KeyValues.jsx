@@ -22,26 +22,26 @@ function KeyValues() {
       <div className="cards">
         <KeyValueCard
           imgSrc="/icon1.png"
-          title="Responsive Services"
-          desc="We kreate 1:1 website designs."
+          title="Company backed"
+          desc="Unlike freelancers, we will stick until work is done"
           delay="200"
         />
         <KeyValueCard
           imgSrc="/icon2.png"
           title="One-stop Shop"
-          desc="Provides both front and backend services."
+          desc="Provides design, frontend and backend services"
           delay="300"
         />
         <KeyValueCard
           imgSrc="/icon3.png"
-          title="Client Satisfaction"
-          desc="Our clients are Our Boss."
+          title="Satisfaction"
+          desc="Quality delivery or 100% refund*"
           delay="400"
         />
         <KeyValueCard
           imgSrc="/icon4.png"
           title="Innovation"
-          desc="The soul of our Kompany is Kreation & Innovation."
+          desc="The soul of our Kompany is Trust & Integrity"
           delay="500"
         />
       </div>

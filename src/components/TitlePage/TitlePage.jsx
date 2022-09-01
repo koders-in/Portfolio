@@ -36,7 +36,7 @@ const titlePage = () => {
           <div className="content-div">
             <div className="inner-heading-1">
               <h1 className="typewriter">
-                <span>WE ARE&nbsp;</span>
+                <span>TRUSTED BY&nbsp; </span>
                 <span className="auto-write">
                   <TypeWriter
                     options={{
@@ -45,12 +45,14 @@ const titlePage = () => {
                     }}
                     onInit={(typewriter) => {
                       typewriter
-                        .typeString("KODERS")
+                        .typeString("INDIAN ARMY")
                         .pauseFor(1500)
                         .deleteAll()
-                        .typeString("KREATORS")
+                        .typeString("GERMAN GOVT")
                         .pauseFor(1500)
-
+                        .deleteAll()
+                        .typeString("THE BEST")
+                        .pauseFor(1500)
                         .deleteAll()
                         .start();
                     }}
@@ -59,13 +61,12 @@ const titlePage = () => {
               </h1>
             </div>
             <div className="inner-heading-2">
-              <p>We Kreate what you Kontemplate.</p>
+              <p>Infrastructure for high quality apps</p>
             </div>
             <div className="inner-paragraph">
               <p>
-                To cater all your software requirements, Koders is all you need!
-                Koders provides the best Kwality! With tremendous growth in IT
-                services, what makes Koders outstand others?
+               Supercharge your business with latest technology, industry level standards
+               and stable applications 
               </p>
             </div>
           </div>
