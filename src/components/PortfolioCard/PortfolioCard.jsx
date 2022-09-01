@@ -81,7 +81,15 @@ function PortfolioCard({
               }}
             />
           ) : (
-            <ReactImageMagnify {...{ ...getCardProps(imgSrc, idx) }} />
+            <ReactImageMagnify
+              {...{
+                ...getCardProps(imgSrc, idx),
+                enlargedImageContainerStyle: {
+                  left: "-105%",
+                  ...getCardProps(imgSrc, idx).enlargedImageContainerStyle,
+                },
+              }}
+            />
           )}
         </div>
       </div>
