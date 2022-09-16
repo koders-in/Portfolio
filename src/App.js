@@ -33,6 +33,7 @@ function App() {
           <Footer />
           <CookieConsent
             buttonText="Accept All"
+            cookieName="koders-portfolio"
             enableDeclineButton
             setDeclineCookie={false}
             declineButtonText="Decline"
