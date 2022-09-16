@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactImageMagnify from "react-image-magnify";
 import "./PortfolioCard.css";
 import AOS from "aos";
+import { useEffect } from "react";
 
 function PortfolioCard({
   imgSrc,
@@ -47,7 +48,10 @@ function PortfolioCard({
     hiddenClass = "hidden";
   }
 
-  AOS.init();
+  useEffect(() => {
+    AOS.init();
+  });
+
   return (
     <div
       className={"PortfolioCard " + hiddenClass}
@@ -64,8 +68,10 @@ function PortfolioCard({
         <div className={"details " + classTitle}>
           <h1>{title}</h1>
           <ul className="tech-stack">
-            {techStack.map((item) => (
-              <p className="skill">{item}</p>
+            {techStack.map((item, i) => (
+              <p className="skill" key={item + i}>
+                {item}
+              </p>
             ))}
           </ul>
           <button className="pc-close" onClick={handleClose}>

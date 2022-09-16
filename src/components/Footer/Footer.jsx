@@ -37,20 +37,6 @@ function Footer() {
         <div className="footer">
           <div className="socials">
             <a
-              target="_blank"
-              href="https://www.instagram.com/koders_in/"
-              rel="noreferrer"
-            >
-              <BsInstagram />
-            </a>
-            <a
-              rel="noreferrer"
-              href="https://www.facebook.com/kodersindia"
-              target="_blank"
-            >
-              <BsFacebook />
-            </a>
-            <a
               rel="noreferrer"
               href="https://twitter.com/KodersHQ"
               target="_blank"
@@ -70,6 +56,20 @@ function Footer() {
               target="_blank"
             >
               <BsLinkedin />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/koders_in/"
+              rel="noreferrer"
+            >
+              <BsInstagram />
+            </a>
+            <a
+              rel="noreferrer"
+              href="https://www.facebook.com/kodersindia"
+              target="_blank"
+            >
+              <BsFacebook />
             </a>
           </div>
           <div id="bottom-anime" className="bottom-anime">
