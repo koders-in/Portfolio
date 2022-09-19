@@ -1,16 +1,30 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import About from ".././src/components/About/About";
-import TitlePage from ".././src/components/TitlePage/TitlePage";
+import ReactGA from "react-ga";
 import Footer from "./components/Footer/Footer";
+import About from ".././src/components/About/About";
 import KeyValues from "./components/KeyValues/KeyValues";
 import Clients from ".././src/components/Clients/Clients";
 import Portfolio from ".././src/components/Portfolio/Portfolio";
+import TitlePage from ".././src/components/TitlePage/TitlePage";
 import SplashScreen from "./components/SplashScreen/SplashScreen";
-import CookieConsent from "react-cookie-consent";
+import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
+
+const COOKIE_NAME = "koders-portfolio";
 
 function App() {
   const [loading, setLoading] = useState(false);
+  const [userClick, setUserClick] = useState(false);
+  const isAccept = getCookieConsentValue(COOKIE_NAME);
+
+  useEffect(() => {
+    if (Boolean(isAccept)) {
+      const trackingID = process.env.REACT_APP_TRACKING_ID;
+      if (trackingID) {
+        ReactGA.initialize();
+      }
+    }
+  }, [isAccept, userClick]);
 
   useEffect(() => {
     setLoading(true);
@@ -18,6 +32,10 @@ function App() {
       setLoading(false);
     }, 3500);
   }, []);
+
+  const handleAccept = () => {
+    setUserClick(true);
+  };
 
   return (
     <div className="App">
@@ -37,7 +55,7 @@ function App() {
             enableDeclineButton
             setDeclineCookie={false}
             declineButtonText="Decline"
-            onAccept={() => {}}
+            onAccept={handleAccept}
             style={{
               background: "#1d2c48",
               fontSize: "14px",
@@ -57,8 +75,8 @@ function App() {
             }}
           >
             We use cookies to enhance your browsing experience, serve
-            personalized ads or content, and analyze our traffic. By clicking
-            'Accept All', you consent to our use of cookies.
+            personalized content, and analyze our traffic. By clicking 'Accept
+            All', you consent to our use of cookies.
           </CookieConsent>
         </>
       )}
