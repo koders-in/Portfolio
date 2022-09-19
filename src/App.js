@@ -21,7 +21,7 @@ function App() {
     if (Boolean(isAccept)) {
       const trackingID = process.env.REACT_APP_TRACKING_ID;
       if (trackingID) {
-        ReactGA.initialize();
+        ReactGA.initialize(trackingID);
       }
     }
   }, [isAccept, userClick]);
