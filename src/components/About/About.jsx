@@ -45,7 +45,7 @@ const about = () => {
               <span>
                 <CountUp end={890} duration={1} enableScrollSpy={true} />
               </span>
-              <p>Project Done</p>
+              <p>Projects Done</p>
             </div>
           </div>
           <div className="about-child third">
