@@ -1,5 +1,5 @@
 import React from "react";
-import PortfolioCard from "../PortfolioCard/PortfolioCard";
+import PortfolioCard from "../portfoliocard/PortfolioCard";
 import "./Portfolio.css";
 import { arr, arr2 } from "../../helper";
 import { useState } from "react";
