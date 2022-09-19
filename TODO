@@ -1,8 +1,0 @@
-Add meta tags for SEO
-Change folder name convention and as well as casing
-Update Readme file
-Move all images into src/Assests folder 
-export all components from single file as dictionary
-add aria labels for button, image links and other elements
-use useEffect for aio init so that aos don't run multiple times
-use css variable for color
