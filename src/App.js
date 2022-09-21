@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import ReactGA from "react-ga";
-import Footer from "./components/Footer/Footer";
-import About from ".././src/components/About/About";
-import KeyValues from "./components/KeyValues/KeyValues";
-import Clients from ".././src/components/Clients/Clients";
-import Portfolio from ".././src/components/Portfolio/Portfolio";
-import TitlePage from ".././src/components/TitlePage/TitlePage";
-import SplashScreen from "./components/SplashScreen/SplashScreen";
+import {
+  About,
+  Clients,
+  Footer,
+  KeyValues,
+  Portfolio,
+  SplashScreen,
+  TitlePage,
+} from "./components";
 import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 
 const COOKIE_NAME = "koders-portfolio";
