@@ -1,5 +1,5 @@
 import React from "react";
-import KeyValueCard from "../KeyValueCard/KeyValueCard";
+import { KeyValueCard } from "../../components";
 import "./KeyValues.css";
 import AOS from "aos";
 
