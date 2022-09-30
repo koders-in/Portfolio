@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./App.css";
+import "./App.scss";
 import ReactGA from "react-ga";
 import Footer from "./components/Footer/Footer";
 import About from ".././src/components/About/About";

@@ -1,0 +1,16 @@
+@import "../../App.scss";
+
+.KeyValueCard {
+  z-index: 1;
+  width: 22%;
+}
+
+.kvc-container h2 {
+  @include font(1.1em, $green, 500);
+}
+
+.kvc-container p {
+  @include font(16px, $white, 300) {
+    line-height: 1.5;
+  }
+}

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./Footer.css";
+import "./Footer.scss";
 import {
   BsInstagram,
   BsFacebook,

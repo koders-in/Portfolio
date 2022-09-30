@@ -1,5 +1,5 @@
 import React from "react";
-import "./SplashScreen.css";
+import "./SplashScreen.scss";
 import logo from "../../Assests/logo.png";
 
 function SplashScreen() {
