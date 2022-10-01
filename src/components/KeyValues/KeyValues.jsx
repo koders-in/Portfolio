@@ -1,5 +1,5 @@
 import React from "react";
-import KeyValueCard from "../KeyValueCard/KeyValueCard";
+import KeyValueCard from "../keyvaluecard/KeyValueCard";
 import "./KeyValues.css";
 import AOS from "aos";
 
@@ -22,7 +22,7 @@ function KeyValues() {
       <div className="cards">
         <KeyValueCard
           imgSrc="/icon1.png"
-          title="Company backed"
+          title="Company backend"
           desc="Unlike freelancers, we will stick until work is done"
           delay="200"
         />
