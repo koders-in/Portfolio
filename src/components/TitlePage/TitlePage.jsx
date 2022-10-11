@@ -1,5 +1,5 @@
 import React from "react";
-import "./TitlePage.css";
+import "./TitlePage.scss";
 import logo from "../../assets/logo.png";
 import topRightCube from "../../assets/tp-top-right-cube.svg";
 import midTopCenterCube from "../../assets/tp-mid-top-cube.svg";
@@ -65,8 +65,8 @@ const titlePage = () => {
             </div>
             <div className="inner-paragraph">
               <p>
-               Supercharge your business with latest technology, industry level standards
-               and stable applications 
+                Supercharge your business with latest technology, industry level
+                standards and stable applications
               </p>
             </div>
           </div>

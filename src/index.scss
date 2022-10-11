@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// variables
+$background-color: #040e27;
+$green: #17b0ac;
+$white: #ffffff;
+$background-secondary: #1d2c48;
+$gray: #ffffff99;
+$red: #ff0000;
+$blue: #0d2156;
+$light-gray: #9d9a9a;
+$dark-blue: #0f1830;
+$dark-blue-bg: #020212;
+$teal: rgba(51, 223, 211, 0.2);
+$black: #000000;
+
+// mixin
+@mixin flex-centerd(
+  $disp: flex,
+  $content: center,
+  $item: center,
+  $direction: row
+) {
+  display: $disp;
+  justify-content: $content;
+  align-items: $item;
+  flex-direction: $direction;
+  @content;
+}
+
+@mixin font($size: 14px, $color: white, $weight: 400) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+  @content;
+}
+
+@mixin common-utility(
+  $width: auto,
+  $height: auto,
+  $padding: 0 0 0 0,
+  $margin: 0 0 0 0
+) {
+  width: $width;
+  height: $height;
+  padding: $padding;
+  margin: $margin;
+}
+
+@mixin wh($width: 100%, $height: 100%) {
+  width: $width;
+  height: $height;
+}
+
+@mixin media($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}

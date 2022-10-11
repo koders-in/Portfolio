@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactImageMagnify from "react-image-magnify";
-import "./PortfolioCard.css";
+import "./PortfolioCard.scss";
 import AOS from "aos";
 import { useEffect } from "react";
 

@@ -1,6 +1,7 @@
 import React from "react";
 import KeyValueCard from "../KeyValueCard/KeyValueCard";
-import "./KeyValues.css";
+import "./KeyValues.scss";
+
 import AOS from "aos";
 
 function KeyValues() {

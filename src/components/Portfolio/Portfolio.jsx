@@ -1,6 +1,6 @@
 import React from "react";
-import PortfolioCard from "../portfoliocard/PortfolioCard";
-import "./Portfolio.css";
+import PortfolioCard from "../PortfolioCard/PortfolioCard";
+import "./Portfolio.scss";
 import { arr, arr2 } from "../../helper/helper";
 import { useState } from "react";
 

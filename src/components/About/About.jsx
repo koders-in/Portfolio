@@ -1,5 +1,5 @@
 import React from "react";
-import "./About.css";
+import "./About.scss";
 import CountUp from "react-countup";
 import aboutTopMidCube from "../../assets/about-top-mid-cube.svg";
 import animeImg5 from "../../assets/anime-img-5.svg";

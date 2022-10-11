@@ -1,5 +1,5 @@
 import React from "react";
-import "./Clients.css";
+import "./Clients.scss";
 import Marquee from "react-fast-marquee";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 

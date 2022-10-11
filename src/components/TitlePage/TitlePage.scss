@@ -1,15 +1,15 @@
+@import "../../App.scss";
+
 .titlePage {
   width: 100%;
   height: 120vh;
-  background-image: url('../../assets/titlePageBg.svg');
+  background-image: url("../../assets/titlePageBg.svg");
   background-size: cover;
 }
 .tp-1 {
   height: 12%;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-centerd(flex, space-between, center);
   overflow: hidden;
 }
 .tp-1 .img-1 {
@@ -21,19 +21,12 @@
   left: 93%;
   bottom: 91%;
   height: 10%;
-  animation-name: rotataor;
-  animation-duration: 30s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation: rotataor 30s linear infinite;
 }
 .img-3 {
   height: 8%;
   position: relative;
-  animation-name: blinker;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: alternate;
+  animation: blinker 3s linear infinite alternate;
 }
 /* adding styling to the arrow image */
 .arrow-img {
@@ -41,51 +34,37 @@
   left: 13%;
   width: 100px;
   top: 33%;
-  animation-name: blinkerTwo;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: alternate;
+  animation: blinkerTwo 2s linear infinite alternate;
 }
 /* adding css to the maine content div */
 .tp-2 {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  @include flex-centerd(flex, space-around, flex-start);
   height: 80%;
-  /* overflow: hidden; */
 }
 .tp-2 .left-tp-2 {
   display: flex;
-  color: white;
+  color: $white;
   width: 30%;
   margin-left: 13%;
   margin-top: 4%;
 }
 .left-tp-2 .content-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-centerd(flex, center, center, column);
   padding: 0% 7%;
 }
 .content-div .inner-heading-1 h1 {
-  font-weight: 400;
   width: 100%;
-  font-size: 1.5 rem;
+  @include font(1.5rem, $white, 400);
 }
 .content-div .inner-heading-1 h1 .auto-write {
-  color: #17c3b7;
-  font-weight: 700;
+  @include font(auto, $green, 700);
 }
 .content-div .inner-heading-2 {
   margin-top: -2rem;
 }
 .content-div .inner-heading-2 p {
-  color: #17c3b7;
-  font-weight: 500;
   font-style: normal;
-  font-size: 18px;
+  @include font(18px, $green, 500);
 }
 .content-div .inner-paragraph {
   line-height: 24px;
@@ -93,16 +72,13 @@
   margin-top: -1rem;
 }
 .content-div .inner-paragraph p {
-  font-size: 13px;
-  font-weight: 400;
-  color: white;
-  font-family: 'Poppins';
+  @include font(13px, $white, 400);
+  font-family: "Poppins";
   font-style: normal;
 }
 /* giving style to the right image containing div */
 .right-tp-2 {
-  display: flex;
-  flex-direction: column;
+  @include flex-centerd(flex, center, center, column);
   width: 30%;
   margin-right: 3%;
   margin-top: 3%;
@@ -120,14 +96,8 @@
   width: 60%;
   z-index: 5;
   transition: all 0.3s ease;
-  animation-name: animationOne;
   transform: translate(5vw, -30vh);
-  animation-duration: 0.8s;
-  animation-iteration-count: 1;
-  animation-delay: 0.7s;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-  animation-direction: normal;
+  animation: animationOne 0.8s linear 0.7s 1 normal forwards;
 }
 .anime-img-2:hover {
   transform: matrix(1, 0, 0, 0.9, 0, 0) translate(-90px, -75px);
@@ -155,11 +125,7 @@
   left: 0%;
   top: 86.5%;
   width: 8%;
-  animation-name: rotataor;
-  animation-duration: 30s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: reverse;
+  animation: rotataor 30s linear infinite reverse;
 }
 /* styling the scroll down arrows */
 .sd {
@@ -220,25 +186,15 @@
   top: 108.8%;
   left: 80%;
   width: 8%;
-  animation-name: moveX;
-  animation-duration: 30s;
-  animation-direction: normal;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation: moveX 30s linear infinite normal;
 }
 /* stling the 3rd animation image */
 .anime-img-3 {
   width: 22%;
   z-index: 5;
-  animation-name: animationTwo;
-  animation-duration: 0.8s;
-  animation-delay: 0.5s;
-  animation-direction: normal;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
   margin-left: 40%;
   transition: all 0.3s ease;
+  animation: animationTwo 0.8s linear 0.5s 1 normal forwards;
 }
 .anime-img-3:hover {
   transform: matrix(0.93, 0, 0, 0.97, 5, -100);
@@ -435,8 +391,7 @@
     flex-direction: column;
   }
   .tp-2 {
-    flex-direction: column;
-    justify-content: center;
+    @include flex-centerd(flex, center, center, column);
     height: auto;
     align-items: center;
   }
