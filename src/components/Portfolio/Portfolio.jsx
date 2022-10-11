@@ -1,7 +1,7 @@
 import React from "react";
 import PortfolioCard from "../PortfolioCard/PortfolioCard";
 import "./Portfolio.scss";
-import { arr, arr2 } from "../../helper";
+import { arr, arr2 } from "../../helper/helper";
 import { useState } from "react";
 
 function Portfolio() {
@@ -21,7 +21,7 @@ function Portfolio() {
         <h4>AUTOMATION: Rules the Roost</h4>
         <p>
           Automation is made easier with Koders. Take a look at the various
-          projects we’ve done
+          projects we've completed
         </p>
       </div>
       <div className="portfolio-cards">
