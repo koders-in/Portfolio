@@ -28,6 +28,7 @@ function App() {
         ReactGA.initialize(trackingID);
       }
     }
+    ReactGA.pageview(window.location.pathname);
   }, [isAccept, userClick]);
 
   useEffect(() => {
