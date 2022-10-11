@@ -1,7 +1,7 @@
 .titlePage {
   width: 100%;
   height: 120vh;
-  background-image: url("../../Assests/titlePageBg.svg");
+  background-image: url('../../assets/titlePageBg.svg');
   background-size: cover;
 }
 .tp-1 {
@@ -96,7 +96,7 @@
   font-size: 13px;
   font-weight: 400;
   color: white;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
 }
 /* giving style to the right image containing div */

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import ReactGA from "react-ga";
+
 import {
   About,
   Clients,
@@ -10,6 +11,7 @@ import {
   SplashScreen,
   TitlePage,
 } from "./components";
+
 import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 
 const COOKIE_NAME = "koders-portfolio";
