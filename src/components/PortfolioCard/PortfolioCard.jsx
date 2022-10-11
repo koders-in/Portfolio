@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactImageMagnify from "react-image-magnify";
-import "./PortfolioCard.css";
+import "./PortfolioCard.scss";
 import AOS from "aos";
 import { useEffect } from "react";
 
@@ -87,7 +87,15 @@ function PortfolioCard({
               }}
             />
           ) : (
-            <ReactImageMagnify {...{ ...getCardProps(imgSrc, idx) }} />
+            <ReactImageMagnify
+              {...{
+                ...getCardProps(imgSrc, idx),
+                enlargedImageContainerStyle: {
+                  left: "-105%",
+                  ...getCardProps(imgSrc, idx).enlargedImageContainerStyle,
+                },
+              }}
+            />
           )}
         </div>
       </div>

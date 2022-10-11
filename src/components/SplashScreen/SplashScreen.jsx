@@ -1,5 +1,5 @@
 import React from "react";
-import "./SplashScreen.css";
+import "./SplashScreen.scss";
 import logo from "../../Assests/logo.png";
 
 function SplashScreen() {
@@ -10,7 +10,7 @@ function SplashScreen() {
       </div>
       <div className="progressbar" />
       <h1>
-        VISION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KREATE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INSPIRE
+        VISION&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;KREATE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;INSPIRE
       </h1>
     </div>
   );

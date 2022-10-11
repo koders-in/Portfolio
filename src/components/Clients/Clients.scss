@@ -1,27 +1,20 @@
+@import "../../index.scss";
+
 .Clients {
   width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-centerd(column, center, center);
 }
 .Clients > h1 {
-  color: white;
-  font-weight: 400;
-  color: white;
-  font-size: 36px;
+  @include font(36px, $white, 400);
 }
 .Clients > h1 > span {
-  font-weight: 900;
-  color: #17c3b7;
+  @include font(36px, $green, 900);
 }
 .logo-container {
   width: 100vw;
 }
 .logo-1 {
-  /* width:7rem; */
   height: 7rem;
-  /* overflow: hidden; */
   margin-right: 5rem;
 }
 .logo-1 img {
@@ -29,14 +22,11 @@
   height: 100%;
 }
 .logo-2 {
-  /* width:7rem; */
   height: 7rem;
-  /* overflow: hidden; */
   margin-right: 5rem;
 }
 .logo-2 img {
-  width: 100%;
-  height: 100%;
+  @include wh();
 }
 .marq-1 {
   margin: 6rem 0rem 8rem 0rem;
@@ -46,20 +36,20 @@
   --scale: 0;
   height: 25px;
   position: absolute;
-  background: #1d2c48;
-  color: #17c3b7;
+  background: $background-secondary;
+  color: $green;
   margin-top: 0.5rem;
-  transform: translateY(-.5rem) scale(var(--scale));
+  transform: translateY(-0.5rem) scale(var(--scale));
 }
 .logo-1::before,
 .logo-1::after {
   --scale: 0;
   height: 25px;
   position: absolute;
-  background: #1d2c48;
-  color: #17c3b7;
+  background: $background-secondary;
+  color: $green;
   margin-top: 0.5rem;
-  transform: translateY(-.5rem) scale(var(--scale));
+  transform: translateY(-0.5rem) scale(var(--scale));
 }
 .argon::before {
   content: attr(data-tooltip);

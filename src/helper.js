@@ -75,7 +75,6 @@ export const arr = [
     position: "left",
     title: "Kyro Tools",
     techStack: ["ReactJS", "ElectronJS", "Docker", "Python", "NodeJS"],
-    // techStack: "ReactJS, ElectronJS, Docker, Python, NodeJS"
   },
   {
     imgSrc: [divine3, divine2, divine1, divine4, divine5, divine6],
@@ -84,7 +83,7 @@ export const arr = [
     classTitle: "divine",
     position: "right",
     title: "Divine",
-    techStack: ["ReactJS", "ElectronJS"],
+    techStack: ["ReactJS", "ElectronJS", "NodeJs", "Socket.io"],
   },
   {
     imgSrc: [hawa1, hawa2, hawa3, hawa4, hawa5, hawa6],
@@ -195,6 +194,6 @@ export const arr2 = [
     classTitle: "popbot",
     position: "right",
     title: "Popbot",
-    techStack: ["HTML", "CSS"],
+    techStack: ["HTML", "CSS", "ElectronJS"],
   },
 ];

@@ -1,0 +1,52 @@
+@import "../../App.scss";
+
+.splashscreen {
+  @include flex-centerd();
+  max-width: 100%;
+  height: 100vh;
+  background: $background-color;
+  overflow: hidden;
+}
+
+.logo {
+  @include flex-centerd();
+}
+.logo h2 {
+  margin: 0;
+  @include font(3rem, $green, 900);
+}
+.logo img {
+  height: 5rem;
+}
+.progressbar {
+  margin-top: 1rem;
+  height: 0.2rem;
+  width: 12rem;
+  background: $white;
+}
+.progressbar::after {
+  content: "";
+  width: 3rem;
+  height: 0.2rem;
+  background: $green;
+  display: block;
+  border-radius: 0.5rem;
+  animation: animation 1.5s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+}
+.splashscreen h1 {
+  position: absolute;
+  bottom: 1rem;
+  @include font(1.5rem, $white, 400);
+}
+
+@keyframes animation {
+  0% {
+    transform: translateX(0rem);
+  }
+  50% {
+    transform: translateX(9rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
