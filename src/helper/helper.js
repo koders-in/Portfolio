@@ -66,7 +66,8 @@ import epon4 from ".././assets/epon/epon4.png";
 import popbot1 from ".././assets/popbot/popbot1.png";
 import popbot2 from ".././assets/popbot/popbot2.png";
 
-export const arr = [{
+export const arr = [
+  {
     imgSrc: [kt1, kt2, kt3, kt5, kt6],
     hidden: false,
     delay: "200",
@@ -122,7 +123,8 @@ export const arr = [{
     techStack: ["ReactJS", "ElectronJS", "NodeJS"],
   },
 ];
-export const arr2 = [{
+export const arr2 = [
+  {
     imgSrc: [pluto3, pluto1, pluto2, pluto4],
     hidden: false,
     delay: "200",
