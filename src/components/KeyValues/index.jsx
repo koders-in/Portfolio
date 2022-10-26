@@ -1,6 +1,6 @@
 import React from "react";
-import KeyValueCard from "../KeyValueCard/KeyValueCard";
-import "./KeyValues.scss";
+import KeyValueCard from "../KeyValueCard";
+import "./style.scss";
 
 import AOS from "aos";
 

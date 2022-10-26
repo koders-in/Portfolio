@@ -1,5 +1,5 @@
 import React from "react";
-import "./KeyValueCard.scss";
+import "./style.scss";
 import AOS from "aos";
 
 function KeyValueCard({ imgSrc, title, desc, delay }) {
