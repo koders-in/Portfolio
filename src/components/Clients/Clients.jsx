@@ -11,8 +11,8 @@ const Clients = () => {
       </h1>
       <div className="logo-container">
         <Marquee loop={0} speed={50} gradientColor={false} className="marq-1">
-          <div className="logo-1 lorem" data-tooltip="First to Notify">
-            <img src="/logo/icon-1.png" alt="" />
+          <div style={{background:"white"}} className="logo-1 lorem" data-tooltip="First to Notify">
+            <img src="/logo/icon-1.svg" alt="" />
           </div>
 
           <div className="logo-1 lorem" data-tooltip="Instaride">
@@ -47,28 +47,28 @@ const Clients = () => {
           direction={"right"}
           className="marq-2"
         >
-          <div className="logo-2 lorem" data-tooltip="Argon AIO">
+          <div className="logo-1 lorem" data-tooltip="Argon AIO">
             <img src="/logo/icon-10.svg" alt="" />
           </div>
-          <div className="logo-2 lorem" data-tooltip="Arc AIO">
+          <div className="logo-1 lorem" data-tooltip="Arc AIO">
             <img src="/logo/icon-11.svg" alt="" />
           </div>
-          <div className="logo-2 lorem" data-tooltip="Machina">
+          <div className="logo-1 lorem" data-tooltip="Machina">
             <img src="/logo/icon-12.svg" alt="" />
           </div>
-          <div className="logo-2 lorem" data-tooltip="Pluto">
+          <div className="logo-1 lorem" data-tooltip="Pluto">
             <img src="/logo/icon-13.svg" alt="" />
           </div>
-          <div className="logo-2 lorem" data-tooltip="Popbot">
+          <div className="logo-1 lorem" data-tooltip="Popbot">
             <img src="/logo/icon-14.svg" alt="" />
           </div>
-          <div className="logo-2 squared-io" data-tooltip="Squared IO">
+          <div className="logo-1 squared-io" data-tooltip="Squared IO">
             <img src="/logo/icon-15.svg" alt="" />
           </div>
-          <div className="logo-2 argon" data-tooltip="UC Toolbot">
+          <div className="logo-1 argon" data-tooltip="UC Toolbot">
             <img src="/logo/icon-17.svg" alt="" />
           </div>
-          <div className="logo-2 wrencho" data-tooltip="Wrencho">
+          <div className="logo-1 wrencho" data-tooltip="Wrencho">
             <img src="/logo/icon-18.svg" alt="" />
           </div>
         </Marquee>
