@@ -1,10 +1,16 @@
 @import "../../App.scss";
 
 .PortfolioCard {
+  height: 40vh;
+  margin-top: 3rem;
   position: relative;
+  @include media(400px) {
+    height: 33vh;
+  }
 }
 
 .portfolio-card-container {
+  height: 100%;
   width: 100%;
   display: flex;
   scroll-behavior: smooth;
@@ -14,7 +20,29 @@
 
 .portfolio-card-container .img-zoom {
   scroll-snap-align: start;
+  height: 100%;
   width: 100%;
+}
+.mobile-card {
+  & > :nth-child(1) {
+    position: relative !important;
+    & > img {
+      display: block !important;
+      width: 35% !important;
+      margin: 0 auto;
+      @include media(400px) {
+        width: 45% !important;
+      }
+    }
+  }
+}
+.portfolio-card-container .img-zoom {
+  & > :nth-child(1) {
+    height: 100% !important;
+    & > img {
+      height: 100% !important;
+    }
+  }
 }
 
 .details {
@@ -99,6 +127,15 @@
 
 .next {
   right: 1rem;
+}
+
+.zoom-container {
+  div {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 @media only screen and (max-width: 960px) {

@@ -24,9 +24,9 @@ const titlePage = () => {
 
   return (
     <div className="titlePage">
-      <div className="tp-1">
-        <img src={logo} alt="" className="img-1" />
-        <img src={topRightCube} alt="" className="img-2" />
+      <div className="header">
+        <img src={logo} alt="" className="logo" />
+        <img src={topRightCube} alt="" className="header-img" />
       </div>
       <img src={midTopCenterCube} alt="" className="img-3" />
       <img src={arrowBig} alt="" className="arrow-img" />

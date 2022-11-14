@@ -2,9 +2,28 @@
 
 .titlePage {
   width: 100%;
+  position: relative;
   height: 120vh;
   background-image: url("../../assets/titlePageBg.svg");
   background-size: cover;
+
+  & > .header {
+    margin: 1rem 3rem 3rem 3rem;
+    @include flex-centerd(flex, space-between, center);
+    & > .logo {
+      height: 2.2rem;
+      @include media(400px) {
+        height: 1.8rem;
+      }
+    }
+    & > .header-img {
+      height: 3.2rem;
+      animation: rotataor 30s linear infinite;
+    }
+    @include media(400px) {
+      margin: 1rem;
+    }
+  }
 }
 .tp-1 {
   height: 12%;
