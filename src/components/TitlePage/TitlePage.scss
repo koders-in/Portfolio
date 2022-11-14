@@ -513,9 +513,9 @@
     flex-direction: column;
   }
   .arrow-img {
-    left: 7%;
+    left: 4%;
     width: 60px;
-    top: 15%;
+    top: 12%;
   }
   .right-tp-2 {
     width: 70%;
@@ -543,5 +543,8 @@
 @media only screen and (max-width: 460px) {
   .tp-1 .img-2 {
     left: 82%;
+  }
+  .inner-heading-1 h1 {
+    font-size: 2rem !important;
   }
 }
