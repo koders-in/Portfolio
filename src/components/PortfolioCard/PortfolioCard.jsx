@@ -12,6 +12,7 @@ function PortfolioCard({
   position,
   hidden,
   techStack,
+  isMobile
 }) {
   const [idx, setIdx] = useState(0);
   let hiddenClass = "";
@@ -78,21 +79,21 @@ function PortfolioCard({
             close
           </button>
         </div>
-        <div className="img-zoom">
+        <div className={`${isMobile?"mobile-card":""} img-zoom`}>
           {position === "left" ? (
             <ReactImageMagnify
               {...{
                 enlargedImageContainerClassName: "zoom-container",
-                ...getCardProps(imgSrc, idx),
+                ...getCardProps(imgSrc, idx,isMobile),
               }}
             />
           ) : (
             <ReactImageMagnify
               {...{
-                ...getCardProps(imgSrc, idx),
+                ...getCardProps(imgSrc, idx,isMobile),
                 enlargedImageContainerStyle: {
                   left: "-105%",
-                  ...getCardProps(imgSrc, idx).enlargedImageContainerStyle,
+                  ...getCardProps(imgSrc, idx,isMobile).enlargedImageContainerStyle,
                 },
               }}
             />
@@ -108,7 +109,7 @@ function PortfolioCard({
 
 export default PortfolioCard;
 
-const getCardProps = (imgSrc, idx) => {
+const getCardProps = (imgSrc, idx,isMobile) => {
   return {
     smallImage: {
       alt: "",
@@ -117,8 +118,8 @@ const getCardProps = (imgSrc, idx) => {
     },
     largeImage: {
       src: imgSrc[idx],
-      width: 1900,
-      height: 1100,
+      width: isMobile?1000: 1900,
+      height: isMobile?1000:1100,
     },
     imageStyle: {
       transition: "all 0.3s ease-out",
@@ -129,8 +130,8 @@ const getCardProps = (imgSrc, idx) => {
       objectFit: "contain",
     },
     enlargedImageContainerDimensions: {
-      width: "100%",
-      height: "150%",
+      width:isMobile?"300%": "100%",
+      height: isMobile?"180%":"150%",
     },
     lensStyle: {
       background: "hsla(0, 0%, 100%, .3)",

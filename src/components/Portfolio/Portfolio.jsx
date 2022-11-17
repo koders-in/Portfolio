@@ -8,9 +8,6 @@ function Portfolio() {
   const [data, setData] = useState([...arr]);
   const handleClick = () => {
     setData((p) => [...p, ...arr2]);
-    // document.querySelectorAll(".hidden").forEach((item) => {
-    //   item.classList.remove("hidden");
-    // });
     document.querySelector(".portfolio-btn").style.display = "none";
   };
 
@@ -35,6 +32,7 @@ function Portfolio() {
             position={item.position}
             techStack={item.techStack}
             title={item.title}
+            isMobile={item?.isMobile}
           />
         ))}
       </div>
