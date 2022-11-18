@@ -12,7 +12,7 @@ function PortfolioCard({
   position,
   hidden,
   techStack,
-  isMobile
+  isMobile,
 }) {
   const [idx, setIdx] = useState(0);
   let hiddenClass = "";
@@ -79,21 +79,22 @@ function PortfolioCard({
             close
           </button>
         </div>
-        <div className={`${isMobile?"mobile-card":""} img-zoom`}>
+        <div className={`${isMobile ? "mobile-card" : ""} img-zoom`}>
           {position === "left" ? (
             <ReactImageMagnify
               {...{
                 enlargedImageContainerClassName: "zoom-container",
-                ...getCardProps(imgSrc, idx,isMobile),
+                ...getCardProps(imgSrc, idx, isMobile),
               }}
             />
           ) : (
             <ReactImageMagnify
               {...{
-                ...getCardProps(imgSrc, idx,isMobile),
+                ...getCardProps(imgSrc, idx, isMobile),
                 enlargedImageContainerStyle: {
                   left: "-105%",
-                  ...getCardProps(imgSrc, idx,isMobile).enlargedImageContainerStyle,
+                  ...getCardProps(imgSrc, idx, isMobile)
+                    .enlargedImageContainerStyle,
                 },
               }}
             />
@@ -109,7 +110,7 @@ function PortfolioCard({
 
 export default PortfolioCard;
 
-const getCardProps = (imgSrc, idx,isMobile) => {
+const getCardProps = (imgSrc, idx, isMobile) => {
   return {
     smallImage: {
       alt: "",
@@ -118,8 +119,8 @@ const getCardProps = (imgSrc, idx,isMobile) => {
     },
     largeImage: {
       src: imgSrc[idx],
-      width: isMobile?1000: 1900,
-      height: isMobile?1000:1100,
+      width: isMobile ? 1000 : 1900,
+      height: isMobile ? 1000 : 1100,
     },
     imageStyle: {
       transition: "all 0.3s ease-out",
@@ -130,8 +131,8 @@ const getCardProps = (imgSrc, idx,isMobile) => {
       objectFit: "contain",
     },
     enlargedImageContainerDimensions: {
-      width:isMobile?"300%": "100%",
-      height: isMobile?"180%":"150%",
+      width: isMobile ? "300%" : "100%",
+      height: isMobile ? "180%" : "150%",
     },
     lensStyle: {
       background: "hsla(0, 0%, 100%, .3)",

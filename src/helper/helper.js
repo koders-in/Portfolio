@@ -75,8 +75,8 @@ import epon2 from ".././assets/epon/epon2.png";
 import epon3 from ".././assets/epon/epon3.png";
 import epon4 from ".././assets/epon/epon4.png";
 
-import popbot1 from ".././assets/popbot/popbot1.png";
-import popbot2 from ".././assets/popbot/popbot2.png";
+// import popbot1 from ".././assets/popbot/popbot1.png";
+// import popbot2 from ".././assets/popbot/popbot2.png";
 
 import instaride1 from ".././assets/instaride/instaride1.png";
 import instaride2 from ".././assets/instaride/instaride2.png";
@@ -214,15 +214,15 @@ export const arr2 = [
     title: "Epon NFT",
     techStack: ["ReactJS", "ElectronJS", "Python", "Docker"],
   },
-  {
-    imgSrc: [popbot1, popbot2],
-    hidden: false,
-    delay: "300",
-    classTitle: "popbot",
-    position: "right",
-    title: "Popbot",
-    techStack: ["HTML", "CSS", "ElectronJS"],
-  },
+  // {
+  //   imgSrc: [popbot1, popbot2],
+  //   hidden: false,
+  //   delay: "300",
+  //   classTitle: "popbot",
+  //   position: "right",
+  //   title: "Popbot",
+  //   techStack: ["HTML", "CSS", "ElectronJS"],
+  // },
   {
     imgSrc: [metamint1, metamint2, metamint3, metamint4],
     hidden: false,
@@ -232,6 +232,9 @@ export const arr2 = [
     title: "Metamint",
     techStack: ["ReactJS", "ElectronJS", "Python"],
   },
+];
+
+export const mobileAppOne = [
   {
     imgSrc: [instaride1, instaride2, instaride3, instaride4],
     hidden: false,
@@ -239,7 +242,14 @@ export const arr2 = [
     classTitle: "instaride",
     position: "right",
     title: "Instaride",
-    techStack: ["React Native", "Python"],
+    techStack: [
+      "React Native",
+      "Python",
+      "PostgreSQL",
+      "Docker",
+      "Graphql",
+      "Rust",
+    ],
     isMobile: true,
   },
   {
@@ -249,7 +259,9 @@ export const arr2 = [
     classTitle: "wrancho",
     position: "left",
     title: "Wrencho",
-    techStack: ["Flutter", "Python"],
+    techStack: ["Flutter", "Node", "SOLR", "PostgreSQL", "AWS S3"],
     isMobile: true,
   },
 ];
+
+export const mobileAppTwo = [];
