@@ -34,7 +34,7 @@ const about = () => {
             <img src={icon1} alt="" className="about-icons" />
             <div className="child-text-1">
               <span>
-                <CountUp end={450} duration={0.8} enableScrollSpy={true} />
+                <CountUp end={50} duration={0.8} enableScrollSpy={true} />
               </span>
               <p>Clients</p>
             </div>
@@ -43,7 +43,7 @@ const about = () => {
             <img src={icon2} alt="" className="about-icons" />
             <div className="child-text-2">
               <span>
-                <CountUp end={890} duration={1} enableScrollSpy={true} />
+                <CountUp end={260} duration={1} enableScrollSpy={true} />
               </span>
               <p>Project Done</p>
             </div>
@@ -52,9 +52,9 @@ const about = () => {
             <img src={icon3} alt="" className="about-icons" />
             <div className="child-text-3">
               <span>
-                <CountUp end={1000} duration={1.5} enableScrollSpy={true} />
+                <CountUp end={18} duration={1.5} enableScrollSpy={true} />
               </span>
-              <p>Cups Of Coffee</p>
+              <p>Countries</p>
             </div>
           </div>
         </div>
