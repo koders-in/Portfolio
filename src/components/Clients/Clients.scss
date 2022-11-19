@@ -18,6 +18,13 @@
   width: 7rem;
   overflow: hidden;
   margin-right: 5rem;
+  @include media(700px) {
+    width: 4rem;
+    margin-right: 3rem;
+  }
+  @include media(500px) {
+    width: 3rem;
+  }
 }
 .logo-1 img {
   width: 100%;
@@ -32,6 +39,9 @@
 }
 .marq-1 {
   margin: 6rem 0rem 8rem 0rem;
+  @include media(500px) {
+    margin: 3rem 0rem 4rem 0rem;
+  }
 }
 .logo-2::before,
 .logo-2::after {

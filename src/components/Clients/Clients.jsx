@@ -11,7 +11,11 @@ const Clients = () => {
       </h1>
       <div className="logo-container">
         <Marquee loop={0} speed={50} gradientColor={false} className="marq-1">
-          <div style={{background:"white"}} className="logo-1 lorem" data-tooltip="First to Notify">
+          <div
+            style={{ background: "white" }}
+            className="logo-1 lorem"
+            data-tooltip="First to Notify"
+          >
             <img src="/logo/icon-1.svg" alt="" />
           </div>
 

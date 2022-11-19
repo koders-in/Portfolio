@@ -4,8 +4,32 @@
   height: 45vh;
   margin-top: 3rem;
   position: relative;
+  @include media(1400px) {
+    height: 40vh;
+  }
+  @include media(1300px) {
+    height: 35vh;
+  }
+  @include media(1300px) {
+    height: 30vh;
+  }
+  @include media(1100px) {
+    height: 25vh;
+  }
+  @include media(900px) {
+    height: 21vh;
+  }
+  @include media(800px) {
+    height: 18vh;
+  }
+  @include media(560px) {
+    height: 30vh;
+  }
+  @include media(500px) {
+    height: 26vh;
+  }
   @include media(400px) {
-    height: 33vh;
+    height: 23vh;
   }
 }
 
@@ -69,12 +93,12 @@
 }
 
 .skill {
-  background-color: $white;
-  padding: 0.5rem 0.5rem;
+  background-color: $green;
+  padding: 0.5rem 1rem;
   border-radius: 50px;
   margin: 0.5rem;
-  width: 19% !important;
-  @include font(14px, $dark-blue-bg !important);
+  width: fit-content !important;
+  @include font(14px, $white !important);
 }
 
 .details h1 {

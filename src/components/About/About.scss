@@ -3,196 +3,77 @@
 .about {
   width: 100%;
   overflow: hidden;
-}
-/* styling the top middle cube */
-.atmc {
-  position: absolute;
-  top: 138%;
-  left: 46%;
-  animation: blinker 3s linear infinite alternate;
-}
-/* styling the first tilted image */
-.tilt-1 {
-  width: 25%;
-  margin-left: 43.6%;
-  transform: matrix(0.99, -0.13, -0.16, 0.99, 0, 0);
-  transition: all 0.3s ease;
-}
-/* styling the main container */
-.main-container {
-  @include flex-centerd(flex, space-evenly, center);
-  margin: 20vh 0 0 1.5vh;
-  width: 90vw;
-}
-/* styling the left container having the laptop */
-.left-container {
-  @include flex-centerd(flex, center, center, column);
-  padding-left: 4rem;
-}
-/* styling the laptop */
-.left-container .laptop {
-  width: 35vw;
-}
-/* styling the right container */
-.right-container {
-  margin-left: -10rem;
-  @include flex-centerd(flex, space-around, center, column) {
-    gap: 2rem;
-  }
-}
-/* styling the inner icons of the right container */
-.right-container .about-child {
-  @include flex-centerd();
-  width: 110%;
-}
-.about-child.first {
-  margin-left: -20px !important;
-}
-.about-child.first img {
-  width: 164px;
-  height: 156px;
-  padding-left: 0.6rem;
-}
-.about-child.second img {
-  width: 118px;
-  height: 118px;
-  padding-left: 2.3rem;
-}
-.about-child.third img {
-  width: 105px;
-  height: 105px;
-  padding-left: 3.5rem;
-}
-/* styling the text int the lhs of the icons */
-.child-text-1 {
-  padding-left: 3.2rem;
-}
-.child-text-1 span {
-  @include font(32px, $green, 600);
-}
-.child-text-1 p {
-  @include font(28px, $white);
-  margin: 0;
-}
-.child-text-2 {
-  margin-left: 2rem;
-}
-.child-text-2 span {
-  @include font(32px, $green, 600);
-}
-.child-text-2 p {
-  @include font(28px, $white);
-  margin: 0;
-}
-.child-text-3 {
-  margin-left: 1rem;
-  padding-top: 1rem;
-}
-.child-text-3 span {
-  @include font(32px, $green, 600);
-}
-.child-text-3 p {
-  @include font(28px, $white);
-  margin: 0;
-}
+  position: relative;
 
-/* use this animation for the blinking effect in the size of the cube */
-@keyframes blinker {
-  from {
-    transform: scale(0.7);
-    opacity: 0.7;
+  .about-container {
+    @include flex-centerd();
+    width: 80%;
+    margin: 12rem auto 0 auto;
+    gap: 10rem;
+    @include media(968px) {
+      margin: 5rem auto 0 auto;
+    }
+    @include media(824px) {
+      margin: 4rem auto 0 auto;
+      width: 90%;
+      gap: 6rem;
+    }
+    @include media(600px) {
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    & > .about-container-sec1 {
+      width: 50%;
+      @include media(474px) {
+        width: 90%;
+      }
+      & > img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    & > .about-container-sec2 {
+      width: 50%;
+      @include media(474px) {
+        width: 90%;
+        padding-left: 30%;
+      }
+      @include media(350px) {
+        padding-left: 22%;
+      }
+      @include media(300px) {
+        padding-left: 5%;
+      }
+      & > .about-box {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        & > img {
+          width: 20%;
+        }
+        & > div {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        & > div > p,
+        span {
+          font-size: 1.5em;
+          margin: 0;
+          @include media(350px) {
+            font-size: 1em;
+          }
+        }
+      }
+    }
   }
-  to {
-    transform: scale(2);
-    opacity: 1;
-  }
-}
 
-/* starts making the website responsive for different devices  */
-@media only screen and (max-width: 1160px) {
-  .atmc {
-    width: 8%;
-    top: 130%;
-  }
-  .tilt-1 {
-    margin-left: 37%;
-  }
-  .left-container {
-    padding-left: 4%;
-  }
-  .right-container {
-    margin-right: 2rem;
-  }
-}
-@media only screen and (max-width: 960px) {
-  .main-container {
-    @include flex-centerd(flex, center, center, column);
-    width: 100%;
-    margin-left: 0;
-    margin-bottom: 5rem;
-  }
-  .left-container {
-    width: 100%;
-    @include flex-centerd();
-    padding: 0;
-  }
-  .right-container {
-    width: 100%;
-    @include flex-centerd();
-    margin: 0;
-  }
-  .tilt-1 {
-    transform: matrix(0.89, 0.13, 0.2, 0.98, 0, 0) translate(-8rem, -1rem) !important;
-    margin-left: 0;
-    width: 30%;
-  }
-  .laptop {
-    width: 60vw !important;
-    margin-left: 4vw;
-  }
-  .right-container {
-    margin-left: -5vw;
-  }
-}
-@media only screen and (max-width: 560px) {
-  .atmc {
-    display: none;
-  }
-  .main-container {
-    margin-top: 30vh;
-  }
-  .laptop {
-    margin: 0;
-    width: 80vw !important;
-  }
-  .child-text-1 p {
-    font-size: 20px;
-  }
-  .child-text-1 {
-    padding-left: 2rem;
-  }
-  .child-text-2 p {
-    font-size: 20px;
-  }
-  .child-text-2 {
-    margin-left: 2.5rem;
-  }
-  .child-text-3 p {
-    font-size: 20px;
-  }
-  .child-text-3 {
-    padding-left: 1rem;
-  }
-  .about-child.second img {
-    padding-left: 0.5rem;
-  }
-  .about-child.third img {
-    padding-left: 1.5rem;
-  }
-  .tilt-1 {
-    transform: matrix(0.89, -0.13, -0.15, 0.98, 0, -110) translate(7rem, 0.5rem) !important;
-  }
-  .right-container {
-    display: block;
+  // ----------
+  .about-top-cube {
+    position: absolute;
+    top: 138%;
+    left: 46%;
+    animation: blinker 3s linear infinite alternate;
   }
 }

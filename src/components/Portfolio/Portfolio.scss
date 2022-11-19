@@ -32,6 +32,14 @@
   grid-row-gap: 3rem;
   width: 80%;
   margin-top: 5rem;
+  @include media(700px) {
+    width: 90%;
+    grid-row-gap: 1rem;
+    grid-column-gap: 3rem;
+  }
+  @include media(600px) {
+    width: 80%;
+  }
 }
 
 .portfolio-btn {
