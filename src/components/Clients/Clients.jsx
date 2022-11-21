@@ -3,6 +3,25 @@ import "./Clients.scss";
 import Marquee from "react-fast-marquee";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+const rowOne = [
+  { src: "/logo/icon-1.svg", tooltip: "First to Notify" },
+  { src: "/logo/icon-2.svg", tooltip: "Instaride" },
+  { src: "/logo/icon-3.svg", tooltip: "Jupiter Toolbox" },
+  { src: "/logo/icon-4.svg", tooltip: "Kyro Tool" },
+  { src: "/logo/icon-5.svg", tooltip: "Hawa UI" },
+  { src: "/logo/icon-6.svg", tooltip: "Gensis" },
+  { src: "/logo/icon-7.svg", tooltip: "Lorem" },
+  { src: "/logo/icon-8.svg", tooltip: "Divine" },
+  { src: "/logo/icon-9.svg", tooltip: "Bat Proxy" },
+  { src: "/logo/icon-11.svg", tooltip: "Argon AIO" },
+  { src: "/logo/icon-12.svg", tooltip: "Machina" },
+  { src: "/logo/icon-13.svg", tooltip: "Pluto" },
+  { src: "/logo/icon-14.svg", tooltip: "Popbot" },
+  { src: "/logo/icon-15.svg", tooltip: "Squared IO" },
+  { src: "/logo/icon-17.svg", tooltip: "UC Toolbot" },
+  { src: "/logo/icon-18.svg", tooltip: "Wrencho" },
+];
+
 const Clients = () => {
   return (
     <div className="Clients">
@@ -10,70 +29,47 @@ const Clients = () => {
         Our <span>Clients</span>
       </h1>
       <div className="logo-container">
-        <Marquee loop={0} speed={50} gradientColor={false} className="marq-1">
-          <div
-            style={{ background: "white" }}
-            className="logo-1 lorem"
-            data-tooltip="First to Notify"
-          >
-            <img src="/logo/icon-1.svg" alt="" />
-          </div>
-
-          <div className="logo-1 lorem" data-tooltip="Instaride">
-            <img src="/logo/icon-2.svg" alt="" />
-          </div>
-          <div className="logo-1 lorem" data-tooltip="Jupiter Toolbox">
-            <img src="/logo/icon-3.svg" alt="" />
-          </div>
-          <div className="logo-1 lorem" data-tooltip="Kyro Tool">
-            <img src="/logo/icon-4.svg" alt="" />
-          </div>
-          <div className="logo-1 lorem" data-tooltip="Hawa UI">
-            <img src="/logo/icon-5.svg" alt="" />
-          </div>
-          <div className="logo-1 lorem" data-tooltip="Gensis">
-            <img src="/logo/icon-6.svg" alt="" />
-          </div>
-          <div className="logo-1 lorem" data-tooltip="Lorem">
-            <img src="/logo/icon-7.svg" alt="" />
-          </div>
-          <div className="logo-1 lorem" data-tooltip="Divine">
-            <img src="/logo/icon-8.svg" alt="" />
-          </div>
-          <div className="logo-1 lorem" data-tooltip="Bat Proxy">
-            <img src="/logo/icon-9.svg" alt="" />
-          </div>
-        </Marquee>
         <Marquee
+          pauseOnHover={true}
           loop={0}
           speed={50}
           gradientColor={false}
-          direction={"right"}
-          className="marq-2"
+          className="marq-1"
         >
-          <div className="logo-1 lorem" data-tooltip="Argon AIO">
-            <img src="/logo/icon-10.svg" alt="" />
+          <div className="tech-container">
+            {rowOne.map((item, i) => (
+              <div key={i} className="logo-1 lorem" data-tooltip={item.tooltip}>
+                <img
+                  style={i === 0 ? { filter: "invert(1)" } : {}}
+                  alt=""
+                  className=""
+                  src={item.src}
+                  key={item.src}
+                />
+              </div>
+            ))}
           </div>
-          <div className="logo-1 lorem" data-tooltip="Arc AIO">
-            <img src="/logo/icon-11.svg" alt="" />
-          </div>
-          <div className="logo-1 lorem" data-tooltip="Machina">
-            <img src="/logo/icon-12.svg" alt="" />
-          </div>
-          <div className="logo-1 lorem" data-tooltip="Pluto">
-            <img src="/logo/icon-13.svg" alt="" />
-          </div>
-          <div className="logo-1 lorem" data-tooltip="Popbot">
-            <img src="/logo/icon-14.svg" alt="" />
-          </div>
-          <div className="logo-1 squared-io" data-tooltip="Squared IO">
-            <img src="/logo/icon-15.svg" alt="" />
-          </div>
-          <div className="logo-1 argon" data-tooltip="UC Toolbot">
-            <img src="/logo/icon-17.svg" alt="" />
-          </div>
-          <div className="logo-1 wrencho" data-tooltip="Wrencho">
-            <img src="/logo/icon-18.svg" alt="" />
+        </Marquee>
+        <Marquee
+          pauseOnHover={true}
+          loop={0}
+          speed={50}
+          gradientColor={false}
+          className="marq-1"
+          direction="right"
+        >
+          <div className="tech-container">
+            {rowOne.map((item, i) => (
+              <div key={i} className="logo-1 lorem" data-tooltip={item.tooltip}>
+                <img
+                  style={i === 0 ? { filter: "invert(1)" } : {}}
+                  alt=""
+                  className=""
+                  src={item.src}
+                  key={item.src}
+                />
+              </div>
+            ))}
           </div>
         </Marquee>
       </div>

@@ -7,6 +7,7 @@
 
   .about-container {
     @include flex-centerd();
+    padding-left: 13%;
     width: 80%;
     margin: 12rem auto 0 auto;
     gap: 10rem;
@@ -19,6 +20,7 @@
       gap: 6rem;
     }
     @include media(600px) {
+      padding-left: 0;
       gap: 2rem;
       flex-wrap: wrap;
     }
@@ -36,10 +38,10 @@
       width: 50%;
       @include media(474px) {
         width: 90%;
-        padding-left: 30%;
+        padding-left: 17%;
       }
       @include media(350px) {
-        padding-left: 22%;
+        padding-left: 17%;
       }
       @include media(300px) {
         padding-left: 5%;

@@ -16,7 +16,7 @@ function Portfolio() {
   return (
     <div className="Portfolio">
       <div className="portfolio-header">
-        <h1>PORTFOLIO</h1>
+        <h1>Portfolio</h1>
         <h4>AUTOMATION: Rules the Roost</h4>
         <p>
           Automation is made easier with Koders. Take a look at the various
@@ -38,7 +38,7 @@ function Portfolio() {
           />
         ))}
       </div>
-      {/* ---------- */}
+      <div style={{ height: "3rem" }}></div>
       <div className="portfolio-cards">
         {mobileApp.map((item) => (
           <PortfolioCard

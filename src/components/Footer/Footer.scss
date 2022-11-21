@@ -80,9 +80,15 @@
 
 .ba-rectangle-2 {
   background: $white;
+  color: white;
   transform: rotate(3.58deg);
   left: 32%;
   top: -40%;
+  &:hover {
+    & > h1 {
+      color: black;
+    }
+  }
 }
 
 .ba-rectangle-3 {
@@ -102,9 +108,15 @@
 
 .ba-rectangle-5 {
   background: $green;
+  color: $green;
   transform: rotate(15.73deg);
   left: 49%;
   top: -45%;
+  &:hover {
+    & > h1 {
+      color: white;
+    }
+  }
 }
 
 .ba-rectangle-6 {
@@ -118,7 +130,7 @@
   @include flex-centerd(flex, center, center, column);
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1164px) {
   .bottom-anime {
     display: none;
   }

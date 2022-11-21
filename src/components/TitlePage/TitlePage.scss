@@ -46,7 +46,7 @@
     position: absolute;
     left: 0%;
     top: 86.5%;
-    width: 8%;
+    height: 7.5%;
     animation: rotataor 30s linear infinite reverse;
   }
   .hc-1 {
@@ -61,8 +61,9 @@
   }
   .arrow-img {
     position: absolute;
+    z-index: -1;
     left: -10%;
-    width: 17%;
+    height: 80%;
     top: -18%;
     animation: blinkerTwo 2s linear infinite alternate;
     @include media(880px) {
@@ -76,9 +77,10 @@
   .brc {
     position: absolute;
     top: 108.8%;
-    left: 80%;
-    width: 8%;
+    // left: 80%;
+    height: 8%;
     animation: moveX 30s linear infinite normal;
+    animation: rotate 2s linear infinite;
   }
   // -------------
   .text-green {
@@ -86,7 +88,7 @@
   }
   // --------------
   .title-sec {
-    z-index: 5;
+    z-index: 4;
     @include flex-centerd();
     width: 85%;
     gap: 7rem;
@@ -105,9 +107,11 @@
     }
     @include media(726px) {
       flex-wrap: wrap;
+      gap: 3rem;
     }
     & > .title-sec1 {
       position: relative;
+      z-index: 5;
       width: 50%;
       @include media(726px) {
         width: 90%;
@@ -116,6 +120,7 @@
         width: 98%;
       }
       & > h2 {
+        z-index: 10;
         margin: 0;
         display: flex;
         justify-content: center;
@@ -129,6 +134,10 @@
       }
       & > h4 {
         margin: 0;
+        @include media(500px) {
+          margin: 0.4rem 0 0.9rem 0;
+          width: 98%;
+        }
       }
       & > p {
         font-size: 0.8em;
@@ -277,9 +286,17 @@
 
 @keyframes moveX {
   from {
-    transform: translateX(-1000%) rotate(0deg);
+    left: 0;
   }
   to {
-    transform: translateX(150%) rotate(360deg);
+    left: 100%;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

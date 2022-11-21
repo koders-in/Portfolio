@@ -92,22 +92,28 @@
 }
 @media only screen and (max-width: 560px) {
   .KeyValues {
-    margin-top: 0rem;
+    margin-top: 2rem;
+  }
+  .heading {
+    & > img {
+      display: none;
+    }
   }
   .heading h1 {
     font-size: 28px;
+    & > span {
+      font-size: 28px;
+    }
   }
   .bg img {
     display: none;
   }
   .cards {
     flex-direction: column;
+    margin-top: 3rem;
   }
   .KeyValueCard {
     width: 100%;
     margin-bottom: 3rem;
-  }
-  .kvc-container h2 {
-    font-size: 30px;
   }
 }

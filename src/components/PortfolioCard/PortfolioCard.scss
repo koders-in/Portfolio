@@ -82,6 +82,10 @@
   text-align: center;
   filter: drop-shadow(4.89751px 4.89751px 3px $teal);
   transition: all ease-in 0.3s;
+  @include media(920px) {
+    justify-content: start;
+    overflow: scroll;
+  }
 }
 
 .tech-stack {

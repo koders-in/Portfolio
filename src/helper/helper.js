@@ -200,7 +200,7 @@ export const arr2 = [
     imgSrc: [argon1, argon2, argon3, argon4],
     hidden: false,
     delay: "300",
-    classTitle: "argon",
+    classTitle: "argons",
     position: "right",
     title: "Argon",
     techStack: ["ReactJS", "ElectronJS"],
