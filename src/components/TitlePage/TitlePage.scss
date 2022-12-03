@@ -1,11 +1,23 @@
 @import "../../App.scss";
 
 .titlePage {
-  width: 100%;
   position: relative;
-  height: 120vh;
+  height: 115vh;
   background-image: url("../../assets/titlePageBg.svg");
   background-size: cover;
+
+  @include media(1672px) {
+    height: 100vh;
+  }
+  @include media(1489px) {
+    height: 90vh;
+  }
+  @include media(1489px) {
+    height: 80vh;
+  }
+  @include media(1200px) {
+    height: 70vh;
+  }
 
   & > .header {
     margin: 1rem 3rem 3rem 3rem;
@@ -24,160 +36,178 @@
       margin: 1rem;
     }
   }
-}
-.tp-1 {
-  height: 12%;
-  width: 100%;
-  @include flex-centerd(flex, space-between, center);
-  overflow: hidden;
-}
-.tp-1 .img-1 {
-  width: 8%;
-  margin-left: 5vw;
-}
-.tp-1 .img-2 {
-  position: absolute;
-  left: 93%;
-  bottom: 91%;
-  height: 10%;
-  animation: rotataor 30s linear infinite;
-}
-.img-3 {
-  height: 8%;
-  position: relative;
-  animation: blinker 3s linear infinite alternate;
-}
-/* adding styling to the arrow image */
-.arrow-img {
-  position: absolute;
-  left: 13%;
-  width: 100px;
-  top: 33%;
-  animation: blinkerTwo 2s linear infinite alternate;
-}
-/* adding css to the maine content div */
-.tp-2 {
-  @include flex-centerd(flex, space-around, flex-start);
-  height: 80%;
-}
-.tp-2 .left-tp-2 {
-  display: flex;
-  color: $white;
-  width: 30%;
-  margin-left: 13%;
-  margin-top: 4%;
-}
-.left-tp-2 .content-div {
-  @include flex-centerd(flex, center, center, column);
-  padding: 0% 7%;
-}
-.content-div .inner-heading-1 h1 {
-  width: 100%;
-  @include font(1.5rem, $white, 400);
-}
-.content-div .inner-heading-1 h1 .auto-write {
-  @include font(auto, $green, 700);
-}
-.content-div .inner-heading-2 {
-  margin-top: -2rem;
-}
-.content-div .inner-heading-2 p {
-  font-style: normal;
-  @include font(18px, $green, 500);
-}
-.content-div .inner-paragraph {
-  line-height: 24px;
-  padding: 0% 4%;
-  margin-top: -1rem;
-}
-.content-div .inner-paragraph p {
-  @include font(13px, $white, 400);
-  font-family: "Poppins";
-  font-style: normal;
-}
-/* giving style to the right image containing div */
-.right-tp-2 {
-  @include flex-centerd(flex, center, center, column);
-  width: 30%;
-  margin-right: 3%;
-  margin-top: 3%;
-}
-.anime-img-1 {
-  width: 100%;
-  z-index: 2;
-  transition: all 0.3s ease-in-out;
-}
-.anime-img-1 .img-4 {
-  object-fit: cover;
-  width: 100%;
-}
-.anime-img-2 {
-  width: 60%;
-  z-index: 5;
-  transition: all 0.3s ease;
-  transform: translate(5vw, -30vh);
-  animation: animationOne 0.8s linear 0.7s 1 normal forwards;
-}
-.anime-img-2:hover {
-  transform: matrix(1, 0, 0, 0.9, 0, 0) translate(-90px, -75px);
+  // ---------------
+  .img-3 {
+    height: 8%;
+    position: relative;
+    animation: blinker 3s linear infinite alternate;
+  }
+  .blc {
+    position: absolute;
+    left: 0%;
+    top: 86.5%;
+    height: 7.5%;
+    animation: rotataor 30s linear infinite reverse;
+  }
+  .hc-1 {
+    position: absolute;
+    top: 24%;
+    left: 86%;
+  }
+  .hc-2 {
+    position: absolute;
+    top: 92.5%;
+    left: 55.8%;
+  }
+  .arrow-img {
+    position: absolute;
+    z-index: -1;
+    left: -10%;
+    height: 80%;
+    top: -18%;
+    animation: blinkerTwo 2s linear infinite alternate;
+    @include media(880px) {
+      width: 12%;
+    }
+    @include media(880px) {
+      left: -4%;
+      top: -12%;
+    }
+  }
+  .brc {
+    position: absolute;
+    top: 108.8%;
+    // left: 80%;
+    height: 8%;
+    animation: moveX 30s linear infinite normal;
+    animation: rotate 2s linear infinite;
+  }
+  // -------------
+  .text-green {
+    color: $green;
+  }
+  // --------------
+  .title-sec {
+    z-index: 4;
+    @include flex-centerd();
+    width: 85%;
+    gap: 7rem;
+    margin: 0 auto;
+    @include media(1160px) {
+      width: 90%;
+      gap: 5rem;
+    }
+    @include media(968px) {
+      width: 90%;
+      gap: 1rem;
+    }
+    @include media(880px) {
+      width: 95%;
+      gap: 0.4rem;
+    }
+    @include media(726px) {
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+    & > .title-sec1 {
+      position: relative;
+      z-index: 5;
+      width: 50%;
+      @include media(726px) {
+        width: 90%;
+      }
+      @include media(410px) {
+        width: 98%;
+      }
+      & > h2 {
+        z-index: 10;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        font-size: 1.8em;
+        @include media(880px) {
+          font-size: 1.5rem;
+        }
+        @include media(360px) {
+          display: block;
+        }
+      }
+      & > h4 {
+        margin: 0;
+        @include media(500px) {
+          margin: 0.4rem 0 0.9rem 0;
+          width: 98%;
+        }
+      }
+      & > p {
+        font-size: 0.8em;
+        width: 90%;
+        margin: 0.6rem auto;
+      }
+    }
+    & > .title-sec2 {
+      position: relative;
+      width: 50%;
+      z-index: 6;
+      @include media(726px) {
+        width: 90%;
+      }
+      & > :nth-child(1) {
+        z-index: 10;
+        width: 80%;
+      }
+      & > .title-sec2-img1 {
+        position: absolute;
+        width: 60%;
+        animation: moveDown1 1s ease forwards;
+        @include media(726px) {
+          display: none;
+        }
+      }
+      & > .title-sec2-img2 {
+        position: absolute;
+        width: 40%;
+        animation: moveDown2 1.2s ease forwards;
+        @include media(726px) {
+          display: none;
+        }
+      }
+      & > .title-sec2-img3 {
+        position: absolute;
+        width: 30%;
+        animation: moveDown3 1.4s ease forwards;
+        @include media(726px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .down-btn {
+    width: 1rem;
+    margin-left: 30%;
+    margin-top: 10rem;
+    @include media(726px) {
+      display: none;
+    }
+    & > img {
+      display: block;
+    }
+    & > a {
+      & > :nth-child(1) {
+        animation: fadeOut 0.8s ease 0s infinite;
+      }
+      & > :nth-child(2) {
+        animation: fadeOut 0.8s ease 0.5s infinite;
+      }
+      & > :nth-child(3) {
+        animation: fadeOut 1s ease 3s infinite;
+      }
+    }
+  }
 }
 
-.anime-img-2 .img-5 {
-  object-fit: cover;
-  width: 100%;
-}
-/* styling the hidden cube 1 */
-.hc-1 {
-  position: absolute;
-  top: 24%;
-  left: 86%;
-}
-/* styling the hidden cube 2 */
-.hc-2 {
-  position: absolute;
-  top: 92.5%;
-  left: 55.8%;
-}
-/* styling to the bottom left cube */
-.blc {
-  position: absolute;
-  left: 0%;
-  top: 86.5%;
-  width: 8%;
-  animation: rotataor 30s linear infinite reverse;
-}
-/* styling the scroll down arrows */
-.sd {
-  position: absolute;
-  top: 87%;
-  left: 33%;
-}
-#scroll-down a {
-  padding-top: 80px;
-}
-#scroll-down a span {
-  position: absolute;
-  top: 0%;
-  animation: sdb07 3s infinite;
-  opacity: 0;
-  box-sizing: border-box;
-  transition: all 5s;
-}
-#scroll-down a span:nth-of-type(1) {
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-}
-#scroll-down a span:nth-of-type(2) {
-  top: 16px;
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-}
-#scroll-down a span:nth-of-type(3) {
-  top: 32px;
-  -webkit-animation-delay: 0.6s;
-  animation-delay: 0.6s;
-}
-@-webkit-keyframes sdb07 {
+// ------------
+@keyframes fadeOut {
   0% {
     opacity: 0;
   }
@@ -188,54 +218,43 @@
     opacity: 0;
   }
 }
-@keyframes sdb07 {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-/* styling the bottom right cube */
-.brc {
-  position: absolute;
-  top: 108.8%;
-  left: 80%;
-  width: 8%;
-  animation: moveX 30s linear infinite normal;
-}
-/* stling the 3rd animation image */
-.anime-img-3 {
-  width: 22%;
-  z-index: 5;
-  margin-left: 40%;
-  transition: all 0.3s ease;
-  animation: animationTwo 0.8s linear 0.5s 1 normal forwards;
-}
-.anime-img-3:hover {
-  transform: matrix(0.93, 0, 0, 0.97, 5, -100);
-}
-.img-6 {
-  object-fit: cover;
-  width: 100%;
-}
-
-/* this animation is  used for the rotating of the cubes */
-@keyframes rotataor {
+@keyframes moveDown1 {
   from {
-    opacity: 1;
-    transform: scale(1);
-    transform: rotate(0deg);
+    left: 0%;
+    top: 0%;
+    transform: matrix(0, 0, 0, 0, 0, 0);
   }
   to {
-    transform: rotate(360deg);
+    left: -10%;
+    top: 80%;
+    transform: matrix(0.89, -0.18, 0.58, 0.98, 0, 0);
+  }
+}
+@keyframes moveDown2 {
+  from {
+    left: 0%;
+    top: 0%;
+    transform: matrix(0, 0, 0, 0, 0, 0);
+  }
+  to {
+    left: -35%;
+    top: 170%;
+    transform: matrix(0.93, 0.21, -0.42, 0.97, 0, 0);
+  }
+}
+@keyframes moveDown3 {
+  from {
+    left: 0%;
+    top: 0%;
+    transform: matrix(0, 0, 0, 0, 0, 0);
+  }
+  to {
+    left: -40%;
+    top: 250%;
+    transform: matrix(0.99, -0.13, -0.16, 0.99, 0, 0);
   }
 }
 
-/* use this animation for the blinking effect in the size of the cube */
 @keyframes blinker {
   from {
     transform: scale(1);
@@ -246,305 +265,38 @@
     opacity: 0.8;
   }
 }
-/* this animation is used in the arrow image near the we are koders */
+@keyframes rotataor {
+  from {
+    opacity: 1;
+    transform: scale(1);
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @keyframes blinkerTwo {
   from {
     transform: none;
   }
   to {
-    transform: translate(15px, 15px);
-  }
-}
-.typewriter {
-  display: flex;
-  justify-content: flex-end;
-}
-/* this animation is used to move the cube in the x-axis */
-@keyframes moveX {
-  from {
-    transform: translateX(-1000%) rotate(0deg);
-  }
-  to {
-    transform: translateX(150%) rotate(360deg);
-  }
-}
-/* this animation is used to animate the images  */
-@keyframes animationOne {
-  from {
-    transform: translate(5vw, -35vh);
-    opacity: 0.9;
-  }
-  to {
-    transform: matrix(0.89, -0.18, 0.58, 0.98, 0, 0) translate(-90px, -75px);
-    opacity: 1;
-    width: 65%;
-    z-index: 5;
-    transition: all 0.3s ease;
-  }
-}
-@keyframes animationTwo {
-  from {
-    transform: translate(21vw, -85vh);
-  }
-  to {
-    transform: matrix(0.93, 0.21, -0.42, 0.97, 5, -100) translate(0px, -22%);
-    width: 20%;
-    z-index: 5;
-    margin-left: 40%;
-    transition: all 0.3s ease;
+    transform: translate(7px, 7px);
   }
 }
 
-/* responsiveness media queries starts here */
-@media only screen and (max-width: 1460px) {
-  .tp-1 .img-2 {
-    left: 91%;
+@keyframes moveX {
+  from {
+    left: 0;
   }
-  .tp-2 .left-tp-2 {
-    width: 40%;
-  }
-  .hc-1 {
-    left: 88%;
+  to {
+    left: 100%;
   }
 }
-@media only screen and (max-width: 1360px) {
-  .tp-1 .img-2 {
-    left: 90%;
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
-  .arrow-img {
-    left: 13%;
-    width: 100px;
-    top: 29.5%;
-  }
-}
-@media only screen and (max-width: 1260px) {
-  .tp-1 .img-2 {
-    height: 8%;
-  }
-  .arrow-img {
-    left: 11%;
-  }
-  .tp-2 .left-tp-2 {
-    margin-left: 10%;
-  }
-}
-@media only screen and (max-width: 1160px) {
-  .tp-1 .img-2 {
-    left: 92%;
-  }
-  .titlePage {
-    height: 105vh;
-  }
-  .hc-1 {
-    left: 87%;
-    top: 22%;
-  }
-  .tp-1 {
-    height: 10%;
-    left: 88%;
-  }
-  .tp-2 .left-tp-2 {
-    margin-left: 1% !important;
-  }
-  .arrow-img {
-    left: 4%;
-    width: 80px;
-    top: 28.5%;
-  }
-  .right-tp-2 {
-    margin-right: 0%;
-  }
-  .content-div .inner-heading-1 h1 {
-    font-size: 2rem;
-  }
-  .sd {
-    left: 27%;
-  }
-  .hc-2 {
-    top: 70%;
-    left: 53%;
-  }
-  .anime-img-3 {
-    margin-top: 5%;
-  }
-  .tp-1 .img-1 {
-    width: 8%;
-    height: 29%;
-    margin-left: 7vw;
-  }
-}
-@media only screen and (max-width: 1060px) {
-  .tp-1 .img-2 {
-    height: 8%;
-  }
-  .tp-2 .left-tp-2 {
-    width: 50%;
-  }
-  .hc-1 {
-    left: 82%;
-    height: 12%;
-    top: 19%;
-  }
-  .hc-1 {
-    display: none;
-  }
-  .sd {
-    left: 29%;
-  }
-  .hc-2 {
-    display: none;
-  }
-}
-@media only screen and (max-width: 960px) {
-  .tp-1 .img-2 {
-    height: 5%;
-    left: 89%;
-  }
-  .img-3 {
-    height: 6%;
-  }
-  .blc {
-    width: 10%;
-  }
-  .titlePage {
-    flex-direction: column;
-  }
-  .tp-2 {
-    @include flex-centerd(flex, center, center, column);
-    height: auto;
-    align-items: center;
-  }
-  .tp-2 .left-tp-2 {
-    width: 80% !important;
-    margin-left: 0%;
-    margin-top: 0%;
-  }
-  .inner-heading-1 h1 {
-    font-size: 2.5rem !important;
-  }
-  .content-div .inner-heading-2 p {
-    font-size: 22px;
-  }
-  .content-div .inner-paragraph p {
-    font-size: 15.5px;
-  }
-  .arrow-img {
-    top: 20%;
-    left: 14.5%;
-  }
-  .content-div .inner-paragraph {
-    line-height: 26px;
-  }
-  /* styling the right div in the title page */
-  .right-tp-2 {
-    width: 50%;
-    margin-top: 5%;
-  }
-  .sd {
-    left: 50%;
-  }
-  .anime-img-2 {
-    width: 60%;
-    transition: all 0.3s ease;
-    animation-name: none;
-    transform: matrix(0.89, 0.13, 0.2, 0.98, 0, 0) translate(-5rem, 2rem);
-  }
-  .anime-img-3 {
-    width: 30% !important;
-    animation-name: none;
-    transform: matrix(0.89, -0.13, -0.15, 0.98, 0, 0) translate(9rem, 4rem) !important;
-  }
-  .img-1 {
-    width: 10.5% !important;
-    height: 21% !important;
-    margin-left: 8vw !important;
-  }
-  .about-child.first {
-    margin-left: -40px !important;
-  }
-}
-@media only screen and (max-width: 860px) {
-  .tp-1 .img-2 {
-    height: 6%;
-  }
-  .tp-2 .left-tp-2 {
-    width: 50%;
-  }
-  .hc-1 {
-    display: none;
-  }
-}
-@media only screen and (max-width: 760px) {
-  .tp-1 .img-2 {
-    left: 87%;
-  }
-}
-@media only screen and (max-width: 660px) {
-  .tp-1 .img-2 {
-    left: 87%;
-  }
-}
-@media only screen and (max-width: 560px) {
-  .tp-1 .img-2 {
-    height: 5%;
-    left: 85%;
-  }
-  .tp-1 {
-    justify-content: center;
-  }
-  .tp-1 .img-1 {
-    width: 7.5rem !important;
-    height: 2rem !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  .img-3 {
-    display: none;
-  }
-  .content-div {
-    padding: 0 !important;
-  }
-  .inner-heading-1 {
-    display: flex;
-    flex-direction: column;
-  }
-  .typewriter {
-    display: flex;
-    flex-direction: column;
-  }
-  .arrow-img {
-    left: 4%;
-    width: 60px;
-    top: 12%;
-  }
-  .right-tp-2 {
-    width: 70%;
-  }
-  .blc {
-    top: 93%;
-    left: 3%;
-  }
-  .sd {
-    left: 45%;
-  }
-  .anime-img-2 {
-    width: 50%;
-    transition: all 0.3s ease;
-    animation-name: none;
-    transform: matrix(0.89, 0.13, 0.2, 0.98, 0, 0) translate(-4rem, 4rem);
-  }
-  .brc {
-    top: 105%;
-  }
-  .anime-img-3 {
-    transform: matrix(0.89, -0.13, -0.15, 0.98, 0, 0) translate(-1rem, 4rem) !important;
-  }
-}
-@media only screen and (max-width: 460px) {
-  .tp-1 .img-2 {
-    left: 82%;
-  }
-  .inner-heading-1 h1 {
-    font-size: 2rem !important;
+  to {
+    transform: rotate(360deg);
   }
 }

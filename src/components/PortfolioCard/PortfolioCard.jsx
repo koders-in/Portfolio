@@ -17,14 +17,16 @@ function PortfolioCard({
   const [idx, setIdx] = useState(0);
   let hiddenClass = "";
 
+  const [showDetails, setShowDetails] = useState(false);
+
   const handleClick = (e) => {
     e.preventDefault();
-    document.querySelector(`.${classTitle}`).style.display = "flex";
-  };
-
-  const handleClose = (e) => {
-    e.preventDefault();
-    document.querySelector(`.${classTitle}`).style.display = "none";
+    if (showDetails) {
+      document.querySelector(`.${classTitle}`).style.display = "none";
+    } else {
+      document.querySelector(`.${classTitle}`).style.display = "flex";
+    }
+    setShowDetails(!showDetails);
   };
 
   const handleNext = (e) => {
@@ -75,9 +77,6 @@ function PortfolioCard({
               </p>
             ))}
           </ul>
-          <button className="pc-close" onClick={handleClose}>
-            close
-          </button>
         </div>
         <div className={`${isMobile ? "mobile-card" : ""} img-zoom`}>
           {position === "left" ? (
@@ -102,7 +101,7 @@ function PortfolioCard({
         </div>
       </div>
       <button className="pc-btn" onClick={handleClick}>
-        view details
+        {showDetails ? "close" : "view details"}
       </button>
     </div>
   );

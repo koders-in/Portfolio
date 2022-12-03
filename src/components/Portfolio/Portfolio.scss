@@ -1,16 +1,25 @@
 @import "../../App.scss";
 
 .Portfolio {
-  margin-top: 8rem;
   @include flex-centerd(flex, center, center, column);
+  margin-top: 3rem;
+  @include media(560px) {
+    margin-top: 8rem;
+  }
 }
 
 .portfolio-header {
   @include flex-centerd(flex, center, center, column);
+  @include media(500px) {
+    margin-top: 3rem;
+  }
 }
 
 .portfolio-header h1 {
-  @include font(25px, $white, 400);
+  @include font(36px, $white, 400);
+  @include media(560px) {
+    font-size: 28px;
+  }
 }
 
 .portfolio-header h4 {
@@ -31,7 +40,14 @@
   grid-column-gap: 6rem;
   grid-row-gap: 3rem;
   width: 80%;
-  margin-top: 5rem;
+  @include media(700px) {
+    width: 90%;
+    grid-row-gap: 1rem;
+    grid-column-gap: 3rem;
+  }
+  @include media(600px) {
+    width: 80%;
+  }
 }
 
 .portfolio-btn {
