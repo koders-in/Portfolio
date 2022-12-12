@@ -25,7 +25,7 @@ function Footer() {
       el.classList.toggle("ba-card-hover");
     };
     const onMouseOut = () => handleToggle();
-    document.querySelectorAll(".skill-card").forEach((el) => {
+    document.querySelectorAll(".skill-card").forEach((el, i) => {
       el?.addEventListener("mouseover", () => onMouseOver(el));
       el?.addEventListener("mouseout", onMouseOut);
     });
@@ -78,7 +78,7 @@ function Footer() {
                 Web Applications
               </h1>
             </div>
-            <div className="ba-rectangle-2 ba-card-back skill-card">
+            <div className="ba-rectangle-2 ba-card-back">
               <h1 className="skill2">Software Development</h1>
             </div>
             <div className="ba-rectangle-3 ba-card skill-card">
@@ -91,7 +91,7 @@ function Footer() {
                 Desktop Applications
               </h1>
             </div>
-            <div className="ba-rectangle-5 ba-card-back skill-card">
+            <div className="ba-rectangle-5 ba-card-back">
               <h1 className="skill5">Discord Bots</h1>
             </div>
             <div className="ba-rectangle-6 ba-card skill-card">

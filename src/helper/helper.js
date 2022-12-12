@@ -104,6 +104,42 @@ export const arr = [
     techStack: ["ReactJS", "ElectronJS", "Docker", "Python", "NodeJS"],
   },
   {
+    imgSrc: [arc1, arc2, arc3, arc4],
+    hidden: false,
+    delay: "300",
+    classTitle: "arc",
+    position: "right",
+    title: "Arc AIO",
+    techStack: ["ReactJS", "ElectronJS"],
+  },
+  {
+    imgSrc: [epon1, epon2, epon3, epon4],
+    hidden: false,
+    delay: "200",
+    classTitle: "epon",
+    position: "left",
+    title: "Epon NFT",
+    techStack: ["ReactJS", "ElectronJS", "Python", "Docker"],
+  },
+  {
+    imgSrc: [metamint1, metamint2, metamint3, metamint4],
+    hidden: false,
+    delay: "300",
+    classTitle: "metamint",
+    position: "right",
+    title: "Metamint",
+    techStack: ["ReactJS", "ElectronJS", "Python"],
+  },
+  {
+    imgSrc: [jt1, jt2, jt3, jt4, jt5, jt6],
+    hidden: false,
+    delay: "300",
+    classTitle: "jupiter-toolbot",
+    position: "right",
+    title: "Jupiter Toolbot",
+    techStack: ["ReactJS", "ElectronJS", "NodeJS"],
+  },
+  {
     imgSrc: [divine3, divine2, divine1, divine4, divine5, divine6],
     hidden: false,
     delay: "300",
@@ -141,17 +177,6 @@ export const arr = [
     techStack: ["Typescript", "ElectronJS"],
   },
   {
-    imgSrc: [jt1, jt2, jt3, jt4, jt5, jt6],
-    hidden: false,
-    delay: "300",
-    classTitle: "jupiter-toolbot",
-    position: "right",
-    title: "Jupiter Toolbot",
-    techStack: ["ReactJS", "ElectronJS", "NodeJS"],
-  },
-];
-export const arr2 = [
-  {
     imgSrc: [pluto3, pluto1, pluto2, pluto4],
     hidden: false,
     delay: "200",
@@ -160,6 +185,8 @@ export const arr2 = [
     title: "Pluto",
     techStack: ["ReactJS", "ElectronJS"],
   },
+];
+export const arr2 = [
   {
     imgSrc: [uc1, uc2, uc3, uc4, uc5, uc6, uc7, uc8],
     hidden: false,
@@ -179,15 +206,6 @@ export const arr2 = [
     techStack: ["ReactJS", "ElectronJS"],
   },
   {
-    imgSrc: [arc1, arc2, arc3, arc4],
-    hidden: false,
-    delay: "300",
-    classTitle: "arc",
-    position: "right",
-    title: "Arc AIO",
-    techStack: ["ReactJS", "ElectronJS"],
-  },
-  {
     imgSrc: [aio1, aio2, aio3, aio4, aio5],
     hidden: false,
     delay: "200",
@@ -204,24 +222,6 @@ export const arr2 = [
     position: "right",
     title: "Argon",
     techStack: ["ReactJS", "ElectronJS"],
-  },
-  {
-    imgSrc: [epon1, epon2, epon3, epon4],
-    hidden: false,
-    delay: "200",
-    classTitle: "epon",
-    position: "left",
-    title: "Epon NFT",
-    techStack: ["ReactJS", "ElectronJS", "Python", "Docker"],
-  },
-  {
-    imgSrc: [metamint1, metamint2, metamint3, metamint4],
-    hidden: false,
-    delay: "300",
-    classTitle: "metamint",
-    position: "right",
-    title: "Metamint",
-    techStack: ["ReactJS", "ElectronJS", "Python"],
   },
 ];
 

@@ -1,18 +1,18 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import "./App.scss";
 import ReactGA from "react-ga";
 
-import {
-  About,
-  Clients,
-  Footer,
-  KeyValues,
-  Portfolio,
-  SplashScreen,
-  TitlePage,
-} from "./components";
-
 import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
+import OurClients from "./components/Clients/OurClients";
+
+const About = React.lazy(() => import("./components/About/About"));
+const Footer = React.lazy(() => import("./components/Footer/Footer"));
+const KeyValues = React.lazy(() => import("./components/KeyValues/KeyValues"));
+const Portfolio = React.lazy(() => import("./components/Portfolio/Portfolio"));
+const SplashScreen = React.lazy(() =>
+  import("./components/SplashScreen/SplashScreen")
+);
+const TitlePage = React.lazy(() => import("./components/TitlePage/TitlePage"));
 
 const COOKIE_NAME = "koders-portfolio";
 
@@ -35,7 +35,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 10);
+    });
   }, []);
 
   const handleAccept = () => {
@@ -47,11 +47,11 @@ function App() {
       {loading ? (
         <SplashScreen />
       ) : (
-        <>
+        <Suspense fallback={<div>Loading...</div>}>
           <TitlePage />
           <About />
           <KeyValues />
-          <Clients />
+          <OurClients />
           <Portfolio />
           <Footer />
           <CookieConsent
@@ -83,7 +83,7 @@ function App() {
             personalized content, and analyze our traffic. By clicking 'Accept
             All', you consent to our use of cookies.
           </CookieConsent>
-        </>
+        </Suspense>
       )}
     </div>
   );

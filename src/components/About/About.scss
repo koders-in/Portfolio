@@ -51,6 +51,9 @@
         align-items: center;
         gap: 1rem;
         margin-bottom: 1.5rem;
+        &>.stats{
+          display: flex;
+        }
         & > img {
           width: 20%;
         }
@@ -66,6 +69,11 @@
           margin: 0;
           @include media(350px) {
             font-size: 1em;
+          }
+        }
+        &>.stats{
+          &>span{
+            color: white;
           }
         }
       }

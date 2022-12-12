@@ -43,12 +43,15 @@ const about = () => {
                   // style={i === 0 ? { height: "6rem" } : {}}
                 />
                 <div>
-                  <CountUp
-                    className=""
-                    end={item.value}
-                    duration={0.8}
-                    enableScrollSpy={true}
-                  />
+                  <div className="stats">
+                    <CountUp
+                      className=""
+                      end={item.value}
+                      duration={0.8}
+                      enableScrollSpy={true}
+                    />
+                    <span className="plus-icon">+</span>
+                  </div>
                   <p>{item.text}</p>
                 </div>
               </div>

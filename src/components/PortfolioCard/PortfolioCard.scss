@@ -5,13 +5,13 @@
   margin-top: 3rem;
   position: relative;
   @include media(1400px) {
+    height: 45vh;
+  }
+  @include media(1300px) {
     height: 40vh;
   }
-  @include media(1300px) {
+  @include media(1200px) {
     height: 35vh;
-  }
-  @include media(1300px) {
-    height: 30vh;
   }
   @include media(1100px) {
     height: 25vh;
