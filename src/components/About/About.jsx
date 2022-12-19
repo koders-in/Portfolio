@@ -3,9 +3,9 @@ import "./About.scss";
 import CountUp from "react-countup";
 import aboutTopMidCube from "../../assets/about-top-mid-cube.svg";
 import laptop from "../../assets/laptop.svg";
-import icon1 from "../../assets/clients.svg";
-import icon2 from "../../assets/about-project.svg";
-import icon3 from "../../assets/countries.svg";
+import icon1 from "../../assets/clients.webp";
+import icon2 from "../../assets/about-project.webp";
+import icon3 from "../../assets/countries.webp";
 import AOS from "aos";
 
 const about = () => {

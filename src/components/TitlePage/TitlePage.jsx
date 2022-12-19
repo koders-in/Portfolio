@@ -4,7 +4,7 @@ import logo from "../../assets/logo.png";
 import topRightCube from "../../assets/tp-top-right-cube.svg";
 import midTopCenterCube from "../../assets/tp-mid-top-cube.svg";
 import arrowBig from "../../assets/arrow-3d1.svg";
-import animeImg1 from "../../assets/anime-img-1.svg";
+import animeImg1 from "../../assets/anime-img-1.webp";
 import animeImg2 from "../../assets/anime-img-2.svg";
 import animeImg3 from "../../assets/anime-img-3.svg";
 import hiddenCube2 from "../../assets/hidden-by-img-2-anime.svg";
