@@ -3,9 +3,9 @@ import "./About.scss";
 import CountUp from "react-countup";
 import aboutTopMidCube from "../../assets/about-top-mid-cube.svg";
 import laptop from "../../assets/laptop.svg";
-import icon1 from "../../assets/clients.svg";
-import icon2 from "../../assets/about-project.svg";
-import icon3 from "../../assets/countries.svg";
+import icon1 from "../../assets/clients.webp";
+import icon2 from "../../assets/about-project.webp";
+import icon3 from "../../assets/countries.webp";
 import AOS from "aos";
 
 const about = () => {
@@ -43,12 +43,15 @@ const about = () => {
                   // style={i === 0 ? { height: "6rem" } : {}}
                 />
                 <div>
-                  <CountUp
-                    className=""
-                    end={item.value}
-                    duration={0.8}
-                    enableScrollSpy={true}
-                  />
+                  <div className="stats">
+                    <CountUp
+                      className=""
+                      end={item.value}
+                      duration={0.8}
+                      enableScrollSpy={true}
+                    />
+                    <span className="plus-icon">+</span>
+                  </div>
                   <p>{item.text}</p>
                 </div>
               </div>

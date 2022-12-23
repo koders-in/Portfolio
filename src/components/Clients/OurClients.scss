@@ -1,0 +1,43 @@
+@import "../../index.scss";
+
+.our-clients{
+    &>h1{
+        @include font(36px, $white, 400);
+        &>span{
+            @include font(36px, $green, 900);
+        }
+    }
+
+    .marquee{
+        display: flex;
+        justify-content: space-around;
+    }
+    .logo-container{
+        position: relative;
+        &>div{
+            color: white;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .logo-container-img{
+        padding: 20px 0;
+        margin: 0 2rem;
+        width: 10rem;
+        height: 10rem;
+        @include media(1000px){
+            width: 8rem;
+            height: 8rem;
+        }
+        @include media(768px){
+            width: 5rem;
+            height: 5rem;
+        }
+        @include media(600px){
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+}

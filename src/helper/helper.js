@@ -18,17 +18,17 @@ import divine4 from ".././assets/divine/divine4.png";
 import divine5 from ".././assets/divine/divine5.png";
 import divine6 from ".././assets/divine/divine6.png";
 
-import genesis1 from ".././assets/genesis/genesis1.png";
-import genesis2 from ".././assets/genesis/genesis2.png";
-import genesis3 from ".././assets/genesis/genesis3.png";
-import genesis4 from ".././assets/genesis/genesis4.png";
-import genesis5 from ".././assets/genesis/genesis5.png";
-import genesis6 from ".././assets/genesis/genesis6.png";
+import genesis1 from ".././assets/genesis/genesis1.webp";
+import genesis2 from ".././assets/genesis/genesis2.webp";
+import genesis3 from ".././assets/genesis/genesis3.webp";
+import genesis4 from ".././assets/genesis/genesis4.webp";
+import genesis5 from ".././assets/genesis/genesis5.webp";
+import genesis6 from ".././assets/genesis/genesis6.webp";
 
-import spacebot1 from ".././assets/spacebot/spacebot1.png";
-import spacebot2 from ".././assets/spacebot/spacebot2.png";
-import spacebot3 from ".././assets/spacebot/spacebot3.png";
-import spacebot4 from ".././assets/spacebot/spacebot4.png";
+import spacebot1 from ".././assets/spacebot/spacebot1.webp";
+import spacebot2 from ".././assets/spacebot/spacebot2.webp";
+import spacebot3 from ".././assets/spacebot/spacebot3.webp";
+import spacebot4 from ".././assets/spacebot/spacebot4.webp";
 
 import pluto1 from ".././assets/pluto/pluto1.png";
 import pluto2 from ".././assets/pluto/pluto2.png";
@@ -65,6 +65,7 @@ import aio2 from ".././assets/aio-world/aio2.jpg";
 import aio3 from ".././assets/aio-world/aio3.jpg";
 import aio4 from ".././assets/aio-world/aio4.jpg";
 import aio5 from ".././assets/aio-world/aio5.jpg";
+
 import argon1 from ".././assets/argon/argon1.png";
 import argon2 from ".././assets/argon/argon2.png";
 import argon3 from ".././assets/argon/argon3.png";
@@ -83,15 +84,15 @@ import instaride2 from ".././assets/instaride/instaride2.png";
 import instaride3 from ".././assets/instaride/instaride3.png";
 import instaride4 from ".././assets/instaride/instaride4.png";
 
-import wrencho1 from ".././assets/wrencho/wrencho1.png";
-import wrencho2 from ".././assets/wrencho/wrencho2.png";
-import wrencho3 from ".././assets/wrencho/wrencho3.png";
-import wrencho4 from ".././assets/wrencho/wrencho4.png";
+import wrencho1 from ".././assets/wrencho/wrencho1.webp";
+import wrencho2 from ".././assets/wrencho/wrencho2.webp";
+import wrencho3 from ".././assets/wrencho/wrencho3.webp";
+import wrencho4 from ".././assets/wrencho/wrencho4.webp";
 
-import metamint1 from ".././assets/metamint/metamint1.png";
-import metamint2 from ".././assets/metamint/metamint2.png";
-import metamint3 from ".././assets/metamint/metamint3.png";
-import metamint4 from ".././assets/metamint/metamint4.png";
+import metamint1 from ".././assets/metamint/metamint1.webp";
+import metamint2 from ".././assets/metamint/metamint2.webp";
+import metamint3 from ".././assets/metamint/metamint3.webp";
+import metamint4 from ".././assets/metamint/metamint4.webp";
 
 export const arr = [
   {
@@ -102,6 +103,42 @@ export const arr = [
     position: "left",
     title: "Kyro Tools",
     techStack: ["ReactJS", "ElectronJS", "Docker", "Python", "NodeJS"],
+  },
+  {
+    imgSrc: [arc1, arc2, arc3, arc4],
+    hidden: false,
+    delay: "300",
+    classTitle: "arc",
+    position: "right",
+    title: "Arc AIO",
+    techStack: ["ReactJS", "ElectronJS"],
+  },
+  {
+    imgSrc: [epon1, epon2, epon3, epon4],
+    hidden: false,
+    delay: "200",
+    classTitle: "epon",
+    position: "left",
+    title: "Epon NFT",
+    techStack: ["ReactJS", "ElectronJS", "Python", "Docker"],
+  },
+  {
+    imgSrc: [metamint1, metamint2, metamint3, metamint4],
+    hidden: false,
+    delay: "300",
+    classTitle: "metamint",
+    position: "right",
+    title: "Metamint",
+    techStack: ["ReactJS", "ElectronJS", "Python"],
+  },
+  {
+    imgSrc: [jt1, jt2, jt3, jt4, jt5, jt6],
+    hidden: false,
+    delay: "300",
+    classTitle: "jupiter-toolbot",
+    position: "right",
+    title: "Jupiter Toolbot",
+    techStack: ["ReactJS", "ElectronJS", "NodeJS"],
   },
   {
     imgSrc: [divine3, divine2, divine1, divine4, divine5, divine6],
@@ -141,17 +178,6 @@ export const arr = [
     techStack: ["Typescript", "ElectronJS"],
   },
   {
-    imgSrc: [jt1, jt2, jt3, jt4, jt5, jt6],
-    hidden: false,
-    delay: "300",
-    classTitle: "jupiter-toolbot",
-    position: "right",
-    title: "Jupiter Toolbot",
-    techStack: ["ReactJS", "ElectronJS", "NodeJS"],
-  },
-];
-export const arr2 = [
-  {
     imgSrc: [pluto3, pluto1, pluto2, pluto4],
     hidden: false,
     delay: "200",
@@ -160,6 +186,8 @@ export const arr2 = [
     title: "Pluto",
     techStack: ["ReactJS", "ElectronJS"],
   },
+];
+export const arr2 = [
   {
     imgSrc: [uc1, uc2, uc3, uc4, uc5, uc6, uc7, uc8],
     hidden: false,
@@ -179,15 +207,6 @@ export const arr2 = [
     techStack: ["ReactJS", "ElectronJS"],
   },
   {
-    imgSrc: [arc1, arc2, arc3, arc4],
-    hidden: false,
-    delay: "300",
-    classTitle: "arc",
-    position: "right",
-    title: "Arc AIO",
-    techStack: ["ReactJS", "ElectronJS"],
-  },
-  {
     imgSrc: [aio1, aio2, aio3, aio4, aio5],
     hidden: false,
     delay: "200",
@@ -204,24 +223,6 @@ export const arr2 = [
     position: "right",
     title: "Argon",
     techStack: ["ReactJS", "ElectronJS"],
-  },
-  {
-    imgSrc: [epon1, epon2, epon3, epon4],
-    hidden: false,
-    delay: "200",
-    classTitle: "epon",
-    position: "left",
-    title: "Epon NFT",
-    techStack: ["ReactJS", "ElectronJS", "Python", "Docker"],
-  },
-  {
-    imgSrc: [metamint1, metamint2, metamint3, metamint4],
-    hidden: false,
-    delay: "300",
-    classTitle: "metamint",
-    position: "right",
-    title: "Metamint",
-    techStack: ["ReactJS", "ElectronJS", "Python"],
   },
 ];
 
