@@ -76,9 +76,6 @@ import epon2 from ".././assets/epon/epon2.png";
 import epon3 from ".././assets/epon/epon3.png";
 import epon4 from ".././assets/epon/epon4.png";
 
-// import popbot1 from ".././assets/popbot/popbot1.png";
-// import popbot2 from ".././assets/popbot/popbot2.png";
-
 import instaride1 from ".././assets/instaride/instaride1.png";
 import instaride2 from ".././assets/instaride/instaride2.png";
 import instaride3 from ".././assets/instaride/instaride3.png";
@@ -94,13 +91,19 @@ import metamint2 from ".././assets/metamint/metamint2.webp";
 import metamint3 from ".././assets/metamint/metamint3.webp";
 import metamint4 from ".././assets/metamint/metamint4.webp";
 
-export const arr = [
+const resolveElementPosition = (imagesArray) => {
+  imagesArray.forEach((element, i) => {
+    element.position = i % 2 ? "right" : "left";
+  });
+  return imagesArray;
+};
+
+const desktopAppImagesData = [
   {
     imgSrc: [kt1, kt2, kt3, kt5, kt6],
     hidden: false,
     delay: "200",
     classTitle: "kyro-tools",
-    position: "left",
     title: "Kyro Tools",
     techStack: ["ReactJS", "ElectronJS", "Docker", "Python", "NodeJS"],
   },
@@ -109,7 +112,6 @@ export const arr = [
     hidden: false,
     delay: "300",
     classTitle: "arc",
-    position: "right",
     title: "Arc AIO",
     techStack: ["ReactJS", "ElectronJS"],
   },
@@ -118,7 +120,6 @@ export const arr = [
     hidden: false,
     delay: "200",
     classTitle: "epon",
-    position: "left",
     title: "Epon NFT",
     techStack: ["ReactJS", "ElectronJS", "Python", "Docker"],
   },
@@ -127,7 +128,6 @@ export const arr = [
     hidden: false,
     delay: "300",
     classTitle: "metamint",
-    position: "right",
     title: "Metamint",
     techStack: ["ReactJS", "ElectronJS", "Python"],
   },
@@ -136,7 +136,6 @@ export const arr = [
     hidden: false,
     delay: "300",
     classTitle: "jupiter-toolbot",
-    position: "right",
     title: "Jupiter Toolbot",
     techStack: ["ReactJS", "ElectronJS", "NodeJS"],
   },
@@ -145,7 +144,6 @@ export const arr = [
     hidden: false,
     delay: "300",
     classTitle: "divine",
-    position: "right",
     title: "Divine",
     techStack: ["ReactJS", "ElectronJS", "NodeJs", "Socket.io"],
   },
@@ -154,7 +152,6 @@ export const arr = [
     hidden: false,
     delay: "200",
     classTitle: "hawa",
-    position: "left",
     title: "Hawa",
     techStack: ["ReactJS", "ElectronJS"],
   },
@@ -163,7 +160,6 @@ export const arr = [
     hidden: false,
     delay: "300",
     classTitle: "spacebot",
-    position: "right",
     title: "Spacebot",
     techStack: ["ReactJS"],
   },
@@ -173,7 +169,6 @@ export const arr = [
     hidden: false,
     delay: "200",
     classTitle: "genesis",
-    position: "left",
     title: "Genesis",
     techStack: ["Typescript", "ElectronJS"],
   },
@@ -182,18 +177,16 @@ export const arr = [
     hidden: false,
     delay: "200",
     classTitle: "pluto",
-    position: "left",
     title: "Pluto",
     techStack: ["ReactJS", "ElectronJS"],
   },
 ];
-export const arr2 = [
+const desktopAppImagesData2 = [
   {
     imgSrc: [uc1, uc2, uc3, uc4, uc5, uc6, uc7, uc8],
     hidden: false,
     delay: "300",
     classTitle: "uc-toolbot",
-    position: "right",
     title: "UC Toolbot",
     techStack: ["ReactJS", "ElectronJS", "NodeJS"],
   },
@@ -202,7 +195,6 @@ export const arr2 = [
     hidden: false,
     delay: "200",
     classTitle: "squared",
-    position: "left",
     title: "Squared",
     techStack: ["ReactJS", "ElectronJS"],
   },
@@ -211,7 +203,6 @@ export const arr2 = [
     hidden: false,
     delay: "200",
     classTitle: "aio-world",
-    position: "left",
     title: "AIO World",
     techStack: ["ReactJS"],
   },
@@ -220,19 +211,17 @@ export const arr2 = [
     hidden: false,
     delay: "300",
     classTitle: "argons",
-    position: "right",
     title: "Argon",
     techStack: ["ReactJS", "ElectronJS"],
   },
 ];
 
-export const mobileAppOne = [
+const mobileAppImagesData = [
   {
     imgSrc: [instaride1, instaride2, instaride3, instaride4],
     hidden: false,
     delay: "300",
     classTitle: "instaride",
-    position: "left",
     title: "Instaride",
     techStack: [
       "React Native",
@@ -248,12 +237,22 @@ export const mobileAppOne = [
     imgSrc: [wrencho1, wrencho2, wrencho3, wrencho4],
     hidden: false,
     delay: "300",
-    classTitle: "wrancho",
-    position: "right",
+    classTitle: "wrencho",
     title: "Wrencho",
     techStack: ["Flutter", "Node", "SOLR", "PostgreSQL", "AWS S3"],
     isMobile: true,
   },
 ];
+const mobileAppImagesData2 = [];
 
-export const mobileAppTwo = [];
+resolveElementPosition(desktopAppImagesData);
+resolveElementPosition(desktopAppImagesData2);
+resolveElementPosition(mobileAppImagesData);
+resolveElementPosition(mobileAppImagesData2);
+
+export {
+  desktopAppImagesData,
+  desktopAppImagesData2,
+  mobileAppImagesData,
+  mobileAppImagesData2
+}
