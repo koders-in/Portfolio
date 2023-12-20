@@ -1,15 +1,15 @@
 import React from "react";
 import PortfolioCard from "../PortfolioCard/PortfolioCard";
 import "./Portfolio.scss";
-import { arr, arr2, mobileAppOne, mobileAppTwo } from "../../helper/helper";
+import { desktopAppImagesData, desktopAppImagesData2, mobileAppImagesData, mobileAppImagesData2 } from "../../helper/helper";
 import { useState } from "react";
 
 function Portfolio() {
-  const [data, setData] = useState([...arr]);
-  const [mobileApp, setMobileApp] = useState([...mobileAppOne]);
+  const [desktopAppImages, setDesktopAppImages] = useState([...desktopAppImagesData]);
+  const [mobileAppImages, setMobileAppImages] = useState([...mobileAppImagesData]);
   const handleClick = () => {
-    setData((p) => [...p, ...arr2]);
-    setMobileApp((p) => [...p, ...mobileAppTwo]);
+    setDesktopAppImages((p) => [...p, ...desktopAppImagesData2]);
+    setMobileAppImages((p) => [...p, ...mobileAppImagesData2]);
     document.querySelector(".portfolio-btn").style.display = "none";
   };
 
@@ -24,7 +24,7 @@ function Portfolio() {
         </p>
       </div>
       <div className="portfolio-cards">
-        {data.map((item) => (
+        {desktopAppImages.map((item) => (
           <PortfolioCard
             key={item.title}
             hidden={item.hidden}
@@ -40,7 +40,7 @@ function Portfolio() {
       </div>
       <div style={{ height: "3rem" }}></div>
       <div className="portfolio-cards">
-        {mobileApp.map((item) => (
+        {mobileAppImages.map((item) => (
           <PortfolioCard
             key={item.title}
             hidden={item.hidden}
