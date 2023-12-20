@@ -30,6 +30,8 @@ jobs:
     needs: build
 
     steps:
+      - name: Debug build directory contents
+        run: ls -R .
       - name: Copy build to VPS via SSH
         uses: appleboy/scp-action@master
         with:
