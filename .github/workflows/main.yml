@@ -1,30 +1,53 @@
-name: Build
+name: Koders Portfolio App
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
 
 jobs:
-  Deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js 16.13.2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16.13.2
+          node-version: 16.14.0
 
-      - name: Cleaning remote docker image and container
-        uses: fifsky/ssh-action@master
-        continue-on-error: true
+      - name: Install dependencies
+        run: npm install --production
+
+      - name: Build React app
+        run: npm run build
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    steps:
+      - name: Copy build to VPS via SSH
+        uses: appleboy/scp-action@master
         with:
-          command: |
-            cd /root/portfolio/
-            git pull 
-            docker build . -t koders-portfolio
-            docker rm $(docker stop $(docker ps -a -q --filter ancestor=${{ secrets.DOCKER_HUB_USERNAME }}/koders-portfolio --format="{{.ID}}"))  && 
-            docker rmi koders-portfolio
-            docker run -d -p 8080:80 --name koders-portfolio koders-portfolio
           host: ${{ secrets.REMOTE_HOST }}
-          user: ${{ secrets.REMOTE_USER }}
-          pass: ${{ secrets.REMOTE_PASSWORD}}
+          username: ${{ secrets.REMOTE_USER }}
+          password: ${{ secrets.REMOTE_PASSWORD }}
+          source: "build/"
+          target: /root/portfolio/
+
+      - name: SSH into VPS and deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          password: ${{ secrets.REMOTE_PASSWORD }}
+          script: |
+            cd /root/portfolio
+            docker rm $(docker stop $(docker ps -a -q --filter ancestor=koders-website-v5 --format="{{.ID}}"))
+            docker rmi koders-website-v5
+            docker build . -t koders-website-v5
+            docker run -d -p 8081:3000 --name koders-website-v5 -e ${{ secrets.WEBHOOK_URL }} koders-website-v5
