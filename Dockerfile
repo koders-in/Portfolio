@@ -13,10 +13,30 @@
 # EXPOSE 80
 # CMD ["nginx", "-g", "daemon off;"]
 
-FROM node:16-slim
-WORKDIR /app
-COPY build/ ./build/
-EXPOSE 80
-RUN npm install -g serve
-CMD ["serve", "-s", "build", "-p", "80"]
+# FROM node:16-slim
+# WORKDIR /app
+# COPY build/ ./build/
+# EXPOSE 80
+# RUN npm install -g serve
+# CMD ["serve", "-s", "build", "-p", "80"]
 
+FROM node:16-slim as builder
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install -g
+
+COPY . .
+
+RUN npm ci --force
+RUN npm run build
+
+FROM nginx:stable-alpine
+
+COPY --from=builder /app /usr/share/nginx/html
+
+EXPOSE 81
+
+CMD ["nginx", "-g", "daemon off;"]
