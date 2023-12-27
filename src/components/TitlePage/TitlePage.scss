@@ -5,6 +5,7 @@
   height: 115vh;
   background-image: url("../../assets/titlePageBg.svg");
   background-size: cover;
+  
 
   @include media(1672px) {
     height: 100vh;

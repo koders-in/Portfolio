@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import ReactImageMagnify from "react-image-magnify";
 import "./PortfolioCard.scss";
 import AOS from "aos";
+import { RiReactjsFill } from "react-icons/ri";
+import { IoLogoElectron } from "react-icons/io5";
+import { FaNodeJs } from "react-icons/fa";
 import { useEffect } from "react";
 
 function PortfolioCard({
@@ -13,11 +16,22 @@ function PortfolioCard({
   hidden,
   techStack,
   isMobile,
+  Description,
+  imgBg,
+  imgIcon,
+  logo,
+  Category,
 }) {
   const [idx, setIdx] = useState(0);
   let hiddenClass = "";
+  let bg = imgBg;
 
   const [showDetails, setShowDetails] = useState(false);
+  let iconStyles = {
+    color: "#00ffff",
+    fontSize: "1.5em",
+    paddingRight: "0.3em",
+  };
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -62,13 +76,21 @@ function PortfolioCard({
       data-aos-delay={delay}
     >
       <button className="next" onClick={handleNext}>
-        &#10095;
+        &#x1F862;
       </button>
       <button className="prev" onClick={handlePrev}>
-        &#10094;
+        &#x1F860;
       </button>
-      <div className={"portfolio-card-container "}>
-        <div className={"details " + classTitle}>
+
+      <div
+        className={"portfolio-card-container"}
+        style={{ backgroundImage: `url(${bg})` }}
+      >
+        <div className={"portfolio-class-title"}>{classTitle}</div>
+        <svg width="30" height="30" className="project-logo">
+          <image xlinkHref={logo} height="30" width="30" />
+        </svg>
+        {/* <div className={"details " + classTitle}>
           <h1>{title}</h1>
           <ul className="tech-stack">
             {techStack.map((item, i) => (
@@ -77,7 +99,7 @@ function PortfolioCard({
               </p>
             ))}
           </ul>
-        </div>
+        </div> */}
         <div className={`${isMobile ? "mobile-card" : ""} img-zoom`}>
           {position === "left" ? (
             <ReactImageMagnify
@@ -100,9 +122,29 @@ function PortfolioCard({
           )}
         </div>
       </div>
-      <button className="pc-btn" onClick={handleClick}>
-        {showDetails ? "close" : "view details"}
-      </button>
+      <div className="portfolio-project-description">
+        <p className="portfolio-card-header">{Category} App</p>
+        <ul className="portfolio-tech-list">
+          <li className="tech-list-item">
+            <div className={"details " + classTitle}>
+              {/* <h1>{title}</h1> */}
+              <ul className="tech-stack">
+                {techStack.map((item, i) => (
+                  <div className="project-details" key={item + i}>
+                    <svg width="30" height="30" className="techStack-logo">
+                      <image xlinkHref={imgIcon[i]} height="25" width="25" />
+                    </svg>
+                    <p className="skill">{item}</p>
+                  </div>
+                ))}
+              </ul>
+              <div className="project-description">
+                <p>{Description}</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
@@ -118,13 +160,11 @@ const getCardProps = (imgSrc, idx, isMobile) => {
     },
     largeImage: {
       src: imgSrc[idx],
-      width: isMobile ? 1000 : 1900,
+      width: isMobile ? 1200 : 1900,
       height: isMobile ? 1000 : 1100,
     },
     imageStyle: {
       transition: "all 0.3s ease-out",
-      borderRadius: "10px",
-      filter: "drop-shadow(4.89751px 4.89751px 3px rgba(51, 223, 211, 0.2))",
     },
     enlargedImageStyle: {
       objectFit: "contain",
