@@ -35,6 +35,16 @@ function Portfolio() {
     }
   }, [currentCard]);
 
+  // var header = document.querySelector("nav-items");
+  // var btns = header.querySelector("btn");
+  // for (var i = 0; i < btns.length; i++) {
+  //   btns[i].addEventListener("click", function() {
+  //   var current = document.querySelector("active");
+  //   current[0].className = current[0].className.replace(" active", "");
+  //   this.className += " active";
+  //   });
+  // }
+
   return (
     <div className="Portfolio">
       <div className="portfolio-header">

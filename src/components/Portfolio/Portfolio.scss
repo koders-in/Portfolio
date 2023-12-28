@@ -72,16 +72,17 @@
   opacity: 0.8;
 }
 
+.active, .btn:hover {
+  border-bottom: 1px solid $green;
+  color: white;
+}
+
 // .nav-link {
 //   text-decoration: none;
 //   color: $white;
 //   font-weight: 300;
 // }
 
-.portfolio-nav > .active > button {
-  font-weight: 600;
-  border-bottom: 2px solid $green;
-}
 
 // .startProjectBtn {
 //   display: flex;
@@ -92,7 +93,7 @@
 
 .portfolio-cards {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 6rem;
   grid-row-gap: 10rem;
   width: 80%;
@@ -101,7 +102,7 @@
     grid-row-gap: 10rem;
     grid-column-gap: 3rem;
   }
-  @include media(600px) {
+  @include media(560px) {
     width: 80%;
   }
 }

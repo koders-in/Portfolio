@@ -48,7 +48,7 @@
   scroll-snap-align: start;
   height: 80%;
   width: 80%;
-  display: block;
+  
   margin-top: 20px;
 }
 
@@ -66,19 +66,19 @@
   padding: 0;
 }
 
-.mobile-card {
-  & > :nth-child(1) {
-    position: relative !important;
-    & > img {
-      display: block !important;
-      width: 35% !important;
-      margin: 0 auto;
-      @include media(400px) {
-        width: 45% !important;
-      }
-    }
-  }
-}
+// .mobile-card {
+//   & > :nth-child(1) {
+//     position: relative !important;
+//     & > img {
+//       display: block !important;
+//       width: 35% !important;
+//       margin: 0 auto;
+//       @include media(400px) {
+//         width: 45% !important;
+//       }
+//     }
+//   }
+// }
 .portfolio-card-container .img-zoom {
   & > :nth-child(1) {
     height: 100% !important;
@@ -294,6 +294,11 @@
       width: 30px;
       height: 30px;
       margin: 10px;
+    }
+    @include media(560px) {
+      width: 30px;
+      height: 30px;
+      margin: 0px;
     }
 }
 
