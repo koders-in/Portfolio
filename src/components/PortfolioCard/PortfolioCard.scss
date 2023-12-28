@@ -216,29 +216,18 @@
 
 .project-description{
   font-size: 0.9vw;
-  padding: 5px 5px 3px 4px;
   height: 10vh;
   font-weight: 400;
-  word-wrap: break-word !important;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  white-space: pre-wrap;
+  text-align: start;
+  margin-top:30px;
   @include media(560px) {
-    font-size: 9px;
+    font-size: 15px;
   }
   @include media(1000px) {
-    font-size: 14px;
+    font-size: 7px;
   }
-
-
-  .project-description>p {
-    white-space: pre-line !important;
-    flex-wrap: wrap !important;
-    word-wrap: break-word !important;
-    
-    
-  }
-  
+ 
   // @include media(650px) {
   //   font-size: 10px;
   // }
@@ -251,6 +240,7 @@
   color: gray;
   font-weight: 400;
   padding: 0;
+  text-align: start;
 }
 .portfolio-tech-list {
   padding: 0;

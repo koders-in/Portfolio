@@ -89,7 +89,8 @@ function Portfolio() {
           view more
         </button>
         <div className="startNewProject">
-          <a className="startNewProject-btn" href="https://koders.in/start-project"><svg
+          <a className="startNewProject-btn" href="https://koders.in/start-project">
+            <svg
             className="rotatingText"
             viewBox="0 0 200 200"
             width="200"

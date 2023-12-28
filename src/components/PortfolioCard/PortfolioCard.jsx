@@ -138,8 +138,8 @@ function PortfolioCard({
                   </div>
                 ))}
               </ul>
-              <div className="project-description">
-                <p>{Description}</p>
+              <div>
+                <p className="project-description">{Description}</p>
               </div>
             </div>
           </li>
