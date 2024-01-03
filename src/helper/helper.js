@@ -64,7 +64,7 @@ import vbpy from ".././assets/VinlyBot/Python.svg";
 import vbrj from ".././assets/VinlyBot/Reactjs.svg";
 import vbtw from ".././assets/VinlyBot/Tailwind.svg";
 
-import dd from ".././assets/Ellipse 54@4x.png";
+import techstackdot from ".././assets/techstack-dot.png";
 
 const sal1="https://cdn.discordapp.com/attachments/1182729641920827443/1192034692212461579/1SalFnFp.webp?ex=65a79bd1&is=659526d1&hm=6f630cec87b524932f54fb44bdf32e088a2ffe15113c246db0ded15a35433142&"
 const sal2 = "https://cdn.discordapp.com/attachments/1182729641920827443/1192034692824842370/2SalFnF.webp?ex=65a79bd1&is=659526d1&hm=95b0549d746a59bb60699c18922330608d3046d7a78fc424abfc622da22348b0&"
@@ -166,7 +166,7 @@ export const arr = [
     imgSrc: [sal1, sal2, sal3, sal4, sal5, sal6, sal7],
     imgBg: [salbg],
     imgIcon: [salReact, salfigma, salMaterial],
-    techIcon:[dd],
+    techIcon:[techstackdot],
     logo: [sallogo],
     hidden: false,
     delay: "200",
