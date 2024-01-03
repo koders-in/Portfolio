@@ -14,15 +14,26 @@ function Portfolio() {
     setMobileApp((p) => [...p, ...mobileAppTwo]);
     document.querySelector(".portfolio-viewmore-btn").style.display = "none";
   };
+
   const handleBtns = (e) => {
     let word = e.target.value;
     setCurrentCard(word);
-    document.querySelector(".portfolio-viewmore-btn").style.display = "none";
   };
+
+  const allSizeElements = document.querySelectorAll(".btn");
+  for (let i = 0; i < allSizeElements.length; i++) {
+    allSizeElements[i].addEventListener("click", function (event) {
+      var prev = document.querySelector(".active");
+      if (prev) prev.classList.remove("active");
+      event.target.classList.add("active");
+    });
+  }
+
   useEffect(() => {
     if (currentCard === "All") {
       setData(arr);
-      document.querySelector(".portfolio-viewmore-btn").style.display = " inline";
+      document.querySelector(".portfolio-viewmore-btn").style.display =
+        " inline";
     } else {
       var arrs = [...arr, ...arr2];
       const filtered = arrs.filter((data) => {
@@ -34,16 +45,6 @@ function Portfolio() {
       setData(filtered);
     }
   }, [currentCard]);
-
-  // var header = document.querySelector("nav-items");
-  // var btns = header.querySelector("btn");
-  // for (var i = 0; i < btns.length; i++) {
-  //   btns[i].addEventListener("click", function() {
-  //   var current = document.querySelector("active");
-  //   current[0].className = current[0].className.replace(" active", "");
-  //   this.className += " active";
-  //   });
-  // }
 
   return (
     <div className="Portfolio">
@@ -57,18 +58,41 @@ function Portfolio() {
       </div>
 
       <div className="portfolio-nav">
-        <section className="nav-items">
-          <button className="btn active"onClick={handleBtns} type="button" value="All">
+        <section className="nav-items" id="nav">
+          <button
+            className="btn active"
+            onClick={handleBtns}
+            type="button"
+            value="All"
+          >
             All
           </button>
-          <button className="btn" onClick={handleBtns} type="button" value="Web">
-            Websites
-          </button>
-          <button className="btn" onClick={handleBtns} type="button" value="Mobile">
+          <button
+            className="btn"
+            onClick={handleBtns}
+            type="button"
+            value="Mobile"
+          >
             Mobile Apps
           </button>
-          <button className="btn" onClick={handleBtns} type="button" value="Desktop">
+          <button
+            className="btn"
+            onClick={handleBtns}
+            type="button"
+            value="Desktop"
+          >
             Desktop Apps
+          </button>
+          <button
+            className="btn"
+            onClick={handleBtns}
+            type="button"
+            value="Web"
+          >
+            Websites
+          </button>
+          <button className="btn" onClick={handleBtns} type="button" value="UI">
+            UI/UX
           </button>
         </section>
       </div>
@@ -90,6 +114,7 @@ function Portfolio() {
             isMobile={item?.isMobile}
             logo={item.logo}
             Category={item.Category}
+            dd={item.dd}
           />
         ))}
       </div>
@@ -99,41 +124,46 @@ function Portfolio() {
           view more
         </button>
         <div className="startNewProject">
-          <a className="startNewProject-btn" href="https://koders.in/start-project">
+          <a
+            className="startNewProject-btn"
+            href="https://koders.in/start-project"
+            target="_blank"
+          >
             <svg
-            className="rotatingText"
-            viewBox="0 0 200 200"
-            width="200"
-            height="200"
-          > 
-            <defs>
-              <path
-                id="circle"
-                d="M 100, 100
+              className="rotatingText"
+              viewBox="0 0 200 200"
+              width="165"
+              height="165"
+            >
+              <defs>
+                <path
+                  id="circle"
+                  d="M 100, 100
                 m -75, 0
                 a 75, 75 0 1, 0 150, 0
                 a 75, 75 0 1, 0 -150, 0
                 "
-              ></path>
-            </defs>
-            <text width="400">
-              <textPath
-                alignmentBaseline="top"
-                xlinkHref="#circle"
-                className="startNewProjectText"
-              >
-                Start A Project With US
-              </textPath>
-            </text>
-            <image
-              xlinkHref={dotSmall}
-              x="75"
-              y="75"
-              height="50px"
-              width="50px"
-              className="startNewProject-dotSmall"
-            ></image>
-          </svg></a>
+                ></path>
+              </defs>
+              <text width="400">
+                <textPath
+                  alignmentBaseline="top"
+                  xlinkHref="#circle"
+                  className="startNewProjectText"
+                >
+                  Start A Project With US
+                </textPath>
+              </text>
+              <image
+                xlinkHref={dotSmall}
+                x="75"
+                y="75"
+                height="50px"
+                width="50px"
+                className="startNewProject-dotSmall"
+              ></image>
+            </svg>
+          </a>
         </div>
       </div>
     </div>

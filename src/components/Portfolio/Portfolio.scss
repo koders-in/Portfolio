@@ -57,7 +57,7 @@
   display: flex;
   flex-direction: row;
   gap: 5.5rem;
-  @include media(550px) {
+  @include media(650px) {
     gap: 15px;
     flex-flow: column wrap;
   }
@@ -66,36 +66,21 @@
 .nav-items button {
   background: none;
   border: none;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
   font-size: 16px;
   opacity: 0.8;
 }
 
-.active, .btn:hover {
-  border-bottom: 1px solid $green;
-  color: white;
+.btn.active {
+  border-bottom: 2px solid $green;
 }
-
-// .nav-link {
-//   text-decoration: none;
-//   color: $white;
-//   font-weight: 300;
-// }
-
-
-// .startProjectBtn {
-//   display: flex;
-//   position: relative;
-//   left: 40%;
-//   margin-top:13rem;
-// }
 
 .portfolio-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 6rem;
-  grid-row-gap: 10rem;
+  grid-row-gap: 12rem;
   width: 80%;
   @include media(700px) {
     width: 90%;
@@ -128,7 +113,7 @@
   display: none;
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 650px) {
   .portfolio-cards {
     grid-template-columns: auto;
   }
@@ -174,6 +159,10 @@
 .startNewProject-dotSmall {
   filter: brightness(0) saturate(100%) invert(59%) sepia(33%) saturate(6084%)
     hue-rotate(142deg) brightness(98%) contrast(82%);
+}
+
+.rotatingText:hover{
+  transform: scale(1.2);
 }
 
 

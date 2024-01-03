@@ -1,21 +1,18 @@
-import React, { useState } from "react";
-import ReactImageMagnify from "react-image-magnify";
+import React, { useState, useRef } from "react";
 import "./PortfolioCard.scss";
 import AOS from "aos";
-import { RiReactjsFill } from "react-icons/ri";
-import { IoLogoElectron } from "react-icons/io5";
-import { FaNodeJs } from "react-icons/fa";
 import { useEffect } from "react";
+import dotSmall from "../../assets/dot-small.svg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function PortfolioCard({
   imgSrc,
   delay,
   classTitle,
-  title,
-  position,
   hidden,
   techStack,
-  isMobile,
   Description,
   imgBg,
   imgIcon,
@@ -26,39 +23,53 @@ function PortfolioCard({
   let hiddenClass = "";
   let bg = imgBg;
 
-  const [showDetails, setShowDetails] = useState(false);
-  let iconStyles = {
-    color: "#00ffff",
-    fontSize: "1.5em",
-    paddingRight: "0.3em",
-  };
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    if (showDetails) {
-      document.querySelector(`.${classTitle}`).style.display = "none";
-    } else {
-      document.querySelector(`.${classTitle}`).style.display = "flex";
-    }
-    setShowDetails(!showDetails);
-  };
-
-  const handleNext = (e) => {
-    e.preventDefault();
-    if (idx >= imgSrc.length - 1) {
-      setIdx(0);
-    } else {
-      setIdx((prevIdx) => prevIdx + 1);
-    }
-  };
-
-  const handlePrev = (e) => {
-    e.preventDefault();
-    if (idx === 0) {
-      setIdx(imgSrc.length - 1);
-    } else {
-      setIdx((prevIdx) => prevIdx - 1);
-    }
+  const slider = React.useRef(null);
+  const sliderSettings = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    arrows: true,
+    centerPadding: "100px",
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: "90px",
+        },
+      },
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: "70px",
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: "20px",
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: "80px",
+        },
+      },
+    ],
   };
 
   if (hidden) {
@@ -75,10 +86,10 @@ function PortfolioCard({
       data-aos="fade-up"
       data-aos-delay={delay}
     >
-      <button className="next" onClick={handleNext}>
+      <button className="next" onClick={() => slider?.current?.slickNext()}>
         &#x1F862;
       </button>
-      <button className="prev" onClick={handlePrev}>
+      <button className="prev" onClick={() => slider?.current?.slickPrev()}>
         &#x1F860;
       </button>
 
@@ -90,36 +101,15 @@ function PortfolioCard({
         <svg width="30" height="30" className="project-logo">
           <image xlinkHref={logo} height="30" width="30" />
         </svg>
-        {/* <div className={"details " + classTitle}>
-          <h1>{title}</h1>
-          <ul className="tech-stack">
-            {techStack.map((item, i) => (
-              <p className="skill" key={item + i}>
-                {item}
-              </p>
+
+        <div className="slider-container">
+          <Slider ref={slider} {...sliderSettings}>
+            {imgSrc.map((img, index) => (
+              <div key={index}>
+                <img alt={img} src={img} className="crousel-image" />
+              </div>
             ))}
-          </ul>
-        </div> */}
-        <div className={`${isMobile ? "mobile-card" : ""} img-zoom`}>
-          {position === "left" ? (
-            <ReactImageMagnify
-              {...{
-                enlargedImageContainerClassName: "zoom-container",
-                ...getCardProps(imgSrc, idx, isMobile),
-              }}
-            />
-          ) : (
-            <ReactImageMagnify
-              {...{
-                ...getCardProps(imgSrc, idx, isMobile),
-                enlargedImageContainerStyle: {
-                  left: "-105%",
-                  ...getCardProps(imgSrc, idx, isMobile)
-                    .enlargedImageContainerStyle,
-                },
-              }}
-            />
-          )}
+          </Slider>
         </div>
       </div>
       <div className="portfolio-project-description">
@@ -127,7 +117,6 @@ function PortfolioCard({
         <ul className="portfolio-tech-list">
           <li className="tech-list-item">
             <div className={"details " + classTitle}>
-              {/* <h1>{title}</h1> */}
               <ul className="tech-stack">
                 {techStack.map((item, i) => (
                   <div className="project-details" key={item + i}>
@@ -135,6 +124,16 @@ function PortfolioCard({
                       <image xlinkHref={imgIcon[i]} height="25" width="25" />
                     </svg>
                     <p className="skill">{item}</p>
+                      <svg width="40" height="40">
+                        <image
+                          xlinkHref={dotSmall}
+                          x="9"
+                          y="5"
+                          height="20px"
+                          width="20px"
+                          className="startNewProject-dotSmall"
+                        ></image>
+                      </svg>
                   </div>
                 ))}
               </ul>
@@ -150,39 +149,3 @@ function PortfolioCard({
 }
 
 export default PortfolioCard;
-
-const getCardProps = (imgSrc, idx, isMobile) => {
-  return {
-    smallImage: {
-      alt: "",
-      isFluidWidth: true,
-      src: imgSrc[idx],
-    },
-    largeImage: {
-      src: imgSrc[idx],
-      width: isMobile ? 1200 : 1900,
-      height: isMobile ? 1000 : 1100,
-    },
-    imageStyle: {
-      transition: "all 0.3s ease-out",
-    },
-    enlargedImageStyle: {
-      objectFit: "contain",
-    },
-    enlargedImageContainerDimensions: {
-      width: isMobile ? "300%" : "100%",
-      height: isMobile ? "180%" : "150%",
-    },
-    lensStyle: {
-      background: "hsla(0, 0%, 100%, .3)",
-      border: "1px solid #ccc",
-      width: "50px",
-      height: "50px",
-    },
-    enlargedImageContainerStyle: {
-      position: "absolute",
-      zIndex: "10",
-      backgroundColor: "black",
-    },
-  };
-};
