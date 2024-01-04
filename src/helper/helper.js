@@ -64,7 +64,6 @@ import vbpy from ".././assets/VinlyBot/Python.svg";
 import vbrj from ".././assets/VinlyBot/Reactjs.svg";
 import vbtw from ".././assets/VinlyBot/Tailwind.svg";
 
-import techstackdot from ".././assets/techstack-dot.png";
 
 const sal1="https://cdn.discordapp.com/attachments/1182729641920827443/1192034692212461579/1SalFnFp.webp?ex=65a79bd1&is=659526d1&hm=6f630cec87b524932f54fb44bdf32e088a2ffe15113c246db0ded15a35433142&"
 const sal2 = "https://cdn.discordapp.com/attachments/1182729641920827443/1192034692824842370/2SalFnF.webp?ex=65a79bd1&is=659526d1&hm=95b0549d746a59bb60699c18922330608d3046d7a78fc424abfc622da22348b0&"
@@ -166,7 +165,6 @@ export const arr = [
     imgSrc: [sal1, sal2, sal3, sal4, sal5, sal6, sal7],
     imgBg: [salbg],
     imgIcon: [salReact, salfigma, salMaterial],
-    techIcon:[techstackdot],
     logo: [sallogo],
     hidden: false,
     delay: "200",
@@ -174,7 +172,7 @@ export const arr = [
     position: "left",
     title: "SalFNF",
     Category: "Web",
-    id: 3,
+    nTs: 3, //no. of tech stack
     techStack: ["ReactJS", "Figma", "Material UI"],
     Description:
       "A website  for a Sneaker Checkout Bot designed for sneaker enthusiasts.",
@@ -190,7 +188,7 @@ export const arr = [
     position: "right",
     title: "Munching Browser",
     Category: "Desktop",
-    id: 2,
+    nTs: 7,
     techStack: [
       "Figma",
       "ReactJS",
@@ -215,7 +213,7 @@ export const arr = [
     position: "left",
     title: "Pingted",
     Category: "Mobile",
-    id: 1,
+    nTs: 5,
     techStack: ["Nodejs", "Figma", "Flutter", "Node JS Auth0", "Firebase"],
     Description:
       "Pingted provides notifications for all your latest items posted on Vinted.",
@@ -231,7 +229,7 @@ export const arr = [
     position: "right",
     title: "SpaceBot",
     Category: "Web",
-    id: 3,
+    nTs: 5,
     techStack: [
       "Vue",
       "Nuxt",
@@ -256,7 +254,7 @@ export const arr = [
     position: "right",
     title: "Kyro Tools",
     Category: "Web",
-    id: 2,
+    nTs: 5,
     techStack: ["ReactJS", "ElectronJS", "NodeJS", "Python", "Docker"],
     Description:
       "KyroTools provides you NFT whitelisting, Twitter Monitor, NFT Minters, XP farmer.",
@@ -272,7 +270,7 @@ export const arr = [
     position: "right",
     title: "Vinly Bot",
     Category: "Web",
-    id: 3,
+    nTs: 5,
     techStack: [
       "ReactJS",
       "NodeJs",
@@ -301,7 +299,7 @@ export const arr2 = [
     position: "left",
     title: "Wrencho Mechanics",
     Category: "Mobile",
-    id: 1,
+    nTs: 5,
     techStack: ["Flutter", "Node", "SOLR", "PostgreSQL", "AWS S3"],
     Description: "This app helps a mechanics offer their services to the user.",
   },
@@ -316,6 +314,7 @@ export const arr2 = [
     position: "right",
     title: "Byte Proxies",
     Category: "Chrome Extension",
+    nTs: 3,
     techStack: ["ReactJS", "Figma", "Tailwind CSS"],
     Description:
       "A Chrome extension which serves as a convenient proxy switcher.",
@@ -332,7 +331,7 @@ export const arr2 = [
     position: "left",
     title: "Filted",
     Category: "Mobile",
-    id: 1,
+    nTs: 4,
     techStack: ["Figma", "Flutter", "Node Js Auth0", "Firebase"],
     Description:
       "A notifications app that monitors Vinted.fr website and allows you to get updates.",
@@ -348,7 +347,7 @@ export const arr2 = [
     position: "left",
     title: "DunkBot",
     Category: "Web",
-    id: 3,
+    nTs: 5,
     techStack: [
       "ReactJS",
       "Figma",

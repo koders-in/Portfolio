@@ -132,6 +132,7 @@
 }
 .startNewProject {
   margin-left: auto;
+
   @include media(850px) {
     margin-left: 0%;
     margin-top: 4rem;

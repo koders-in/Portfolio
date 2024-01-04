@@ -114,7 +114,7 @@ function Portfolio() {
             isMobile={item?.isMobile}
             logo={item.logo}
             Category={item.Category}
-            dd={item.dd}
+            nTs={item.nTs}
           />
         ))}
       </div>

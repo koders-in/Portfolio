@@ -18,6 +18,7 @@ function PortfolioCard({
   imgIcon,
   logo,
   Category,
+  nTs,
 }) {
   const [idx, setIdx] = useState(0);
   let hiddenClass = "";
@@ -124,6 +125,7 @@ function PortfolioCard({
                       <image xlinkHref={imgIcon[i]} height="25" width="25" />
                     </svg>
                     <p className="skill">{item}</p>
+                    {nTs-- > 1 && (
                       <svg width="40" height="40">
                         <image
                           xlinkHref={dotSmall}
@@ -133,7 +135,9 @@ function PortfolioCard({
                           width="20px"
                           className="startNewProject-dotSmall"
                         ></image>
+                        
                       </svg>
+                    )}
                   </div>
                 ))}
               </ul>
