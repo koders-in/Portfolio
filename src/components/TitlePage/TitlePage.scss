@@ -3,8 +3,12 @@
 .titlePage {
   position: relative;
   height: 115vh;
-  background-image: url("../../assets/titlePageBg.svg");
+  // background-image: url("../../assets/titlePageBg.svg");
   background-size: cover;
+
+  .titlePage::before{
+    content: url("../../assets/titlePageBg.svg");
+  }
   
 
   @include media(1672px) {

@@ -20,7 +20,6 @@ function PortfolioCard({
   Category,
   nTs,
 }) {
-  const [idx, setIdx] = useState(0);
   let hiddenClass = "";
   let bg = imgBg;
 
@@ -107,7 +106,7 @@ function PortfolioCard({
           <Slider ref={slider} {...sliderSettings}>
             {imgSrc.map((img, index) => (
               <div key={index}>
-                <img alt={img} src={img} className="crousel-image" />
+                <img alt={img} src={img} className="crousel-image" async/>
               </div>
             ))}
           </Slider>
