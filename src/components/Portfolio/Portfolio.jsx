@@ -18,6 +18,7 @@ function Portfolio() {
   const handleBtns = (e) => {
     let word = e.target.value;
     setCurrentCard(word);
+    
   };
 
   const allSizeElements = document.querySelectorAll(".btn");
@@ -41,7 +42,7 @@ function Portfolio() {
           data.Category === currentCard || data.Category.includes(currentCard)
         );
       });
-
+      document.querySelector(".portfolio-viewmore-btn").style.display = "none";
       setData(filtered);
     }
   }, [currentCard]);
