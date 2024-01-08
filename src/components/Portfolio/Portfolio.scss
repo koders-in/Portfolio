@@ -74,6 +74,7 @@
 
 .btn.active {
   border-bottom: 2px solid $green;
+  font-weight: 700;
 }
 
 .portfolio-cards {
@@ -163,7 +164,7 @@
 }
 
 .rotatingText:hover{
-  transform: scale(1.2);
+  transform: rotate(-1turn) scale(1.3);
 }
 
 

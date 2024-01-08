@@ -101,7 +101,7 @@ const vb3 = "https://cdn.discordapp.com/attachments/1182729641920827443/11920363
 const vb4 = "https://cdn.discordapp.com/attachments/1182729641920827443/1192036366708650034/4Vinlybot.webp?ex=65a79d60&is=65952860&hm=ecc0052648292b0f210d037a77f5c4ceb02af089a8698465be2a4c26856f228a&";
 const vb5 = "https://cdn.discordapp.com/attachments/1182729641920827443/1192036366163382292/5Vinlybot.webp?ex=65a79d60&is=65952860&hm=e9e92f3c3ea4a2587901f16c48532080189efe7f6b181b25b73466dc368c2a0e&";
 const vb6 = "https://cdn.discordapp.com/attachments/1182729641920827443/1192036365689430056/6Vinlybot.webp?ex=65a79d60&is=65952860&hm=0146c7e41248a9200817a0e655bf4e05316c39f7abfea10903550b601e69586f&";
-const vbbg = "https://cdn.discordapp.com/attachments/1182729641920827443/1192036365299363861/VinlyBotBG.webp?ex=65a79d60&is=65952860&hm=104361c95fa96ed3f42da26c7d4731ccecbcaafeece7292e6428386c704cf374&";
+const vbbg = "https://cdn.discordapp.com/attachments/1189459683367473243/1193840804406509609/VinlyBotBG.webp?ex=65ae2de4&is=659bb8e4&hm=76b05797169db8d9f0f291a20e487f8aaa12b5a7dfe6d0fb7dcc521515c92db8&";
 
 
 const spacebot1 = "https://cdn.discordapp.com/attachments/1182729641920827443/1192035808920731658/1.webp?ex=65a79cdb&is=659527db&hm=6a5dd42eff4f0ddd6e477ed5acc220f7ce7712985a27c239499cd0494898b2cf&";
@@ -128,7 +128,7 @@ const WM4 = "https://cdn.discordapp.com/attachments/1182729641920827443/11920363
 const WM5 = "https://cdn.discordapp.com/attachments/1182729641920827443/1192036379975233557/5WrenchoServices.webp?ex=65a79d63&is=65952863&hm=b7a23edeac02ccb6a576244957d9772d307b3ab623902b2042a6d580056c6db9&";
 const WM6 = "https://cdn.discordapp.com/attachments/1182729641920827443/1192036379408990208/6WrenchoGenerateBill.webp?ex=65a79d63&is=65952863&hm=04535ed4fc4ded7c720fe0b1e667b8f31085e86b5e72af334e3ed7e4067517c4&";
 const WM7 = "https://cdn.discordapp.com/attachments/1182729641920827443/1192036378788245534/7WrenchoOther.webp?ex=65a79d63&is=65952863&hm=6664893c4b024a7ec70a32804357162430e0b21916186f93fc42834855902574&";
-const WMbg = "https://cdn.discordapp.com/attachments/1182729641920827443/1192036378419134495/WrenchoMechanicsBG.webp?ex=65a79d63&is=65952863&hm=36df9d55a7aad503479c69d42b754af3a9ffb6387a2707264e80e7b8a9c7abd2&";
+const WMbg = "https://cdn.discordapp.com/attachments/1189459683367473243/1193840803500523640/Wrencho_MechanicsBG.webp?ex=65ae2de4&is=659bb8e4&hm=94cc58cf7951779d8c406cce680ff32779426643a7583e8e195ae34ff8116d06&";
 
 
 const Bp1 = "https://cdn.discordapp.com/attachments/1182729641920827443/1192036374040297545/1ByteProxiesGIF.webp?ex=65a79d62&is=65952862&hm=a06ea5dd84c12cff3f3edad8f226ec41bb82da5c08fe30cbb1dc8a950fa22cc5&";
@@ -146,7 +146,7 @@ const fil5 = "https://cdn.discordapp.com/attachments/1182729641920827443/1192036
 const fil6 = "https://cdn.discordapp.com/attachments/1182729641920827443/1192036398560190595/6FiltedAlerts.webp?ex=65a79d68&is=65952868&hm=69cd22c4d40e67ce16d7c22b3b8a53a114fd457abd9bbd36b17a64dc10ffafea&";
 const fil7 = "https://cdn.discordapp.com/attachments/1182729641920827443/1192036398023323678/7FiltedAddAlerts.webp?ex=65a79d68&is=65952868&hm=f79490451b1b80ec6721e89d7f7977187a5ee288022dba856ba05182699ff9ea&";
 const fil8 = "https://cdn.discordapp.com/attachments/1182729641920827443/1192036397578723429/8FiltedAccountToken.webp?ex=65a79d68&is=65952868&hm=003c35735802ce1a74af5f63810745baa5ab8346f47f35f80f8f9164ee1c3b99&";
-const filbg = "https://cdn.discordapp.com/attachments/1182729641920827443/1192036396957970502/FiltedBG.webp?ex=65a79d68&is=65952868&hm=a70d5ee164efd6cd287c3a73c0fab767f515d6dc1e6e3488233c1a671d5ace96&";
+const filbg = "https://cdn.discordapp.com/attachments/1189459683367473243/1193840804087730258/FiltedBG.webp?ex=65ae2de4&is=659bb8e4&hm=48fd25c9744e3be5994984d1cde51f8721be91c2d0a8b981be7a433c199d98bf&";
 
 
 const dk1 ="https://cdn.discordapp.com/attachments/1182729641920827443/1192036391593451530/1DunkBot-Login-Koders.webp?ex=65a79d66&is=65952866&hm=1cde2957f10c24593bb21fb6b6092554c2a5b4734da22f03f8eaf1e9d911c093&";
