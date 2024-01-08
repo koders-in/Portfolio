@@ -13,6 +13,7 @@ function Portfolio() {
     setData((p) => [...p, ...arr2]);
     setMobileApp((p) => [...p, ...mobileAppTwo]);
     document.querySelector(".portfolio-viewmore-btn").style.display = "none";
+
   };
 
   const handleBtns = (e) => {
@@ -99,7 +100,7 @@ function Portfolio() {
       </div>
 
       <div className="portfolio-cards">
-        {data.map((item) => (
+        {desktopAppImages.map((item) => (
           <PortfolioCard
             key={item.title}
             hidden={item.hidden}
@@ -119,7 +120,6 @@ function Portfolio() {
           />
         ))}
       </div>
-
       <div className="portfolio-buttons">
         <button className="portfolio-viewmore-btn" onClick={handleClick}>
           view more

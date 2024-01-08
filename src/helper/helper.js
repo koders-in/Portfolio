@@ -160,7 +160,15 @@ const dk8 ="https://cdn.discordapp.com/attachments/1182729641920827443/119203638
 const dkbg = "https://cdn.discordapp.com/attachments/1182729641920827443/1192036387319468053/DunkBotBG.webp?ex=65a79d65&is=65952865&hm=cb46da4c1221623e7c50bd3701a07c38b290373869c38ff470c59250d0c72ecb&";
 
 
-export const arr = [
+
+const resolveElementPosition = (imagesArray) => {
+  imagesArray.forEach((element, i) => {
+    element.position = i % 2 ? "right" : "left";
+  });
+  return imagesArray;
+};
+
+const desktopAppImagesData = [
   {
     imgSrc: [sal1, sal2, sal3, sal4, sal5, sal6, sal7],
     imgBg: [salbg],
@@ -284,6 +292,7 @@ export const arr = [
     ],
     Description:
       "A website that provides real-time notifications of products from vinted.fr.",
+
   },
   
 ];
@@ -302,6 +311,7 @@ export const arr2 = [
     nTs: 5,
     techStack: ["Flutter", "Node", "SOLR", "PostgreSQL", "AWS S3"],
     Description: "This app helps a mechanics offer their services to the user.",
+
   },
   {
     imgSrc: [Bp1, Bp2, Bp3, Bp4],
@@ -362,6 +372,18 @@ export const arr2 = [
 ];
 
 export const mobileAppOne = [
-];
 
-export const mobileAppTwo = [];
+];
+const mobileAppImagesData2 = [];
+
+resolveElementPosition(desktopAppImagesData);
+resolveElementPosition(desktopAppImagesData2);
+resolveElementPosition(mobileAppImagesData);
+resolveElementPosition(mobileAppImagesData2);
+
+export {
+  desktopAppImagesData,
+  desktopAppImagesData2,
+  mobileAppImagesData,
+  mobileAppImagesData2
+}
