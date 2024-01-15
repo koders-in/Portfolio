@@ -1,17 +1,15 @@
 import React from "react";
 import PortfolioCard from "../PortfolioCard/PortfolioCard";
 import "./Portfolio.scss";
-import { arr, arr2, mobileAppOne, mobileAppTwo } from "../../helper/helper";
+import { arr, arr2 } from "../../helper/helper";
 import dotSmall from "../../assets/dot-small.svg";
 import { useEffect, useState } from "react";
 
 function Portfolio() {
   const [data, setData] = useState([...arr]);
   const [currentCard, setCurrentCard] = useState("All");
-  const [mobileApp, setMobileApp] = useState([...mobileAppOne]);
   const handleClick = () => {
     setData((p) => [...p, ...arr2]);
-    setMobileApp((p) => [...p, ...mobileAppTwo]);
     document.querySelector(".portfolio-viewmore-btn").style.display = "none";
 
   };
@@ -100,7 +98,7 @@ function Portfolio() {
       </div>
 
       <div className="portfolio-cards">
-        {desktopAppImages.map((item) => (
+        {data.map((item) => (
           <PortfolioCard
             key={item.title}
             hidden={item.hidden}

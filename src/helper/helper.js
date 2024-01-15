@@ -168,7 +168,7 @@ const resolveElementPosition = (imagesArray) => {
   return imagesArray;
 };
 
-const desktopAppImagesData = [
+export const arr = [
   {
     imgSrc: [sal1, sal2, sal3, sal4, sal5, sal6, sal7],
     imgBg: [salbg],
@@ -374,16 +374,5 @@ export const arr2 = [
 export const mobileAppOne = [
 
 ];
-const mobileAppImagesData2 = [];
-
-resolveElementPosition(desktopAppImagesData);
-resolveElementPosition(desktopAppImagesData2);
-resolveElementPosition(mobileAppImagesData);
-resolveElementPosition(mobileAppImagesData2);
-
-export {
-  desktopAppImagesData,
-  desktopAppImagesData2,
-  mobileAppImagesData,
-  mobileAppImagesData2
-}
+resolveElementPosition(arr);
+resolveElementPosition(arr2);
