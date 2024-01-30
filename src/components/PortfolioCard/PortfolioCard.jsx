@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import "./PortfolioCard.scss";
 import AOS from "aos";
 import { useEffect } from "react";

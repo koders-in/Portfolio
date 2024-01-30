@@ -127,6 +127,7 @@ function Portfolio() {
             className="startNewProject-btn"
             href="https://koders.in/start-project"
             target="_blank"
+            rel="noreferrer"
           >
             <svg
               className="rotatingText"
