@@ -2,7 +2,10 @@
 
 .Portfolio {
   @include flex-centerd(flex, center, center, column);
-  margin-top: 3rem;
+  margin-top: 7rem;
+  background-image: url("../../assets/portfolio-bg.png");
+  background-repeat: no-repeat;
+  background-position: right 37% bottom 60%;
   @include media(560px) {
     margin-top: 8rem;
   }
@@ -16,14 +19,16 @@
 }
 
 .portfolio-header h1 {
-  @include font(36px, $white, 400);
-  @include media(560px) {
+  word-wrap: break-word;
+  line-height: 0;
+  @include font(121.99px, $white, 300);
+  @include media(600px) {
     font-size: 28px;
   }
 }
 
 .portfolio-header h4 {
-  @include font(22px, $green, 700);
+  @include font(25px, $green, 700);
   margin-bottom: 1rem;
 }
 
@@ -32,34 +37,76 @@
   width: 70%;
   margin-top: 0;
   line-height: 1.5;
+  font-size: 16px;
+}
+
+.portfolio-nav {
+  margin-top: 60px;
+  padding: 0;
+  @include media(600px) {
+    gap: 30px;
+  }
+  @include media(1000px) {
+    justify-content: center;
+  }
+}
+
+.nav-items {
+  color: $white;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  gap: 5.5rem;
+  @include media(650px) {
+    gap: 15px;
+    flex-flow: column wrap;
+  }
+}
+
+.nav-items button {
+  background: none;
+  border: none;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.btn.active {
+  border-bottom: 2px solid $green;
+  font-weight: 700;
 }
 
 .portfolio-cards {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 6rem;
-  grid-row-gap: 3rem;
+  grid-row-gap: 12rem;
   width: 80%;
   @include media(700px) {
     width: 90%;
-    grid-row-gap: 1rem;
+    grid-row-gap: 10rem;
     grid-column-gap: 3rem;
   }
-  @include media(600px) {
+  @include media(560px) {
     width: 80%;
   }
 }
 
-.portfolio-btn {
+.portfolio-viewmore-btn {
   background-color: transparent;
   border: none;
-  margin-top: 4rem;
   cursor: pointer;
+  margin-left: 45%;
   transition: all ease 0.3s;
   @include font(20px, $green, 300);
+  @include media(850px) {
+    margin-top: 25%;
+    margin-left: 0%;
+  }
 }
 
-.portfolio-btn:hover {
+.portfolio-viewmore-btn:hover {
   color: $green;
 }
 
@@ -67,11 +114,74 @@
   display: none;
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 650px) {
   .portfolio-cards {
     grid-template-columns: auto;
   }
   .Portfolio {
     margin-top: 0rem;
+  }
+}
+
+.startNewProjectText {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 10px;
+  font-size: 15px;
+  filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(2933%)
+    hue-rotate(228deg) brightness(113%) contrast(100%);
+}
+.startNewProject {
+  margin-left: auto;
+
+  @include media(850px) {
+    margin-left: 0%;
+    margin-top: 4rem;
+  }
+}
+.startNewProject-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.rotatingText {
+  animation-name: rotate-circle;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate-circle {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.startNewProject-dotSmall {
+  filter: brightness(0) saturate(100%) invert(59%) sepia(33%) saturate(6084%)
+    hue-rotate(142deg) brightness(98%) contrast(82%);
+}
+
+.rotatingText:hover{
+  transform: rotate(-1turn) scale(1.3);
+}
+
+
+.portfolio-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+  width: 80%;
+  @include media(1600px) {
+    margin-top: 30vh;
+  }
+
+  @include media(850px) {
+    margin-top: 20vh;
+    flex-flow: column wrap;
+  }
+  @include media(560px) {
+    margin-top: 28vh;
   }
 }
