@@ -1,85 +1,121 @@
 import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
-
+import { useEffect } from "react";
 import Divider from "../Divider/Divider";
-
+import axios from "axios";
 import "./OurClients.scss";
 
-const rowOne = [
-  { src: "/logo/icon-1.svg", tooltip: "First to Notify", id: "icon-1" },
-  { src: "/logo/icon-2.svg", tooltip: "Instaride", id: "icon-2" },
-  { src: "/logo/icon-3.svg", tooltip: "Jupiter Toolbox", id: "icon-3" },
-  { src: "/logo/icon-4.svg", tooltip: "Kyro Tool", id: "icon-4" },
-  { src: "/logo/icon-5.svg", tooltip: "Hawa UI", id: "icon-5" },
-  { src: "/logo/icon-6.svg", tooltip: "Gensis", id: "icon-6" },
-  { src: "/logo/icon-7.svg", tooltip: "Lorem", id: "icon-7" },
-  { src: "/logo/icon-8.svg", tooltip: "Divine", id: "icon-8" },
-];
-const rowTwo = [
-  { src: "/logo/icon-9.svg", tooltip: "Bat Proxy", id: "icon-9" },
-  { src: "/logo/icon-11.svg", tooltip: "Argon AIO", id: "icon-10" },
-  { src: "/logo/icon-12.svg", tooltip: "Machina", id: "icon-11" },
-  { src: "/logo/icon-13.svg", tooltip: "Pluto", id: "icon-12" },
-  { src: "/logo/icon-14.svg", tooltip: "Popbot", id: "icon-13" },
-  { src: "/logo/icon-15.svg", tooltip: "Squared IO", id: "icon-14" },
-  { src: "/logo/icon-17.svg", tooltip: "UC Toolbot", id: "icon-15" },
-  { src: "/logo/icon-18.svg", tooltip: "Wrencho", id: "icon-16" },
-];
-
 const OurClients = () => {
-  const [isShowTooltip, setIsShowTooltip] = useState(false);
-  return (
-    <div className="our-clients">
-      <h1>
-        Our <span>Clients</span>
-      </h1>
-      <Divider height="4rem" />
-      <Marquee
-        pauseOnHover={true}
-        loop={0}
-        speed={50}
-        gradientColor={false}
-        className="marquee-container-one"
-      >
-        {rowOne.map((item, i) => (
-          <div key={item.src} className="logo-container">
-            <img
-              onMouseEnter={() => setIsShowTooltip(item.id)}
-              onMouseLeave={() => setIsShowTooltip("")}
-              style={i === 0 ? { filter: "invert(1)" } : {}}
-              className="logo-container-img"
-              alt={item.src}
-              src={item.src}
-            />
-            {isShowTooltip === item.id && <div>{item.tooltip}</div>}
-          </div>
-        ))}
-      </Marquee>
-      <Divider height="4rem" />
-      <Marquee
-        pauseOnHover={true}
-        loop={0}
-        speed={50}
-        gradientColor={false}
-        className="marquee-container-two"
-        direction="right"
-      >
-        {rowTwo.map((item, i) => (
-          <div key={item.src} className="logo-container">
-            <img
-              onMouseEnter={() => setIsShowTooltip(item.id)}
-              onMouseLeave={() => setIsShowTooltip("")}
-              alt={item.src}
-              src={item.src}
-              key={item.src}
-              className="logo-container-img"
-            />
-            {isShowTooltip === item.id && <div>{item.tooltip}</div>}
-          </div>
-        ))}
-      </Marquee>
-    </div>
-  );
+    const [clientData, SetClientData] = useState([]);
+    const [isShowTooltip, setIsShowTooltip] = useState(false);
+    const base_url = "https://strapi.koders.in";
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(
+                    "https://strapi.koders.in/api/client-logos?populate=*"
+                );
+                SetClientData(response.data.data);
+            } catch (error) {
+                console.error("Error fetching data from Strapi:", error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    return (
+        <div className="our-clients">
+            <h1>
+                Our <span>Clients</span>
+            </h1>
+            <Divider height="4rem" />
+            <Marquee
+                pauseOnHover={true}
+                loop={0}
+                speed={50}
+                gradientColor={false}
+                className="marquee-container-one"
+            >
+                {clientData &&
+                    clientData
+                        .slice(0, Math.ceil(clientData.length / 2))
+                        .map((item, i) => (
+                            <div key={item.id} className="logo-container">
+                                {item.attributes.Img.data.map(
+                                    (image, index) => (
+                                        <img
+                                            key={index}
+                                            onMouseEnter={() =>
+                                                setIsShowTooltip(item.id)
+                                            }
+                                            onMouseLeave={() =>
+                                                setIsShowTooltip("")
+                                            }
+                                            style={
+                                                i === 0
+                                                    ? { filter: "invert(1)" }
+                                                    : {}
+                                            }
+                                            className="logo-container-img"
+                                            alt={image.attributes.name} // Set alt text
+                                            src={
+                                                base_url + image.attributes.url
+                                            } // Constructing URL with base_url
+                                        />
+                                    )
+                                )}
+                                {isShowTooltip === item.id && (
+                                    <div>{item.attributes.tooltip}</div>
+                                )}
+                            </div>
+                        ))}
+            </Marquee>
+            <Divider height="4rem" />
+            <Marquee
+                pauseOnHover={true}
+                loop={0}
+                speed={50}
+                gradientColor={false}
+                className="marquee-container-two"
+                direction="right"
+            >
+                {clientData &&
+                    clientData
+                        .slice(Math.ceil(clientData.length / 2))
+                        .map((item, i) => (
+                            <div key={item.id} className="logo-container">
+                                {item.attributes.Img.data.map(
+                                    (image, index) => (
+                                        <img
+                                            key={index}
+                                            onMouseEnter={() =>
+                                                setIsShowTooltip(item.id)
+                                            }
+                                            onMouseLeave={() =>
+                                                setIsShowTooltip("")
+                                            }
+                                            style={
+                                                i === 0
+                                                    ? { filter: "invert(1)" }
+                                                    : {}
+                                            }
+                                            className="logo-container-img"
+                                            alt={image.attributes.name}
+                                            src={
+                                                base_url + image.attributes.url
+                                            }
+                                        />
+                                    )
+                                )}
+                                {isShowTooltip === item.id && (
+                                    <div>{item.attributes.tooltip}</div>
+                                )}
+                            </div>
+                        ))}
+            </Marquee>
+        </div>
+    );
 };
 
 export default OurClients;
