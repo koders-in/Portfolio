@@ -11,6 +11,7 @@ function PortfolioCard({
   imgSrc,
   delay,
   classTitle,
+  title,
   hidden,
   techStack,
   Description,
@@ -86,31 +87,30 @@ function PortfolioCard({
       data-aos="fade-up"
       data-aos-delay={delay}
     >
-      <button className="next" onClick={() => slider?.current?.slickNext()}>
-        &#x1F862;
-      </button>
-      <button className="prev" onClick={() => slider?.current?.slickPrev()}>
-        &#x1F860;
-      </button>
-
       <div
         className={"portfolio-card-container"}
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <div className={"portfolio-class-title"}>{classTitle}</div>
+        {" "}
+        <button className="next" onClick={() => slider?.current?.slickNext()}>
+          &#x1F862;
+        </button>
+        <button className="prev" onClick={() => slider?.current?.slickPrev()}>
+          &#x1F860;
+        </button>
         <svg width="30" height="30" className="project-logo">
           <image xlinkHref={logo} height="30" width="30" />
         </svg>
-
         <div className="slider-container">
           <Slider ref={slider} {...sliderSettings}>
             {imgSrc.map((img, index) => (
               <div key={index}>
-                <img alt={img} src={img} className="crousel-image" async/>
+                <img alt={img} src={img} className="crousel-image" async />
               </div>
             ))}
           </Slider>
         </div>
+        <div className={"portfolio-class-title"}>{title}</div>
       </div>
       <div className="portfolio-project-description">
         <p className="portfolio-card-header">{Category} App</p>
@@ -134,7 +134,6 @@ function PortfolioCard({
                           width="20px"
                           className="startNewProject-dotSmall"
                         ></image>
-                        
                       </svg>
                     )}
                   </div>
