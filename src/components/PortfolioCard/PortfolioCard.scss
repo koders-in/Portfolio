@@ -4,9 +4,8 @@
   border-image: linear-gradient(#aaaaaae0, #ffffff00) 30;
   border-width: 2px;
   border-style: solid;
-  height: 54vh;
   margin-top: 5rem;
-  position: relative;
+  // position: relative;
   @include media(1400px) {
     height: 45vh;
   }
@@ -37,9 +36,10 @@
 }
 
 .portfolio-card-container {
-  height: 100%;
   width: 100%;
+  padding-bottom: 5rem;
   display: grid;
+  position: relative;
   grid-auto-flow: column;
   scroll-behavior: auto;
   overflow-y: auto;
@@ -55,17 +55,15 @@
 
 .portfolio-card-container .project-images {
   scroll-snap-align: start;
-  height: 62%;
-  width: 80%;
+  width: 100%;
   position: absolute;
-  bottom: 18%;
+  bottom: 30%;
   left: 5%;
   display: flex;
 }
 .crousel-image{
   display: flex;
-  width: 90%;
-  height: 100%;
+  width: 98%;
 }
 
 .slider-container{
@@ -229,15 +227,15 @@
   position: absolute;
   bottom: 0%;
   margin-left: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 1.2rem;
   @include media(560px) {
-    font-size: 10px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
   @include media(1300px) {
-    font-size: 13px;
-    margin-bottom: 13px;
+    font-size: 23px;
+    margin-bottom: 23px;
   }
   @include media(460px) {
     font-size: 10px;
@@ -272,7 +270,7 @@
   font-size: 0.9vw;
   font-weight: 200;
   word-break: break-all;
-  margin-top: 30px;
+  margin-top: 10px;
   text-align: left;
   @include media(560px) {
     font-size: 15px;
