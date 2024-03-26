@@ -1,0 +1,119 @@
+@import "../../App.scss";
+
+.KeyValues {
+  background-color: $background-color;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 10rem;
+  margin-top: 7rem;
+  @include flex-centerd(flex, center, center, column);
+}
+
+.heading {
+  @include flex-centerd();
+  font-family: "Poppins", sans-serif;
+}
+
+.heading {
+  margin-top: 1rem;
+}
+
+.heading img {
+  width: 18%;
+  margin-right: 1rem;
+}
+
+.heading h1 {
+  @include font(36px, $white, 400);
+}
+
+.heading h1 span {
+  @include font(36px, $green, 900);
+}
+
+.bg {
+  position: absolute;
+  z-index: 0;
+  margin-top: 22rem;
+  width: 100%;
+}
+
+.bg img {
+  width: 100%;
+}
+
+.cards {
+  width: 90%;
+  margin-top: 8rem;
+  @include flex-centerd(flex, space-between, flex-start);
+}
+
+.cards img {
+  width: 11rem;
+  height: 11rem;
+  margin-bottom: 2rem;
+  animation: shake 3s ease infinite alternate;
+}
+
+.KeyValues .kv-cube-bottom {
+  z-index: 1;
+  width: 8rem;
+  position: absolute;
+  bottom: 2.5rem;
+  left: 18rem;
+}
+/* code for responsiveness */
+@media only screen and (max-width: 960px) {
+  .KeyValues {
+    padding-bottom: 0rem;
+  }
+  .cards {
+    width: 95%;
+    margin-top: 5rem;
+  }
+  .cards img {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 0rem;
+  }
+  .cards h2 {
+    font-size: 1.1em;
+  }
+}
+/* animation for the shaking effect of the icons in the key values section */
+@keyframes shake {
+  from {
+    transform: translate(0%, -5%);
+  }
+  to {
+    transform: translate(0%, 5%);
+  }
+}
+@media only screen and (max-width: 560px) {
+  .KeyValues {
+    margin-top: 2rem;
+  }
+  .heading {
+    & > img {
+      display: none;
+    }
+  }
+  .heading h1 {
+    font-size: 28px;
+    & > span {
+      font-size: 28px;
+    }
+  }
+  .bg img {
+    display: none;
+  }
+  .cards {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+  .KeyValueCard {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}

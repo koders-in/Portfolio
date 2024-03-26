@@ -1,0 +1,304 @@
+@import "../../App.scss";
+
+.titlePage {
+  position: relative;
+  height: 115vh;
+  background-image: url("../../assets/titlePageBg.svg");
+  background-size: cover;
+
+  @include media(1672px) {
+    height: 100vh;
+  }
+  @include media(1489px) {
+    height: 90vh;
+  }
+  @include media(1489px) {
+    height: 80vh;
+  }
+  @include media(1200px) {
+    height: 70vh;
+  }
+
+  & > .header {
+    margin: 1rem 3rem 3rem 3rem;
+    @include flex-centerd(flex, space-between, center);
+    & > .logo {
+      height: 2.2rem;
+      @include media(400px) {
+        height: 1.8rem;
+      }
+    }
+    & > .header-img {
+      height: 3.2rem;
+      animation: rotataor 30s linear infinite;
+    }
+    @include media(400px) {
+      margin: 1rem;
+    }
+  }
+  // ---------------
+  .img-3 {
+    height: 8%;
+    position: relative;
+    animation: blinker 3s linear infinite alternate;
+  }
+  .blc {
+    position: absolute;
+    left: 0%;
+    top: 86.5%;
+    height: 7.5%;
+    animation: rotataor 30s linear infinite reverse;
+  }
+  .hc-1 {
+    position: absolute;
+    top: 24%;
+    left: 86%;
+  }
+  .hc-2 {
+    position: absolute;
+    top: 92.5%;
+    left: 55.8%;
+  }
+  .arrow-img {
+    position: absolute;
+    z-index: -1;
+    left: -10%;
+    height: 80%;
+    top: -18%;
+    animation: blinkerTwo 2s linear infinite alternate;
+    @include media(880px) {
+      width: 12%;
+    }
+    @include media(880px) {
+      left: -4%;
+      top: -12%;
+    }
+  }
+  .brc {
+    position: absolute;
+    top: 108.8%;
+    // left: 80%;
+    height: 8%;
+    animation: moveX 30s linear infinite normal;
+    animation: rotate 2s linear infinite;
+  }
+  // -------------
+  .text-green {
+    color: $green;
+  }
+  // --------------
+  .title-sec {
+    z-index: 4;
+    @include flex-centerd();
+    width: 85%;
+    gap: 7rem;
+    margin: 0 auto;
+    @include media(1160px) {
+      width: 90%;
+      gap: 5rem;
+    }
+    @include media(968px) {
+      width: 90%;
+      gap: 1rem;
+    }
+    @include media(880px) {
+      width: 95%;
+      gap: 0.4rem;
+    }
+    @include media(726px) {
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+    & > .title-sec1 {
+      position: relative;
+      z-index: 5;
+      width: 50%;
+      @include media(726px) {
+        width: 90%;
+      }
+      @include media(410px) {
+        width: 98%;
+      }
+      & > h2 {
+        color: white;
+        z-index: 10;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        font-size: 1.8em;
+        @include media(880px) {
+          font-size: 1.5rem;
+        }
+        @include media(360px) {
+          display: block;
+        }
+      }
+      & > h4 {
+        margin: 0;
+        @include media(500px) {
+          margin: 0.4rem 0 0.9rem 0;
+          width: 98%;
+        }
+      }
+      & > p {
+        color: white;
+        font-size: 0.8em;
+        width: 90%;
+        margin: 0.6rem auto;
+      }
+    }
+    & > .title-sec2 {
+      position: relative;
+      width: 50%;
+      z-index: 6;
+      @include media(726px) {
+        width: 90%;
+      }
+      & > :nth-child(1) {
+        z-index: 10;
+        width: 80%;
+      }
+      & > .title-sec2-img1 {
+        position: absolute;
+        width: 60%;
+        animation: moveDown1 1s ease forwards;
+        @include media(726px) {
+          display: none;
+        }
+      }
+      & > .title-sec2-img2 {
+        position: absolute;
+        width: 40%;
+        animation: moveDown2 1.2s ease forwards;
+        @include media(726px) {
+          display: none;
+        }
+      }
+      & > .title-sec2-img3 {
+        position: absolute;
+        width: 30%;
+        animation: moveDown3 1.4s ease forwards;
+        @include media(726px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .down-btn {
+    width: 1rem;
+    margin-left: 30%;
+    margin-top: 10rem;
+    @include media(726px) {
+      display: none;
+    }
+    & > img {
+      display: block;
+    }
+    & > a {
+      & > :nth-child(1) {
+        animation: fadeOut 0.8s ease 0s infinite;
+      }
+      & > :nth-child(2) {
+        animation: fadeOut 0.8s ease 0.5s infinite;
+      }
+      & > :nth-child(3) {
+        animation: fadeOut 1s ease 3s infinite;
+      }
+    }
+  }
+}
+
+// ------------
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes moveDown1 {
+  from {
+    left: 0%;
+    top: 0%;
+    transform: matrix(0, 0, 0, 0, 0, 0);
+  }
+  to {
+    left: -10%;
+    top: 80%;
+    transform: matrix(0.89, -0.18, 0.58, 0.98, 0, 0);
+  }
+}
+@keyframes moveDown2 {
+  from {
+    left: 0%;
+    top: 0%;
+    transform: matrix(0, 0, 0, 0, 0, 0);
+  }
+  to {
+    left: -35%;
+    top: 170%;
+    transform: matrix(0.93, 0.21, -0.42, 0.97, 0, 0);
+  }
+}
+@keyframes moveDown3 {
+  from {
+    left: 0%;
+    top: 0%;
+    transform: matrix(0, 0, 0, 0, 0, 0);
+  }
+  to {
+    left: -40%;
+    top: 250%;
+    transform: matrix(0.99, -0.13, -0.16, 0.99, 0, 0);
+  }
+}
+
+@keyframes blinker {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+}
+@keyframes rotataor {
+  from {
+    opacity: 1;
+    transform: scale(1);
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes blinkerTwo {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translate(7px, 7px);
+  }
+}
+
+@keyframes moveX {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

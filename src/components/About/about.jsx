@@ -1,50 +1,62 @@
 import React from "react";
-import "./about.css";
+import "./About.scss";
 import CountUp from "react-countup";
-import aboutTopMidCube from "../../Assests/about-top-mid-cube.svg";
-import animeImg5 from "../../Assests/anime-img-5.svg";
-import laptop from "../../Assests/laptop.png";
-import icon1 from "../../Assests/about-icon-1.svg";
-import icon2 from "../../Assests/about-icon-2.svg";
-import icon3 from "../../Assests/about-icon-3.svg";
+import aboutTopMidCube from "../../assets/about-top-mid-cube.svg";
+import laptop from "../../assets/laptop.svg";
+import icon1 from "../../assets/clients.webp";
+import icon2 from "../../assets/about-project.webp";
+import icon3 from "../../assets/countries.webp";
+import AOS from "aos";
 
 const about = () => {
+  AOS.init({
+    once: true,
+  });
+
+  const abourData = [
+    { icon: icon1, text: "Clients", value: 50 },
+    { icon: icon2, text: "Projects Done", value: 260 },
+    { icon: icon3, text: "Countries", value: 18 },
+  ];
   return (
     <div className="about" id="about-id">
-      <img src={aboutTopMidCube} alt="" className="atmc" />
-      <div className="main-container">
-        <div className="left-container">
-          <img src={animeImg5} alt="" className="tilt-1" />
+      <img src={aboutTopMidCube} alt="" className="about-top-cube" />
+      <div className="about-container">
+        <div
+          className="about-container-sec1"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
           <img src={laptop} alt="" className="laptop" />
         </div>
-        <div className="right-container">
-          <div className="about-child first">
-            <img src={icon1} alt="" className="about-icons" />
-            <div className="child-text-1">
-              <span>
-                <CountUp end={450} duration={1} enableScrollSpy={true}/>
-              </span>
-              <p>Clients</p>
-            </div>
-          </div>
-          <div className="about-child second">
-            <img src={icon2} alt="" className="about-icons" />
-            <div className="child-text-2">
-              <span>
-                <CountUp end={890} duration={2} enableScrollSpy={true} />
-              </span>
-              <p>Project Done</p>
-            </div>
-          </div>
-          <div className="about-child third">
-            <img src={icon3} alt="" className="about-icons" />
-            <div className="child-text-3">
-              <span>
-                <CountUp end={1000} duration={3} enableScrollSpy={true} />
-              </span>
-              <p>Cups Of Coffee</p>
-            </div>
-          </div>
+        <div
+          className="about-container-sec2"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
+          {abourData.map((item, i) => {
+            return (
+              <div key={i} className="about-box">
+                <img
+                  src={item.icon}
+                  alt={item.icon}
+                  // style={i === 0 ? { height: "6rem" } : {}}
+                />
+                <div>
+                  <div className="stats">
+                    <CountUp
+                      className=""
+                      end={item.value}
+                      duration={0.8}
+                      enableScrollSpy={true}
+                    />
+                    <span className="plus-icon">+</span>
+                  </div>
+                  <p>{item.text}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

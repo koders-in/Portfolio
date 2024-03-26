@@ -1,0 +1,90 @@
+@import "../../index.scss";
+
+.about {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  .about-container {
+    @include flex-centerd();
+    padding-left: 13%;
+    width: 80%;
+    margin: 12rem auto 0 auto;
+    gap: 10rem;
+    @include media(968px) {
+      margin: 5rem auto 0 auto;
+    }
+    @include media(824px) {
+      margin: 4rem auto 0 auto;
+      width: 90%;
+      gap: 6rem;
+    }
+    @include media(600px) {
+      padding-left: 0;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    & > .about-container-sec1 {
+      width: 50%;
+      @include media(474px) {
+        width: 90%;
+      }
+      & > img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    & > .about-container-sec2 {
+      width: 50%;
+      @include media(474px) {
+        width: 90%;
+        padding-left: 17%;
+      }
+      @include media(350px) {
+        padding-left: 17%;
+      }
+      @include media(300px) {
+        padding-left: 5%;
+      }
+      & > .about-box {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        &>.stats{
+          display: flex;
+        }
+        & > img {
+          width: 20%;
+        }
+        & > div {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        & > div > p,
+        span {
+          color: white;
+          font-size: 1.5em;
+          margin: 0;
+          @include media(350px) {
+            font-size: 1em;
+          }
+        }
+        &>.stats{
+          &>span{
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  // ----------
+  .about-top-cube {
+    position: absolute;
+    top: 138%;
+    left: 46%;
+    animation: blinker 3s linear infinite alternate;
+  }
+}

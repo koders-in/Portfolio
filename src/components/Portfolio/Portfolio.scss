@@ -1,0 +1,77 @@
+@import "../../App.scss";
+
+.Portfolio {
+  @include flex-centerd(flex, center, center, column);
+  margin-top: 3rem;
+  @include media(560px) {
+    margin-top: 8rem;
+  }
+}
+
+.portfolio-header {
+  @include flex-centerd(flex, center, center, column);
+  @include media(500px) {
+    margin-top: 3rem;
+  }
+}
+
+.portfolio-header h1 {
+  @include font(36px, $white, 400);
+  @include media(560px) {
+    font-size: 28px;
+  }
+}
+
+.portfolio-header h4 {
+  @include font(22px, $green, 700);
+  margin-bottom: 1rem;
+}
+
+.portfolio-header p {
+  color: $white;
+  width: 70%;
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+.portfolio-cards {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 6rem;
+  grid-row-gap: 3rem;
+  width: 80%;
+  @include media(700px) {
+    width: 90%;
+    grid-row-gap: 1rem;
+    grid-column-gap: 3rem;
+  }
+  @include media(600px) {
+    width: 80%;
+  }
+}
+
+.portfolio-btn {
+  background-color: transparent;
+  border: none;
+  margin-top: 4rem;
+  cursor: pointer;
+  transition: all ease 0.3s;
+  @include font(20px, $green, 300);
+}
+
+.portfolio-btn:hover {
+  color: $green;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 560px) {
+  .portfolio-cards {
+    grid-template-columns: auto;
+  }
+  .Portfolio {
+    margin-top: 0rem;
+  }
+}

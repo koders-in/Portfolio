@@ -1,0 +1,9 @@
+export { default as About } from "./About/About.jsx";
+export { default as Footer } from "./Footer/Footer.jsx";
+export { default as KeyValueCard } from "./KeyValueCard/KeyValueCard.jsx";
+export { default as KeyValues } from "./KeyValues/KeyValues.jsx";
+export { default as Portfolio } from "./Portfolio/Portfolio.jsx";
+export { default as PortfolioCard } from "./PortfolioCard/PortfolioCard.jsx";
+export { default as SplashScreen } from "./SplashScreen/SplashScreen.jsx";
+export { default as TitlePage } from "./TitlePage/TitlePage.jsx";
+export { default as Divider } from "./Divider/Divider.jsx";
