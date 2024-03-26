@@ -20,14 +20,14 @@ const about = () => {
   ];
   return (
     <div className="about" id="about-id">
-      <img src={aboutTopMidCube} alt="" className="about-top-cube" />
+      <img src={aboutTopMidCube} alt="" className="about-top-cube" rel="preload" />
       <div className="about-container">
         <div
           className="about-container-sec1"
           data-aos="fade-right"
           data-aos-delay="200"
         >
-          <img src={laptop} alt="" className="laptop" />
+          <img src={laptop} alt="" className="laptop" rel="preload"/>
         </div>
         <div
           className="about-container-sec2"
@@ -41,6 +41,7 @@ const about = () => {
                   src={item.icon}
                   alt={item.icon}
                   // style={i === 0 ? { height: "6rem" } : {}}
+                  rel="preload"
                 />
                 <div>
                   <div className="stats">
