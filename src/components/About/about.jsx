@@ -8,7 +8,7 @@ import icon2 from "../../assets/about-project.webp";
 import icon3 from "../../assets/countries.webp";
 import AOS from "aos";
 
-const about = () => {
+const About = () => {
   AOS.init({
     once: true,
   });
@@ -20,14 +20,19 @@ const about = () => {
   ];
   return (
     <div className="about" id="about-id">
-      <img src={aboutTopMidCube} alt="" className="about-top-cube" rel="preload" />
+      <img
+        src={aboutTopMidCube}
+        alt=""
+        className="about-top-cube"
+        rel="preload"
+      />
       <div className="about-container">
         <div
           className="about-container-sec1"
           data-aos="fade-right"
           data-aos-delay="200"
         >
-          <img src={laptop} alt="" className="laptop" rel="preload"/>
+          <img src={laptop} alt="" className="laptop" rel="preload" />
         </div>
         <div
           className="about-container-sec2"
@@ -64,4 +69,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

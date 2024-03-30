@@ -254,5 +254,5 @@ export {
   desktopAppImagesData,
   desktopAppImagesData2,
   mobileAppImagesData,
-  mobileAppImagesData2
-}
+  mobileAppImagesData2,
+};

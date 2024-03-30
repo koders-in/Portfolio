@@ -2,10 +2,12 @@
 
 .PortfolioCard {
   border-image: linear-gradient(#aaaaaae0, #ffffff00) 30;
-  border-width: 2px;
+  border-width: 2.5px;
   border-style: solid;
+  height: 50vh;
   margin-top: 5rem;
-  // position: relative;
+  justify-content: space-between;
+  position: relative;
   @include media(1400px) {
     height: 45vh;
   }
@@ -22,16 +24,16 @@
     height: 30vh;
   }
   @include media(800px) {
-    height: 30vh;
+    height: 38vh;
   }
   @include media(650px) {
-    height: 40vh;
+    height: 52vh;
   }
   @include media(500px) {
-    height: 35vh;
+    height: 50vh;
   }
   @include media(400px) {
-    height: 30vh;
+    height: 49.1vh;
   }
 }
 
@@ -47,6 +49,16 @@
   scroll-snap-type: x mandatory;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
+
+  // transition: transform 0.3s ease-in-out;
+  // perspective: 1000px; /* Set the perspective for 3D effect */
+  
+  // &:hover {
+  //   transform: translateY(-100px) translateZ(1000deg) rotateX(20deg); /* Apply translation and rotation on hover */
+  //   box-shadow: 0 10px 20px rgba(0.7, 0.7, 0.7, 0.7); /* Add shadow for depth */
+  //   scale: 1.04;
+  //   transition: all 0.5s ease-in-out;
+  // }
 }
 
 .portfolio-card-container::-webkit-scrollbar{
@@ -63,7 +75,15 @@
 }
 .crousel-image{
   display: flex;
-  width: 98%;
+  width: 93%;
+  transition: transform 0.3s ease-in-out;
+}
+.crousel-image:hover {
+  overflow: visible; 
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.5); /* Apply scale transformation on hover */
 }
 
 .slider-container{
@@ -82,13 +102,13 @@
     height: 22vh;
     width: 33vw;
     margin-left: 10px;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   @include media(1100px) {
     height: 19vh;
     width: 36vw;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-left: -10px;
   }
 
@@ -102,14 +122,25 @@
     width: 30vw;
     margin-top: 2rem;
   }
-
+   
+  
   @include media(650px) {
-    width:80vw; 
+    width:90vw; 
     margin-left: -40px; 
     margin-top: 2.5rem;
     height: 26vh;
   }
+  @include media(425px){
+    width: 85vw;
+    height: 28vh;
 
+  }
+  @include media(400px) {
+    width:100vw; 
+    margin-left: -120px; 
+    margin-top: 2.5rem;
+    height: 26vh;
+  }
 }
 .slick-track
 {
@@ -124,28 +155,40 @@
   height: inherit !important;
   box-sizing: border-box;
   @include media(800px) {
-    margin-left:10px;
+    margin-left:20px;
+    width: 100%;
+    
   }
   @include media(700px) {
-    margin-left:7px;
+    width: 100%;
+    // Adjusted width to compensate for the reduced margin
+    margin-left:10px;
   }
   @include media(650px) {
     margin-left:0px;
   }
+
 }
 
 .slick-slider {
   max-height: 30vh;
   overflow: hidden;
   @include media(800px) {
+    width: 100%;
     margin-left:-20px;
   }
   @include media(700px) {
+   
   }
   @include media(650px) {
     width: 100%;
     margin-left:10px;
   }
+  @include media(320px){
+    width: 100%;
+    margin-left: -10px;
+  }
+
 }
 
 .slick-slide img {
@@ -166,7 +209,7 @@
 
   @include media(800px) {
     height: 15vh;
-    width: 17vw;
+    width: 22vw;
   }
   @include media(700px) {
     height: 15vh;
@@ -176,6 +219,7 @@
     height:26vh;
     width: 52vw;
   }
+
 }
 
 .tech-stack {
@@ -267,9 +311,10 @@
 }
 
 .project-description {
-  font-size: 0.9vw;
-  font-weight: 200;
+  font-size: 1vw;
+  font-weight: 400;
   word-break: break-all;
+  line-height: normal;
   margin-top: 10px;
   text-align: left;
   @include media(560px) {

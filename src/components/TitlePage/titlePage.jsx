@@ -19,7 +19,7 @@ import sd3 from "../../assets/dark-sd.svg";
 import TypeWriter from "typewriter-effect";
 import AOS from "aos";
 
-const titlePage = () => {
+const TitlePage = () => {
   AOS.init({
     once: true,
   });
@@ -28,16 +28,18 @@ const titlePage = () => {
     <div className="titlePage">
       <div className="header">
         <img src={logo} alt="" className="logo" />
-        <img src={topRightCube} alt="" className="header-img" rel="preload"/>
+        <img src={topRightCube} alt="" className="header-img" rel="preload" />
       </div>
-      <img src={midTopCenterCube} alt="" className="img-3" rel="preload"/> {/* cube one */}
-      <img src={bottomLeftCube} alt="" className="blc" rel="preload"/>
-      <img src={hiddenCube1} alt="" className="hc-1" rel="preload"/> {/*cube in bg */}
-      <img src={hiddenCube2} alt="" className="hc-2" rel="preload"/>
+      <img src={midTopCenterCube} alt="" className="img-3" rel="preload" />{" "}
+      {/* cube one */}
+      <img src={bottomLeftCube} alt="" className="blc" rel="preload" />
+      <img src={hiddenCube1} alt="" className="hc-1" rel="preload" />{" "}
+      {/*cube in bg */}
+      <img src={hiddenCube2} alt="" className="hc-2" rel="preload" />
       <img src={bottomRightCube} alt="" className="brc" />
       <div className="title-sec">
         <div className="title-sec1">
-          <img src={arrowBig} alt="" className="arrow-img" rel="preload"/>
+          <img src={arrowBig} alt="" className="arrow-img" rel="preload" />
           <h2>
             <span> TRUSTED BY&nbsp;</span>
             <span className="text-green">
@@ -69,21 +71,36 @@ const titlePage = () => {
           </p>
         </div>
         <div className="title-sec2">
-          <img src={animeImg1} alt="" className="" rel="preload"/>
-          <img src={animeImg2} alt="" className="title-sec2-img1" rel="preload"/>
-          <img src={animeImg3} alt="" className="title-sec2-img2" rel="preload"/>
-          <img src={animeImg5} alt="" className="title-sec2-img3" rel="preload"/>
+          <img src={animeImg1} alt="" className="" rel="preload" />
+          <img
+            src={animeImg2}
+            alt=""
+            className="title-sec2-img1"
+            rel="preload"
+          />
+          <img
+            src={animeImg3}
+            alt=""
+            className="title-sec2-img2"
+            rel="preload"
+          />
+          <img
+            src={animeImg5}
+            alt=""
+            className="title-sec2-img3"
+            rel="preload"
+          />
         </div>
       </div>
       <div className="down-btn">
         <a href="#about-id">
-          <img src={sd1} alt="" rel="preload"/>
-          <img src={sd2} alt="" rel="preload"/>
-          <img src={sd3} alt="" rel="preload"/>
+          <img src={sd1} alt="" rel="preload" />
+          <img src={sd2} alt="" rel="preload" />
+          <img src={sd3} alt="" rel="preload" />
         </a>
       </div>
     </div>
   );
 };
 
-export default titlePage;
+export default TitlePage;
