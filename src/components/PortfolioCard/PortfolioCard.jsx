@@ -6,7 +6,7 @@ import dotSmall from "../../assets/dot-small.svg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { useState } from "react";
 function PortfolioCard({
   imgSrc,
   delay,
@@ -81,6 +81,8 @@ function PortfolioCard({
     AOS.init();
   });
 
+  const [hoverIndex, setHoverIndex] = useState(-1);
+
   return (
     <div
       className={"PortfolioCard " + hiddenClass}
@@ -98,7 +100,7 @@ function PortfolioCard({
         <button className="prev" onClick={() => slider?.current?.slickPrev()}>
           &#x1F860;
         </button>
-        <svg width="30" height="30" className="project-logo">
+        <svg width="30" height="30" className="project-logo ">
           <image xlinkHref={logo} height="30" width="30" />
         </svg>
         <div className="slider-container">
@@ -119,7 +121,7 @@ function PortfolioCard({
             <div className={"details " + classTitle}>
               <ul className="tech-stack">
                 {techStack.map((item, i) => (
-                  <div className="project-details" key={item + i}>
+                  <div className="project-details">
                     <svg width="30" height="30" className="techStack-logo">
                       <image xlinkHref={imgIcon[i]} height="25" width="25" />
                     </svg>
@@ -140,7 +142,9 @@ function PortfolioCard({
                 ))}
               </ul>
               <div>
-                <p className="project-description">{Description}</p>
+                <p className="project-description" style={{ color: "#FFFFFF" }}>
+                  {Description}
+                </p>
               </div>
             </div>
           </li>

@@ -17,7 +17,42 @@ function Portfolio() {
         const response = await axios.get(
           "https://strapi.koders.in/api/koders-projects?populate=*"
         );
-        setPortfolioData(response.data.data);
+        const modifiedData = response.data.data.map((item) => {
+          // Check if the item's title is "Vinly Bot"
+          if (item.attributes.title === "Vinly Bot") {
+            // Remove the last four entries from the techStack array
+            const updatedTechStack = item.attributes.techStack.slice(
+              0,
+              item.attributes.techStack.length - 4
+            );
+            // Return a modified object with the updated techStack
+            return {
+              ...item,
+              attributes: {
+                ...item.attributes,
+                techStack: updatedTechStack,
+              },
+            };
+          } else if (item.attributes.title === "SpaceBot") {
+            console.log("Tech Stack:", item.attributes.techStack); // Log the techStack array
+            const updatedTechStack = item.attributes.techStack.slice(
+              0,
+              item.attributes.techStack.length - 1
+            );
+            // Return a modified object with the updated techStack
+            return {
+              ...item,
+              attributes: {
+                ...item.attributes,
+                techStack: updatedTechStack,
+              },
+            };
+          } else {
+            // If the title is not "Vinly Bot" or "Spacebot", return the item as it is
+            return item;
+          }
+        });
+        setPortfolioData(modifiedData);
       } catch (error) {
         console.error("Error fetching data from Strapi:", error);
       }
@@ -85,6 +120,10 @@ function Portfolio() {
       setData(extractedDataArray.slice(0, 6));
       document.querySelector(".portfolio-viewmore-btn").style.display =
         " inline";
+    } else if (currentCard === "UI") {
+      setData(extractedDataArray.slice(0, 6));
+      document.querySelector(".portfolio-viewmore-btn").style.display =
+        " inline";
     } else {
       const filtered = extractedDataArray.filter((item) => {
         return item.category && item.category === currentCard;
@@ -94,6 +133,12 @@ function Portfolio() {
       setData(filtered);
     }
   }, [currentCard, extractedDataArray]);
+
+  // useEffect(() => {
+  //   if (currentCard === "UI") {
+  //     setData(extractedDataArray);
+  //   }
+  // }, [currentCard, extractedDataArray]);
 
   return (
     <div className="Portfolio">
@@ -148,11 +193,17 @@ function Portfolio() {
       <div className="portfolio-cards">
         {data &&
           data.map((item) => {
+            // console.log("Tech Stack:", item.techStack); // Log the techStack array
             if (
               item &&
               Array.isArray(item.imageSrc) &&
               Array.isArray(item.imageIcon)
             ) {
+              // Check if "Figma" is in the techStack array
+
+              // If Figma is in techStack, assign "UI" to category, otherwise use the existing category
+              // const isUI = item.techStack.includes("Figma");
+              // const Category = isUI ? "UI" : item.category;
               const renderedPortfolioCard = (
                 <PortfolioCard
                   key={item.title}
