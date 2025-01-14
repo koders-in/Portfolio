@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./TitlePage.scss";
 import logo from "../../assets/logo.png";
 import topRightCube from "../../assets/tp-top-right-cube.svg";
-import midTopCenterCube from "../../assets/tp-mid-top-cube.svg";
 import arrowBig from "../../assets/arrow-3d1.svg";
 import animeImg1 from "../../assets/anime-img-1.webp";
 import animeImg2 from "../../assets/anime-img-2.svg";
@@ -12,78 +11,70 @@ import hiddenCube1 from "../../assets/hidden-by-img-1-anime.svg";
 import bottomLeftCube from "../../assets/tp-top-right-cube.svg";
 import bottomRightCube from "../../assets/tp-bottom-right-cube.svg";
 import animeImg5 from "../../assets/anime-img-5.svg";
-
 import sd1 from "../../assets/not-visible-sd.svg";
 import sd2 from "../../assets/light-sd.svg";
 import sd3 from "../../assets/dark-sd.svg";
-import TypeWriter from "typewriter-effect";
 import AOS from "aos";
 
-const titlePage = () => {
-  AOS.init({
-    once: true,
-  });
+const texts = ["INDIAN ARMY", "GERMAN GOVT", "THE BEST"];
+
+const TitlePage = () => {
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    AOS.init({ once: true });
+  }, []);
 
   return (
     <div className="titlePage">
       <div className="header">
-        <img src={logo} alt="" className="logo" />
-        <img src={topRightCube} alt="" className="header-img" rel="preload"/>
+        <img src={logo} alt="Koders Logo" className="logo" />
+        <img src={topRightCube} alt="Decorative Cube" className="header-img" />
       </div>
-      <img src={midTopCenterCube} alt="" className="img-3" rel="preload"/> {/* cube one */}
-      <img src={bottomLeftCube} alt="" className="blc" rel="preload"/>
-      <img src={hiddenCube1} alt="" className="hc-1" rel="preload"/> {/*cube in bg */}
-      <img src={hiddenCube2} alt="" className="hc-2" rel="preload"/>
-      <img src={bottomRightCube} alt="" className="brc" />
+      <img src={bottomLeftCube} alt="Bottom Left Cube" className="blc" />
+      <img src={hiddenCube1} alt="Hidden Cube 1" className="hc-1" />
+      <img src={hiddenCube2} alt="Hidden Cube 2" className="hc-2" />
+      <img src={bottomRightCube} alt="Bottom Right Cube" className="brc" />
       <div className="title-sec">
         <div className="title-sec1">
-          <img src={arrowBig} alt="" className="arrow-img" rel="preload"/>
+          <img src={arrowBig} alt="Arrow Graphic" className="arrow-img" />
           <h2>
-            <span> TRUSTED BY&nbsp;</span>
-            <span className="text-green">
-              <TypeWriter
-                options={{
-                  autoStart: true,
-                  loop: true,
-                }}
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString("INDIAN ARMY")
-                    .pauseFor(1500)
-                    .deleteAll()
-                    .typeString("GERMAN GOVT")
-                    .pauseFor(1500)
-                    .deleteAll()
-                    .typeString("THE BEST")
-                    .pauseFor(1500)
-                    .deleteAll()
-                    .start();
-                }}
-              />
-            </span>
+            <span className="trusted-by">TRUSTED BY&nbsp;</span>
+            <div className="combined-container">
+              <h1 className="combined-text" key={currentTextIndex}>
+                {texts[currentTextIndex]}
+              </h1>
+            </div>
           </h2>
           <h4 className="text-green">Infrastructure for high quality apps</h4>
           <p>
-            Supercharge your business with latest technology, industry level
-            standards and stable applications
+            Supercharge your business with the latest technology, industry-level
+            standards, and stable applications.
           </p>
         </div>
         <div className="title-sec2">
-          <img src={animeImg1} alt="" className="" rel="preload"/>
-          <img src={animeImg2} alt="" className="title-sec2-img1" rel="preload"/>
-          <img src={animeImg3} alt="" className="title-sec2-img2" rel="preload"/>
-          <img src={animeImg5} alt="" className="title-sec2-img3" rel="preload"/>
+          <img src={animeImg1} alt="Anime Graphic 1" decoding="async" />
+          <img src={animeImg2} alt="Anime Graphic 2" className="title-sec2-img1" loading="lazy" />
+          <img src={animeImg3} alt="Anime Graphic 3" className="title-sec2-img2" loading="lazy" />
+          <img src={animeImg5} alt="Anime Graphic 5" className="title-sec2-img3" loading="lazy" />
         </div>
       </div>
       <div className="down-btn">
         <a href="#about-id">
-          <img src={sd1} alt="" rel="preload"/>
-          <img src={sd2} alt="" rel="preload"/>
-          <img src={sd3} alt="" rel="preload"/>
+          <img src={sd1} alt="Scroll Down Icon 1" />
+          <img src={sd2} alt="Scroll Down Icon 2" />
+          <img src={sd3} alt="Scroll Down Icon 3" />
         </a>
       </div>
     </div>
   );
 };
 
-export default titlePage;
+export default TitlePage;

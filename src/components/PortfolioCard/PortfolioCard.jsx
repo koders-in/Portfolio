@@ -1,153 +1,106 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./PortfolioCard.scss";
 import AOS from "aos";
-import { useEffect } from "react";
-import dotSmall from "../../assets/dot-small.svg";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "aos/dist/aos.css";
 
 function PortfolioCard({
-  imgSrc,
-  delay,
-  classTitle,
-  hidden,
-  techStack,
+  imgSrc = [],
+  title,
   Description,
+  techStack = [],
   imgBg,
   imgIcon,
-  logo,
-  Category,
-  nTs,
+  hidden = false,
+  delay = 100,
 }) {
-  let hiddenClass = "";
-  let bg = imgBg;
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slider = React.useRef(null);
-  const sliderSettings = {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    centerMode: true,
-    arrows: true,
-    centerPadding: "100px",
-    infinite: true,
-    responsive: [
-      {
-        breakpoint: 1300,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: "90px",
-        },
-      },
-      {
-        breakpoint: 1100,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: "70px",
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: "20px",
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 650,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: "80px",
-        },
-      },
-    ],
-  };
-
-  if (hidden) {
-    hiddenClass = "hidden";
-  }
+  useEffect(() => {
+    if (imgSrc.length > 0) {
+      const interval = setTimeout(() => {
+        setCurrentSlide((prevSlide) => (prevSlide + 1) % imgSrc.length);
+      }, 2000);
+      return () => clearTimeout(interval);
+    }
+  }, [currentSlide, imgSrc.length]);
 
   useEffect(() => {
     AOS.init();
-  });
+  }, []);
 
   return (
-    <div
-      className={"PortfolioCard " + hiddenClass}
-      data-aos="fade-up"
+    <a
+      // href={`/portfolio/${title}`}
+      className={`PortfolioCard ${hidden ? "hidden" : ""}`}
+      data-aos="flip-left"
       data-aos-delay={delay}
+      style={{ cursor: "pointer" }}
     >
-      <button className="next" onClick={() => slider?.current?.slickNext()}>
-        &#x1F862;
-      </button>
-      <button className="prev" onClick={() => slider?.current?.slickPrev()}>
-        &#x1F860;
-      </button>
-
+      <div className="slider-container">
+        {imgSrc && imgSrc.length > 0 ? (
+          <div className="slider-item">
+            <img
+              alt={`Slide ${currentSlide + 1} for ${title}`}
+              src={`https://strapi.koders.in${
+                imgSrc[currentSlide]?.formats?.large?.url ||
+                imgSrc[currentSlide]?.formats?.medium?.url ||
+                imgSrc[currentSlide]?.formats?.small?.url ||
+                imgSrc[currentSlide]?.formats?.thumbnail?.url ||
+                imgSrc[currentSlide]?.url
+              }`}
+              className="carousel-image"
+              loading="lazy"
+            />
+          </div>
+        ) : (
+          <p className="no-images-message">No images available</p>
+        )}
+      </div>
       <div
-        className={"portfolio-card-container"}
-        style={{ backgroundImage: `url(${bg})` }}
-      >
-        <div className={"portfolio-class-title"}>{classTitle}</div>
-        <svg width="30" height="30" className="project-logo">
-          <image xlinkHref={logo} height="30" width="30" />
-        </svg>
-
-        <div className="slider-container">
-          <Slider ref={slider} {...sliderSettings}>
-            {imgSrc.map((img, index) => (
-              <div key={index}>
-                <img alt={img} src={img} className="crousel-image" async/>
-              </div>
-            ))}
-          </Slider>
+        className="card-background"
+        style={{
+          backgroundImage: `url(${imgBg?.url ? `https://strapi.koders.in${imgBg.url}` : ""})`,
+        }}
+      ></div>
+      <div className="overlay">
+        <div className="card-content">
+          <div className="bottomContent" data-aos="zoom-in">
+            <h4 className="portfolio-title">{title}</h4>
+            <p className="portfolio-description">{Description}</p>
+            <ul className="tech-stack">
+              {techStack.map((tech, index) => {
+                const icon = `https://strapi.koders.in${imgIcon?.[index]?.url}`;
+                return (
+                  <li key={index}>
+                    {icon ? (
+                      <svg width="40" height="40">
+                        <image href={icon} />
+                      </svg>
+                    ) : (
+                      <span>{tech}</span>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+            {/* <div className="read-more-wrapper">
+                {
+                  <button
+                    className="read-more-btn"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleNavigate();
+                    }}
+                    aria-label={`Read more about ${title}`}
+                  >
+                    Read More
+                  </button>
+                }
+              </div> */}
+          </div>
         </div>
       </div>
-      <div className="portfolio-project-description">
-        <p className="portfolio-card-header">{Category} App</p>
-        <ul className="portfolio-tech-list">
-          <li className="tech-list-item">
-            <div className={"details " + classTitle}>
-              <ul className="tech-stack">
-                {techStack.map((item, i) => (
-                  <div className="project-details" key={item + i}>
-                    <svg width="30" height="30" className="techStack-logo">
-                      <image xlinkHref={imgIcon[i]} height="25" width="25" />
-                    </svg>
-                    <p className="skill">{item}</p>
-                    {nTs-- > 1 && (
-                      <svg width="40" height="40">
-                        <image
-                          xlinkHref={dotSmall}
-                          x="9"
-                          y="5"
-                          height="20px"
-                          width="20px"
-                          className="startNewProject-dotSmall"
-                        ></image>
-                        
-                      </svg>
-                    )}
-                  </div>
-                ))}
-              </ul>
-              <div>
-                <p className="project-description">{Description}</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
+    </a>
   );
 }
 

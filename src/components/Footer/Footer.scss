@@ -1,5 +1,4 @@
 @import "../../index.scss";
-
 .Footer-container {
   background-color: $background-secondary;
   width: 100vw;
@@ -7,51 +6,115 @@
   margin-top: 15rem;
   @include flex-centerd();
 }
-
 .footer {
   @include flex-centerd(flex, space-between, center, row);
   width: 90%;
   padding: 2rem 0;
+  flex-wrap: wrap; 
 }
-
-.right-text a {
-  z-index: 10;
-  text-decoration: none;
-  width: fit-content;
-  margin-bottom: 0.7rem;
-  @include font(22px, $white);
+@media (max-width: 1200px) {
+  .Footer-container {
+    margin-top: 8rem;
+  }
+  .footer {
+    width: 95%;
+  }
 }
-
-.right-text a:hover {
-  border-bottom: 1px solid $green;
+@media (max-width: 992px) {
+  .Footer-container {
+    margin-top: 8rem;
+  }
+  .footer {
+    width: 100%;
+    padding: 1.5rem 0;
+    flex-direction: column; 
+    text-align: center; 
+  }
 }
-
-.right-text small {
-  color: $gray;
-  font-size: 12px;
+@media (max-width: 768px) {
+  .Footer-container {
+    margin-top: 2rem;
+  }
+  .footer {
+    width: 100%;
+    padding: 1rem 0;
+    flex-direction: column; 
+    text-align: center; 
+  }
 }
-
+@media (max-width: 540px) {
+  .Footer-container {
+    margin-top: 6rem;
+  }
+  .footer {
+    width: 100%;
+    padding: 1rem 0;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .Footer-container {
+    margin-top: 8rem;
+  }
+  .footer {
+    width: 100%;
+    padding: 1rem 0;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.right-text {
+  @include flex-centerd(flex, center, center, column);
+  a {
+    z-index: 10;
+    text-decoration: none;
+    width: fit-content;
+    margin-bottom: 0.7rem;
+    @include font(22px, $white);
+    transition: border-bottom 0.3s ease;
+    &:hover {
+      border-bottom: 1px solid $green;
+    }
+  }
+  small {
+    color: $gray;
+    font-size: 12px;
+  }
+}
 .socials {
   @include flex-centerd(flex, space-between, center);
   width: 12rem;
+  a {
+    text-decoration: none;
+    border-bottom: 1px solid $green;
+    @include font(25px, $white);
+    transition: color 0.3s ease;
+    &:hover {
+      color: $green;
+    }
+  }
 }
-
-.socials a {
-  text-decoration: none;
-  border-bottom: 1px solid $green;
-  @include font(25px, $white);
-}
-
 .ba-card,
 .ba-card-back {
   width: 202px;
   height: 191px;
-  transition: 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease;
   position: absolute;
   cursor: pointer;
+  color: white;
   @include flex-centerd();
+  h1 {
+    font-size: 24px;
+    display: none;
+  }
+  &:hover {
+    transform: translateY(-130px) rotate(-10deg);
+    h1 {
+      display: block;
+    }
+  }
 }
-
 .ba-rectangle-1 {
   background: $green;
   transform: rotate(17.82deg);
@@ -59,45 +122,23 @@
   top: -15%;
   z-index: 1;
 }
-
-#bottom-anime {
-  border: 1px solid $red;
-}
-.ba-card-hover {
-  transform: translateY(-130px) rotate(-10deg) !important;
-}
-
-.ba-card h1 {
-  font-size: 24px;
-  display: none;
-}
-.ba-card-hover > h1 {
-  display: block;
-}
-.ba-card-back h1 {
-  font-size: 24px;
-}
-
 .ba-rectangle-2 {
   background: $white;
-  color: white;
   transform: rotate(3.58deg);
   left: 32%;
   top: -40%;
   &:hover {
-    & > h1 {
+    h1 {
       color: black;
     }
   }
 }
-
 .ba-rectangle-3 {
   background: $blue;
   transform: rotate(-20.64deg);
   left: 37%;
   top: -45%;
 }
-
 .ba-rectangle-4 {
   background: $light-gray;
   transform: rotate(-3.15deg);
@@ -105,20 +146,17 @@
   left: 47%;
   z-index: 2;
 }
-
 .ba-rectangle-5 {
   background: $green;
-  color: $green;
   transform: rotate(15.73deg);
   left: 49%;
   top: -45%;
-  &:hover {
-    & > h1 {
+ &:hover {
+    h1 {
       color: white;
     }
   }
 }
-
 .ba-rectangle-6 {
   background-color: $dark-blue;
   transform: rotate(-18.91deg);
@@ -126,16 +164,9 @@
   top: -25%;
   z-index: 3;
 }
-.right-text {
-  @include flex-centerd(flex, center, center, column);
-}
-
 @media only screen and (max-width: 1164px) {
   .bottom-anime {
     display: none;
-  }
-  .Footer-container {
-    margin-top: 7rem;
   }
   .footer {
     flex-direction: column;

@@ -1,43 +1,237 @@
 @import "../../index.scss";
 
-.our-clients{
-    &>h1{
+.our-clients {
+    padding: 20px;
+
+
+    &>h1 {
         @include font(36px, $white, 400);
-        &>span{
-            @include font(36px, $green, 900);
+
+        &>span {
+            @include font(36px, $green, 900); 
         }
     }
+    .rfm-marquee{
+      min-width: fit-content;
+    }
 
-    .marquee{
+    @media (min-width: 2000px){
+      .rfm-marquee{
+        gap: 80px;
+      }
+      .rfm-initial-child-container{
+        gap: 80px;
+      }
+    }
+
+
+    .marquee {
         display: flex;
         justify-content: space-around;
+        padding: 10px;
     }
-    .logo-container{
-        position: relative;
-        &>div{
+    .logo-container {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        transition: transform 0.2s ease-in-out;
+
+        &>div {
             color: white;
             position: absolute;
             top: 0;
-            right: 0;
+            right: 1;
         }
     }
+    
 
-    .logo-container-img{
-        padding: 20px 0;
-        margin: 0 2rem;
-        width: 10rem;
-        height: 10rem;
-        @include media(1000px){
-            width: 8rem;
-            height: 8rem;
+
+    .tooltip {
+        position: fixed;
+        pointer-events: none;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+        max-width: 200px;
+        font-size: 14px;
+        visibility: visible;
+        transition: opacity 0.3s ease;
+      }
+      
+    
+
+
+    .logo-container:hover {
+        transform: scale(1.1);
+    }
+
+    .logo-container-img {
+        width: 7rem;
+        height: 8rem;
+        object-fit: contain; 
+        padding: 10px; 
+        margin: 0 1rem; 
+        transition: transform 0.2s ease-in-out;
+    
+        @include media(1000px) {
+            width: 6rem;
+            height: 6rem;
         }
-        @include media(768px){
-            width: 5rem;
-            height: 5rem;
-        }
-        @include media(600px){
+    
+        @include media(768px) {
             width: 4rem;
             height: 4rem;
         }
+    
+        @include media(600px) {
+            width: 3rem;
+            height: 3rem;
+        }
     }
+    
+    .logo-container:hover .logo-container-img {
+        transform: scale(1.1); /* Adjust hover effect */
+    }
+}    
+
+/* Default styles for large screens */
+.logo-container-img#icon-8 {
+    height: 11rem;
+    width: 11rem;
+  }
+  .logo-container-img#icon-1 {
+    height: 7rem;
+    width: 7rem;
+  }
+  .logo-container-img#icon-5 {
+    height: 11rem;
+    width: 11rem;
+  }
+  .logo-container-img#icon-13 {
+    height: 6rem;
+    width: 6rem;
+  }
+  .logo-container-img#icon-9{
+    height: 9rem;
+    width: 9rem;
+  }
+  .logo-container-img#icon-10 {
+    height: 7.5rem;
+    width: 7.5rem;
+  }
+  .logo-container-img#icon-11 {
+    height: 12rem;
+    width: 12rem;
+  }
+  .logo-container-img#icon-12 {
+    height: 10rem;
+    width: 10rem;
+  }
+  .logo-container-img#icon-14 {
+    height: 8.2rem;
+    width: 8.2rem;
+  }
+  .logo-container-img#icon-15 {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 30px;
+  }
+  .logo-container-img#icon-16 {
+    height: 11rem;
+    width: 11rem;
+  }
+  .logo-container-img#icon-7 {
+    height: 6.3rem;
+    width: 6.3rem;
+  }
+  .logo-container-img#icon-2 {
+    height: 6rem;
+    width: 6rem;
+  }
+  .logo-container-img#icon-3 {
+    height: 6rem;
+    width: 6rem;
+  }
+  .logo-container-img#icon-4 {
+    height: 6rem;
+    width: 6rem;
+  }
+  .logo-container-img#icon-6 {
+    height: 6.3rem;
+    width: 6.3rem;
+  }
+
+@media (max-width: 1000px) {
+    /* Adjust styles for medium screens */
+    .logo-container-img#icon-8 {
+        height: 8rem;
+        width: 8rem;
+      }
+      .logo-container-img#icon-1 {
+        height: 5rem;
+        width: 5rem;
+      }
+      .logo-container-img#icon-5 {
+        height: 8rem;
+        width: 8rem;
+      }
+      .logo-container-img#icon-13 {
+        height: 4rem;
+        width: 4rem;
+      }
+      .logo-container-img#icon-9{
+        height: 6rem;
+        width: 6rem;
+      }
+      .logo-container-img#icon-10 {
+        height: 5rem;
+        width: 5rem;
+      }
+      .logo-container-img#icon-11 {
+        height: 9rem;
+        width: 9rem;
+      }
+      .logo-container-img#icon-12 {
+        height: 7rem;
+        width: 7rem;
+      }
+      .logo-container-img#icon-14 {
+        height: 6rem;
+        width: 6rem;
+      }
+      .logo-container-img#icon-15 {
+        height: 5rem;
+        width: 5rem;
+        border-radius: 20px;
+      }
+      .logo-container-img#icon-16 {
+        height: 8rem;
+        width: 8rem;
+      }
+      .logo-container-img#icon-7 {
+        height: 4.5rem;
+        width: 4.5rem;
+      }
+      .logo-container-img#icon-2 {
+        height: 4rem;
+        width: 4rem;
+      }
+      .logo-container-img#icon-3 {
+        height: 4rem;
+        width: 4rem;
+      }
+      .logo-container-img#icon-4 {
+        height: 4rem;
+        width: 4rem;
+      }
+      .logo-container-img#icon-6 {
+        height: 4.5rem;
+        width: 4.5rem;
+      }
 }
+  
+  
+  
