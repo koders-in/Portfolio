@@ -1,17 +1,45 @@
 @import "../../App.scss";
-
 .KeyValueCard {
   z-index: 1;
   width: 22%;
 }
+.KeyValueCard {
+  .kvc-container {
+    .kvc-image.animated {
+      animation: pulse 2s infinite;
+    }
+    .kvc-content {
+      .kvc-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
 
+      .kvc-desc {
+        font-size: 18px;
+        color: #f7f4f4;
+      }
+    }
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .kvc-container h2 {
   @include font(1.1em, $green, 500);
+  margin: 0;
   @include media(560px) {
     font-size: 26px !important;
   }
 }
-
 .kvc-container p {
   @include font(16px, $white, 300) {
     line-height: 1.5;

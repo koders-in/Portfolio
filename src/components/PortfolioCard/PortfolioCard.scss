@@ -1,378 +1,217 @@
-@import "../../App.scss";
-
 .PortfolioCard {
-  border-image: linear-gradient(#aaaaaae0, #ffffff00) 30;
-  border-width: 2px;
-  border-style: solid;
-  height: 54vh;
-  margin-top: 5rem;
   position: relative;
-  @include media(1400px) {
-    height: 45vh;
-  }
-  @include media(1300px) {
-    height: 40vh;
-  }
-  @include media(1200px) {
-    height: 35vh;
-  }
-  @include media(1100px) {
-    height: 30vh;
-  }
-  @include media(900px) {
-    height: 30vh;
-  }
-  @include media(800px) {
-    height: 30vh;
-  }
-  @include media(650px) {
-    height: 40vh;
-  }
-  @include media(500px) {
-    height: 35vh;
-  }
-  @include media(400px) {
-    height: 30vh;
-  }
-}
-
-.portfolio-card-container {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-auto-flow: column;
-  scroll-behavior: auto;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scroll-snap-type: x mandatory;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-}
-
-.portfolio-card-container::-webkit-scrollbar{
-  display: none;
-}
-
-.portfolio-card-container .project-images {
-  scroll-snap-align: start;
-  height: 62%;
-  width: 80%;
-  position: absolute;
-  bottom: 18%;
-  left: 5%;
-  display: flex;
-}
-.crousel-image{
-  display: flex;
-  width: 90%;
-  height: 100%;
-}
-
-.slider-container{
-  max-width: 100vw;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  width: 34vw; 
-  margin-left: -40px; 
-  margin-top: 4rem;
-  @include media(1300px) {
-    height: 24vh;
-  }
-
-  @include media(1200px) {
-    height: 22vh;
-    width: 33vw;
-    margin-left: 10px;
-    margin-top: 2rem;
-  }
-
-  @include media(1100px) {
-    height: 19vh;
-    width: 36vw;
-    margin-top: 1rem;
-    margin-left: -10px;
-  }
-
-  @include media(800px) {
-    height: 15vh;
-    width: 35vw;
-    margin-top: 2rem;
-  }
-  @include media(700px) {
-    height: 18vh;
-    width: 30vw;
-    margin-top: 2rem;
-  }
-
-  @include media(650px) {
-    width:80vw; 
-    margin-left: -40px; 
-    margin-top: 2.5rem;
-    height: 26vh;
-  }
-
-}
-.slick-track
-{
-  display: flex !important;
-}
-
-.slick-list{
-  padding-left: 0px !important;
-}
-
-.slick-slide {
-  height: inherit !important;
-  box-sizing: border-box;
-  @include media(800px) {
-    margin-left:10px;
-  }
-  @include media(700px) {
-    margin-left:7px;
-  }
-  @include media(650px) {
-    margin-left:0px;
-  }
-}
-
-.slick-slider {
-  max-height: 30vh;
+  max-width: 450px;
+  margin: 20px auto;
+  border-radius: 20px;
   overflow: hidden;
-  @include media(800px) {
-    margin-left:-20px;
-  }
-  @include media(700px) {
-  }
-  @include media(650px) {
-    width: 100%;
-    margin-left:10px;
-  }
-}
-
-.slick-slide img {
-  height:30vh; 
-  @include media(1300px) {
-    height: 22vh;
-  }
-
-  @include media(1200px) {
-    height: 18vh;
-    width: 16vw;
-  }
-
-  @include media(1100px) {
-    height: 17vh;
-    width: 18vw;
-  }
-
-  @include media(800px) {
-    height: 15vh;
-    width: 17vw;
-  }
-  @include media(700px) {
-    height: 15vh;
-    width: 19vw;
-  }
-  @include media(650px) {
-    height:26vh;
-    width: 52vw;
-  }
-}
-
-.tech-stack {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-
-.portfolio-card-container .img-zoom {
-  & > :nth-child(1) {
-    height: 100% !important;
-    & > img {
-      height: 100% !important;
-    }
-  }
-}
-
-.skill {
-  @include media(900px) {
-    font-size: 16px;
-  }
-  @include media(700px) {
-    font-size: 14px;
-  }
-  @include media(560px) {
-    font-size: 14px;
-  }
-  @include font(14px, $white !important);
-}
-
-
-.next,
-.prev {
-  position: absolute;
-  bottom: 0%;
-  transform: translateY(-50%);
+  box-shadow: 0 10px 15px rgba(14, 211, 201, 0.1);
+  text-decoration: none;
   cursor: pointer;
-  width: 3rem;
-  height: 3rem;
-  background-color: $white;
-  border-radius: 30px;
-  border: none;
-  color: black;
-  z-index: 1;
-}
-.portfolio-class-title {
-  position: absolute;
-  bottom: 0%;
-  margin-left: 40px;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  @include media(560px) {
-    font-size: 10px;
-    margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); 
   }
-  @include media(1300px) {
-    font-size: 13px;
-    margin-bottom: 13px;
-  }
-  @include media(460px) {
-    font-size: 10px;
-    margin-bottom: 0px;
-  }
-}
-
-.prev {
-  right: 4.5rem;
-}
-
-.next {
-  right: 1rem;
-}
-
-.zoom-container {
-  div {
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-}
-
-@media only screen and (max-width: 960px) {
-  .zoom-container {
+  &.hidden {
     display: none;
   }
+  .slider-container {
+    position: relative;
+    z-index: 3;
+    .carousel-image {
+      width: 100%;
+      height: 300px; 
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .no-images-message {
+      text-align: center;
+      padding: 20px;
+      font-size: 1rem;
+      color: #999;
+    }
+  }
+  .card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.7;
+  }
+  .card-content {
+    position: relative;
+    padding: 1px;
+    .bottomContent {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .portfolio-title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: white;
+          margin: 5px; 
+      }
+      .portfolio-description {
+        font-size: 0.95rem;
+        color: white;
+        margin-top: 1px;
+        margin-bottom: 10px;
+        max-width: 60vh;
+      }
+      .tech-stack {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          svg {
+            width: 35px;
+            height: 35px;
+          }
+          span {
+            font-size: 0.95rem;
+            color: #17a3bc;
+            margin-bottom: 14px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1300px) {
+    max-width: 400px;
+    .carousel-image {
+      height: 220px; 
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .portfolio-title {
+      font-size: 1.2rem; 
+    }
+  }
+@media(max-width:1150px){
+  max-width: 375px;
+  .carousel-image{
+    height: 210px;
+  }
+  .card-content{
+    padding: auto;
+  }
+  .portfolio-title{
+    font-size: 1.1rem;
+  }
+  .card-content h4{
+    margin: 2px;
+  }
 }
-
-.project-description {
-  font-size: 0.9vw;
-  font-weight: 200;
-  word-break: break-all;
-  margin-top: 30px;
-  text-align: left;
-  @include media(560px) {
-    font-size: 15px;
+  @media (max-width: 1050px) {
+    max-width: 375px;
+    .carousel-image {
+      height: 200px; 
+    }
+    .card-content {
+      padding: 10px;
+    }
+    .portfolio-title {
+      font-size: 1.1rem;
+    }
+    .card-content h4{
+      margin-top: 2px;
+    }
+    .card-content p{
+      margin: 0;
+    }   
   }
-  @include media(1000px) {
-    font-size: 9px;
+  @media (max-width: 800px) { 
+     max-width: 450px;
+    .carousel-image {
+      height: 180px; 
+    }
+    .portfolio-title {
+      font-size: 1rem;
+    }
+    .tech-stack {
+      gap: 10px;
+    }
+    .bottomContent {
+      padding: 0 10px;
+    }
   }
-  @include media(700px) {
-    font-size: 7px;
-  }
-  @include media(650px) {
-    font-size: 12px;
-  }
-  @include media(650px) {
-    font-size: 10px;
+  @media (max-width: 500px) {
+    max-width: 100%;
+    .portfolio-title {
+      font-size: 1rem;
+    }
+    .portfolio-description {
+      font-size: 0.85rem;
+    }
+    .carousel-image {
+      height: 180px; 
+    }
+    .card-content {
+      padding: 1px;
+    }
   }
 }
-
-.portfolio-card-header {
-  color: gray;
-  font-weight: 400;
-  padding: 0;
-  text-align: start;
-}
-.portfolio-tech-list {
-  padding: 0;
-}
-.tech-list-item {
+.read-more-wrapper {
   display: flex;
-  flex-direction: row;
-  line-height: 0;
-}
-
-.techStack-logo {
-  @include media(1200px) {
-    width: 20px;
-    height: 28px;
-    margin-right: 5px;
-    padding: 0;
-  }
-  @include media(560px) {
-    width: 15px;
-    height: 24px;
-    margin: 0px;
-  }
-}
-
-.techStack-logo image {
-  @include media(1200px) {
-    width: 20px;
-    height: 28px;
-    margin: 5px;
-  }
-  @include media(560px) {
-    width: 15px;
-    height: 24px;
-    margin: 0px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .read-more-btn {
+    color: white;
+    border: 1px solid #17a3bc;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    background-color: #17a3bc;
   }
 }
-
-.project-details {
-  display: flex;
-  flex-direction: row;
-}
-
-.project-logo {
-  margin-top: 15px;
-  margin-left: 45px;
-  @include media(1200px) {
-    width: 25px;
-    height: 25px;
-    margin: 0;
-    padding: 0;
-  }
-  @include media(560px) {
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-  }
-  @include media(560px) {
-    width: 30px;
-    height: 30px;
-    margin: 0px;
+@media (max-width: 1200px) {
+  .read-more-btn {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
   }
 }
-
-.project-logo image {
-  @include media(1200px) {
-    width: 25px;
-    height: 25px;
-  }
-  @include media(560px) {
-    width: 30px;
-    height: 30px;
-    margin: 10px;
+@media (max-width: 992px) {
+  .read-more-btn {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
   }
 }
-
-.startNewProject-dotSmall {
-  filter: brightness(0) saturate(100%) invert(59%) sepia(33%) saturate(6084%)
-    hue-rotate(142deg) brightness(98%) contrast(82%);
+@media (max-width: 768px) {
+  .read-more-btn {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.6rem;
+  }
 }
-
+@media (max-width: 576px) {
+  .read-more-btn {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem; 
+  }
+  .PortfolioCard:hover .read-more-wrapper .read-more-btn {
+    transform: translateX(35px);
+    padding: 0.2rem 0.5rem;
+  }
+}

@@ -1,10 +1,8 @@
 @import "../../index.scss";
-
 .about {
   width: 100%;
   overflow: hidden;
   position: relative;
-
   .about-container {
     @include flex-centerd();
     padding-left: 13%;
@@ -32,6 +30,24 @@
       & > img {
         height: 100%;
         width: 100%;
+        @include media(968px) {
+          width: 100%;
+        }
+        @include media(824px) {
+          width: 100%;
+        }
+        @include media(600px) {
+          width: 100%;
+        }
+        @include media(474px) {
+          width: 85%;
+        }
+        @include media(350px) {
+          width: 80%;
+        }
+        @include media(300px) {
+          width: 70%;
+        }
       }
     }
     & > .about-container-sec2 {
@@ -79,8 +95,6 @@
       }
     }
   }
-
-  // ----------
   .about-top-cube {
     position: absolute;
     top: 138%;
