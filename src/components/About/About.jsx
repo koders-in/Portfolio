@@ -14,9 +14,9 @@ const About = () => {
   }, []);
 
   const aboutData = [
-    { icon: icon1, text: "Clients", value: 50 },
-    { icon: icon2, text: "Projects Done", value: 260 },
-    { icon: icon3, text: "Countries", value: 18 },
+    { icon: icon1, text: "Clients", value: 70 },
+    { icon: icon2, text: "Projects Done", value: 286 },
+    { icon: icon3, text: "Countries", value: 21 },
   ];
 
   return (

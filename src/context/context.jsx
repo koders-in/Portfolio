@@ -10,7 +10,6 @@ const PortfolioState = ({ children }) => {
   const fetchAllPortfolioData = async () => {
     setLoading(true);
     try {
-      // Check if data exists in sessionStorage
       const cachedData = sessionStorage.getItem("portfolioData");
 
       if (cachedData) {
@@ -42,7 +41,6 @@ const PortfolioState = ({ children }) => {
         }
       }
 
-      // Cache the fetched data in sessionStorage
       sessionStorage.setItem("portfolioData", JSON.stringify(allData));
       setData(allData);
     } catch (err) {

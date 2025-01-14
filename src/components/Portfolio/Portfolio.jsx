@@ -21,9 +21,11 @@ function Portfolio() {
   const filteredData =
     currentCategory === "All"
       ? data
-      : data.filter(
-          (item) =>
-            item.category?.toLowerCase() === currentCategory.toLowerCase()
+      : data.filter((item) =>
+          item.category
+            ?.split(",")
+            .map((cat) => cat.trim().toLowerCase())
+            .includes(currentCategory.toLowerCase())
         );
 
   const displayedData = showMore ? filteredData : filteredData.slice(0, 6);
@@ -54,7 +56,7 @@ function Portfolio() {
       </div>
       <div className="portfolio-nav">
         <section className="nav-items">
-          {["All", "Mobile", "Desktop", "Web", "UI", "Discord Bots", "DevOps"].map(
+          {["All", "Mobile", "Desktop", "Web", "UI/UX", "Discord Bots", "DevOps"].map(
             (category) => (
               <button
                 key={category}

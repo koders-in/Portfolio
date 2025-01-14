@@ -4,7 +4,7 @@ import Divider from "../Divider/Divider";
 import "./OurClients.scss";
 
 const logos = [
-  { src: "/logo/icon-1.png", tooltip: "First to Notify", id: "icon-1" }, 
+  { src: "/logo/icon-1.png", tooltip: "First to Notify", id: "icon-1" },
   { src: "/logo/icon-2.svg", tooltip: "Instaride", id: "icon-2" },
   { src: "/logo/icon-3.svg", tooltip: "Jupiter Toolbox", id: "icon-3" },
   { src: "/logo/icon-4.svg", tooltip: "Kyro Tool", id: "icon-4" },
@@ -22,9 +22,13 @@ const logos = [
   { src: "/logo/icon-18.svg", tooltip: "Wrencho", id: "icon-16" },
 ];
 
-
 const OurClients = () => {
-  const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, tooltipText: "" });
+  const [tooltip, setTooltip] = useState({
+    visible: false,
+    x: 0,
+    y: 0,
+    tooltipText: "",
+  });
 
   const handleMouseEnter = useCallback((tooltipText, event) => {
     const { clientX, clientY } = event;
@@ -36,17 +40,14 @@ const OurClients = () => {
     });
   }, []);
 
-  const handleMouseMove = useCallback(
-    (event) => {
-      const { clientX, clientY } = event;
-      setTooltip((prev) => ({
-        ...prev,
-        x: clientX + 15,
-        y: clientY + 15,
-      }));
-    },
-    []
-  );
+  const handleMouseMove = useCallback((event) => {
+    const { clientX, clientY } = event;
+    setTooltip((prev) => ({
+      ...prev,
+      x: clientX + 15,
+      y: clientY + 15,
+    }));
+  }, []);
 
   const handleMouseLeave = () => {
     setTooltip({ visible: false, x: 0, y: 0, tooltipText: "" });
